@@ -31,6 +31,42 @@ editor:
 
 ## Introduction {#sec-intro}
 
+talk about illegal to overwork yourself but hereres no parking
+
+zonign welfare
+
+is there a identifieabl undersupply of trucking regulation
+
+truck parkign accdeints effect on truck stop creation
+
+Question: come up with a well-defined research question (i.e., what is
+the effect of X on Y?)
+◮ Motivation: tell us a convincing argument as to why
+economists/policymakers should care about knowing an answer to
+that question
+
+Question: come up with a well-defined research question (i.e., what is
+the effect of X on Y?)
+◮ Motivation: tell us a convincing argument as to why
+economists/policymakers should care about knowing an answer to
+that question.
+◮ Conceptual Framework: what economic model informs us about a
+potential answer to the question, and what are the comparative
+statics you can derive from the model
+
+Question: come up with a well-defined research question (i.e., what is
+the effect of X on Y?)
+◮ Motivation: tell us a convincing argument as to why
+economists/policymakers should care about knowing an answer to
+that question.
+◮ Conceptual Framework: what economic model informs us about a
+potential answer to the question, and what are the comparative
+statics you can derive from the model?
+◮ Contribution: If it’s such an important question, why somebody
+couldn’t have done it before?
+In other words, what is your unique
+empirical contribution
+
 The United States hosts 90,056 local governments, each imposing unique zoning restrictions that shape land use.
 Among the pressing concerns influenced by these regulations is the growing shortage of truck parking [@american-trucking-associationNationalTruckParking2023].
 Inadequate truck parking has led to dangerous or illegal practices, such as parking on highway shoulders or in unauthorized areas, which heightens traffic accident risks and imposes economic costs like increased fuel consumption, delivery delays, and inflated goods prices [@usdotJasonsLawTruck2015].
@@ -120,21 +156,21 @@ Where
 
 -   $Y_{it}$ is the chaneg in truck parking capacity for category $i$ at time $t$.
 
--    $HR_{it}$ is the high restriction index indicator for category $i$ at time $t$.
+-   $HR_{it}$ is the high restriction index indicator for category $i$ at time $t$.
 
--    $Post_{it}$ is the indicator for the post-TPA period for category $i$ at time $t$.
+-   $Post_{it}$ is the indicator for the post-TPA period for category $i$ at time $t$.
 
--    $HR_{it} \times Post_{it}$ is the interaction term that captures the treatment effect of being in a high restriction area after the truck parking accident.
+-   $HR_{it} \times Post_{it}$ is the interaction term that captures the treatment effect of being in a high restriction area after the truck parking accident.
 
--    $\theta_t$ represents unique coefficients for the high restriction index across time periods $t$.
+-   $\theta_t$ represents unique coefficients for the high restriction index across time periods $t$.
 
--    $\phi_t$ represents unique coefficients for the post-TPA period across time periods $t$.
+-   $\phi_t$ represents unique coefficients for the post-TPA period across time periods $t$.
 
 -   $\psi_t$ represents unique coefficients for the interaction term across time periods $t$.
 
--    $X_{it}$ is a vector of control variables for category $i$ at time $t$.
+-   $X_{it}$ is a vector of control variables for category $i$ at time $t$.
 
--    $\epsilon_{it}$ is the error term.
+-   $\epsilon_{it}$ is the error term.
 
 ## **Limitations**
 
@@ -166,9 +202,9 @@ Insurance claims dataset are also another dataset worth looking into
 
 Most research on zoning restrictiveness focuses on housing, yet there is no reason to believe that a housing restrictiveness index cannot be adapted for studying industrial zoning restrictiveness.
 
-## **Appendix** 
+## **Appendix**
 
-### **A. Visualization of dataset.**  {#sec-a.-visualization-of-dataset.-}
+### **A. Visualization of dataset.** {#sec-a.-visualization-of-dataset.-}
 
 (Present Truck stop parking observatios also available [Truck Stop Parking \| Geospatial at the Bureau of Transportation Statistics](https://data-usdot.opendata.arcgis.com/datasets/usdot::truck-stop-parking/about))
 
@@ -178,4 +214,4 @@ Most research on zoning restrictiveness focuses on housing, yet there is no reas
 
 ### B. Map of Zoning Categories {#sec-b.-map-of-zoning-categories}
 
-![](images/unnamed (1).png)
+![](images/unnamed%20(1).png)
