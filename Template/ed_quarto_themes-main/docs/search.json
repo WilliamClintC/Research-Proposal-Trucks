@@ -1,0 +1,58 @@
+[
+  {
+    "objectID": "ed_template.html#what-constitutes-as-severe-accident",
+    "href": "ed_template.html#what-constitutes-as-severe-accident",
+    "title": "Progress Update",
+    "section": "What constitutes as severe accident?",
+    "text": "What constitutes as severe accident?"
+  },
+  {
+    "objectID": "ed_template.html#what-constitutes-as-severe-accident-1",
+    "href": "ed_template.html#what-constitutes-as-severe-accident-1",
+    "title": "Progress Update",
+    "section": "What constitutes as severe accident?",
+    "text": "What constitutes as severe accident?"
+  },
+  {
+    "objectID": "ed_template.html#what-constitutes-as-severe-accident-2",
+    "href": "ed_template.html#what-constitutes-as-severe-accident-2",
+    "title": "Progress Update",
+    "section": "What constitutes as severe accident?",
+    "text": "What constitutes as severe accident?"
+  },
+  {
+    "objectID": "ed_template.html#adjusted-model-for-truck-parking-analysis-1",
+    "href": "ed_template.html#adjusted-model-for-truck-parking-analysis-1",
+    "title": "Progress Update",
+    "section": "Adjusted Model for Truck Parking Analysis",
+    "text": "Adjusted Model for Truck Parking Analysis\n\nFix limited observations\nways to deal with it?"
+  },
+  {
+    "objectID": "ed_template.html#adjusted-model-for-truck-parking-analysis-2",
+    "href": "ed_template.html#adjusted-model-for-truck-parking-analysis-2",
+    "title": "Progress Update",
+    "section": "Adjusted Model for Truck Parking Analysis",
+    "text": "Adjusted Model for Truck Parking Analysis\nlook at \\(\\Delta_{2006}\\) and change in \\(\\Delta_{2016}\\) vs look at \\(\\Delta_{2006-206}\\)"
+  },
+  {
+    "objectID": "ed_template.html#adjusted-model-for-truck-parking-analysis-3",
+    "href": "ed_template.html#adjusted-model-for-truck-parking-analysis-3",
+    "title": "Progress Update",
+    "section": "Adjusted Model for Truck Parking Analysis",
+    "text": "Adjusted Model for Truck Parking Analysis\n\\[ \\Delta\\text{Num\\_Truck\\_Stop}_{t=2006-2016} = \\sum_{i=2}^{0} \\beta_{t-i} \\text{TPA}_{t-i}\\cdot \\text{Severity}_t \\\\ + \\gamma X_t + \\epsilon_t \\]\n\n$ _{t-i} $: A lagged dummy variable indicating a severe truck parking accident.\nSeverity is our measure of severity of the accident (‘VEHICLES_IN_ACCIDENT’ or ‘INJURIES’ or Fatalities)"
+  },
+  {
+    "objectID": "ed_template.html#data-cleaning-tips",
+    "href": "ed_template.html#data-cleaning-tips",
+    "title": "Progress Update",
+    "section": "Data Cleaning Tips?",
+    "text": "Data Cleaning Tips?\nneed to join to 1 column how?"
+  },
+  {
+    "objectID": "ed_template.html#references",
+    "href": "ed_template.html#references",
+    "title": "Progress Update",
+    "section": "References",
+    "text": "References"
+  }
+]

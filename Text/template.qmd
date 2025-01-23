@@ -39,33 +39,15 @@ is there a identifieabl undersupply of trucking regulation
 
 truck parkign accdeints effect on truck stop creation
 
-Question: come up with a well-defined research question (i.e., what is
-the effect of X on Y?)
-◮ Motivation: tell us a convincing argument as to why
-economists/policymakers should care about knowing an answer to
-that question
+Question: come up with a well-defined research question (i.e., what is the effect of X on Y?) ◮ Motivation: tell us a convincing argument as to why economists/policymakers should care about knowing an answer to that question
 
-Question: come up with a well-defined research question (i.e., what is
-the effect of X on Y?)
-◮ Motivation: tell us a convincing argument as to why
-economists/policymakers should care about knowing an answer to
-that question.
-◮ Conceptual Framework: what economic model informs us about a
-potential answer to the question, and what are the comparative
-statics you can derive from the model
+Question: come up with a well-defined research question (i.e., what is the effect of X on Y?) ◮ Motivation: tell us a convincing argument as to why economists/policymakers should care about knowing an answer to that question.
+◮ Conceptual Framework: what economic model informs us about a potential answer to the question, and what are the comparative statics you can derive from the model
 
-Question: come up with a well-defined research question (i.e., what is
-the effect of X on Y?)
-◮ Motivation: tell us a convincing argument as to why
-economists/policymakers should care about knowing an answer to
-that question.
-◮ Conceptual Framework: what economic model informs us about a
-potential answer to the question, and what are the comparative
-statics you can derive from the model?
-◮ Contribution: If it’s such an important question, why somebody
-couldn’t have done it before?
-In other words, what is your unique
-empirical contribution
+Question: come up with a well-defined research question (i.e., what is the effect of X on Y?) ◮ Motivation: tell us a convincing argument as to why economists/policymakers should care about knowing an answer to that question.
+◮ Conceptual Framework: what economic model informs us about a potential answer to the question, and what are the comparative statics you can derive from the model?
+◮ Contribution: If it’s such an important question, why somebody couldn’t have done it before?
+In other words, what is your unique empirical contribution
 
 The United States hosts 90,056 local governments, each imposing unique zoning restrictions that shape land use.
 Among the pressing concerns influenced by these regulations is the growing shortage of truck parking [@american-trucking-associationNationalTruckParking2023].
@@ -120,7 +102,7 @@ No Truck Parking → Trucks will illegally park → **Accidents Occur** (observe
 The equation to estimate the effect of the Truck Parking Accident (TPA) on the creation of truck stops is specified as follows:
 
 $$
-Y_{tj} = \sum_{i=-6}^{6} \beta_i \text{TPA}_{i,j} + \gamma X_{tj} + \epsilon_{tj}
+Y_{tj} = \sum_{i=-6}^{6} \beta_{ij} \text{TPA}_{ij} + \gamma X_{tj} + \epsilon_{tj}
 $$
 
 Where:
