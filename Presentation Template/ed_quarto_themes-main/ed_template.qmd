@@ -1,0 +1,84 @@
+---
+title: "Progress Update"
+subtite: ""
+date: today
+format: 
+  revealjs:
+    theme: night
+    chalkboard: true
+editor: visual
+author:
+  - name: "William Clinton Co"
+    id: 
+    orcid: 
+    email: 
+    affiliation: 
+      - name: The University of British Columbia
+        city: 
+        url: ""
+logo: /content/ubc-logo.png
+footer: ""
+bibliography: references.bib
+---
+
+# Updates
+
+1.  Background
+
+2.  **([Yuanning Liang](https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=3113619 "View other papers by this author"),2021)**
+
+## Background
+
+-   90,056 local governments
+
+-   Inadequate truck parking has led to dangerous or illegal practices (such as **parking on highway shoulders** or in unauthorized areas, which heightens traffic accident risks and imposes economic costs like increased fuel consumption, delivery delays, and inflated goods prices)
+
+-   limited empirical research
+
+-   traffic accident data as a proxy for truck parking demand -\> land-use regulations -\> truck parking availability.
+
+## Zoning regulation welfare-enhancing?
+
+No Truck Parking → Trucks will illegally park → **Accidents Occur** (observed)→Truck Parking Demand increases → **Truck Parking Capacity Increase** (observed)
+
+## 4 Zoning Categories
+
+![](images/unnamed%20(1).png)
+
+## Data
+
+![](images/unnamed.png)
+
+## Event Study Model
+
+$$
+\Delta \text{NumTruckStop}_{tj} = \sum_{i=-n}^{n} \beta_{ij} \text{Accident}_{ij}\cdot \text{Severity}_{ij} + \gamma_{tj} X_{tj} \\ + \epsilon_{tj}
+$$
+
+-   year $t$ ,category $j$, time $i$
+
+-   $\Delta\text{NumTruckStop}_{tj}$ —- change in truck stop
+
+-   $\text{Accident}_{i,j}$ –- event dummy indicating the presence of a Accident
+
+-   $\text{Severity}_{ij}$ -– fatalities associated with the accident
+
+## DiD Model 
+
+$$
+Y_{tj} = \sum_{t=-n}^{n} \theta_{tj} HR_{tj} + \sum_{t=-n}^{n} \phi_{tj} Post_{tj} + \sum_{t=-n}^{n} \psi_{tj} (HR_{tj} \times Post_{tj}) \\+ \gamma_{tj} X_{tj} + \epsilon_{tj}
+$$
+
+-   category $j$ , time $i$
+
+-   $Y_{tj}$ —- change in truck parking capacity
+
+-   $HR_{tj}$ —- high restriction index
+
+-   $Post_{tj}$ —- represents the indicator for the post-accident period
+
+## **([Yuanning Liang](https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=3113619 "View other papers by this author"),2021)**
+
+Useful and highly relevant data description
+
+## References

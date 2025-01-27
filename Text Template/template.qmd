@@ -1,0 +1,236 @@
+---
+title: "Zoning: A Barrier or Solution to Truck Parking Infrastructure Shortages?"
+format:
+  jasa-pdf:
+    keep-tex: true  
+    journal:
+      blinded: false
+  jasa-html: default
+date: last-modified
+author:
+  - name: William Co
+    acknowledgements: |
+    affiliations:
+      - name: University of British Columbia
+        department: Department of Economics
+abstract: |
+  This study explores the impact of local zoning regulations on the growing shortage of truck parking in the United States. We utilize traffic accident data as a proxy for truck parking demand to examine how zoning restrictions affect parking capacity. Employing an event study design, we categorize zoning regimes into Traditional, Exclusion, Reform, and Wild Wild Texas. Additionally, we implement a difference-in-differences approach to compare high-restrictive and low-restrictive areas.
+bibliography: bibliography.bib  
+editor: 
+  markdown: 
+    wrap: sentence
+---
+
+## Agenda
+
+1.  Quantifying Truck Parking Shortage. 
+
+2.  Do local economies respond to the need for truck parking or is it hindered?
+
+3.  Does land regulation limit truck parking creation?
+
+## Research Question
+
+What is the effect of truck parking accidents on truck stop creation?
+
+## Motivation
+
+The United States hosts 90,056 local governments, each imposing unique zoning restrictions that shape land use.
+Among the pressing concerns influenced by these regulations is the growing shortage of truck parking [@american-trucking-associationNationalTruckParking2023].
+Inadequate truck parking has led to dangerous or illegal practices, such as parking on highway shoulders or in unauthorized areas, which heightens traffic accident risks and imposes economic costs like increased fuel consumption, delivery delays, and inflated goods prices [@usdotJasonsLawTruck2015].
+
+Despite the significant implications, there is limited empirical research quantifying the relationship between truck parking demand and the regulatory environment influencing its availability.
+Zoning regulations, in particular, often play a more decisive role in truck parking accessibility than geographic or transportation network factors [@shertzerZoningEconomicGeography2018].
+This study seeks to bridge this gap by leveraging traffic accident data as a proxy for truck parking demand and analyzing how land-use regulations impact truck parking availability.
+
+Cities with bustling economies require robust transportation logistics, including an adequate trucking supply chain, to support economic growth.
+However, these thriving urban centers often enforce strict zoning regulations that aim to protect land values, promote housing development, and maintain order.
+Unfortunately, these regulations frequently hinder the development of truck stops, which are vital for the trucking industry to meet the demands of the growing economy.
+
+The lack of sufficient truck stops creates significant challenges for truck drivers operating in these regions.
+Truckers often face the constraints imposed by restrictive zoning regulations, leading to potentially dangerous consequences.
+Federal regulations mandate a maximum number of driving hours for truckers to ensure safety, and exceeding these hours is both unsafe and illegal.
+However, when truck stop availability is inadequate, truck drivers are forced to make difficult choices: either continue driving while fatigued or park illegally.
+
+Both options pose substantial risks.
+Fatigued driving significantly increases the likelihood of accidents, endangering the trucker and the public.
+Similarly, illegal parking exposes truckers to safety hazards, including theft and accidents.
+Jason’s Law exemplifies the dangers faced by truckers, highlighting the vulnerabilities associated with insufficient and unsafe parking options.
+Illegal parking in undesignated areas not only jeopardizes trucker safety but also disrupts traffic and creates further risks for the community.
+
+Addressing the growing need for truck stops in cities with strict zoning regulations is essential to ensuring the safety of truckers and the public while supporting the supply chain vital to these economies.
+
+## Conceptual Framework
+
+Is zoning regulation welfare-enhancing?
+This paper examines this question through the lens of trucking accidents.
+Areas with a high frequency of trucking accidents can serve as evidence for the need to relax zoning regulations, particularly those contributing to an under-supply of truck parking.
+By analyzing these areas, we can compare regions with strict zoning regulations to those with more lenient zoning practices to identify discrepancies in truck parking availability.
+
+Although several models exist to investigate whether zoning regulations optimize welfare, none of these studies explicitly consider truck parking as a variable.
+This research aims to fill that gap by highlighting the relationship between zoning regulations, truck parking availability, and their impact on trucking accidents, offering new insights into the welfare implications of zoning policies.
+
+Specifically, this research aims to test two hypotheses:
+
+1.  If restrictive local zoning laws drive truck parking shortages, regions with high truck parking-related accidents should exhibit minimal correlation with increased truck stop capacity.
+
+2.  Parking accidents involving trucks can serve as a quantitative proxy for truck stop demand, enabling the evaluation of truck stop shortages across regions.
+
+this study employs an event study design, categorizing zoning regimes into four types—Traditional, Exclusion, Reform, and Wild Wild Texas—based on [@puentesTraditionalReformedReview2006] (See [Appendi](#sec-b.-map-of-zoning-categories){#sec:appendix-b}[x B](#sec:appendix-b)) .
+We hypothesize that restrictive zoning regimes (Traditional and Exclusion) are less responsive to truck parking demand compared to flexible regimes (Reform and Wild Wild Texas), resulting in lower truck parking capacity despite evident needs.
+
+Additionally, this study will employ a difference-in-differences design to compare high-restrictive zoning areas with low-restrictive zoning areas.
+By controlling for the four zoning categories—Traditional, Exclusion, Reform, and Wild Wild Texas—we analyze the effects of a major trucking accident as the event of interest.
+This approach will allow us to assess how zoning restrictiveness influences truck parking capacity and whether high-restrictive regimes exacerbate the challenges associated with truck parking shortages in the aftermath of such incidents.
+
+## Related Literature
+
+Existing studies on zoning provide valuable context but are limited in scope.
+Research often focuses on single areas (Chicago, Eastern Massachusetts) and are often focused on aspects unrelated to truck zoning regulation [@shertzerRaceEthnicityDiscriminatory2016; @glaeserCausesConsequencesLand2009] or are scoped in international contexts such as Brazil [@anagolEstimatingEconomicValue2021].
+Furthermore, most literature emphasizes US residential zoning [@lensStrictLandUse2016; @huangResidentialLandUse2012]or office space [@cheshireOfficeSpaceSupply2008], leaving industrial zoning and its implications for truck parking largely unexplored.
+All of these papers demonstrate that zoning reforms are binding and limit overall population welfare in favor of benefiting a select few.
+
+Initially designed to balance public welfare and economic development, zoning regulations have evolved, sometimes adapting to market forces or catering to local stakeholder interests, such as middle-class homeowners [@fischelEconomicHistoryZoning2024].
+While zoning has the potential to enhance economic productivity, it can also introduce inefficiencies, particularly in industrial applications [@mcdonaldPDFEconomicsZoning2012].
+Fragmented zoning governance often discourages communities from accommodating truck parking, despite its regional benefits, due to localized decision-making dynamics.
+Furthermore, it is unclear whether the current state of land regulation optimizes welfare.
+Some estimates say misallocation through zoning welfare cost the economy up to 13.6 percent of gross domestic product [@osmanRestrictiveLandUse2020].
+This paper aims to address this gap within the context of truck parking shortages these challenges,.
+
+This research contributes to the broader discourse on zoning's economic impact, extending the analysis to the critical issue of truck parking infrastructure.
+By examining the interplay between zoning classifications, parking-related accidents, and truck stop capacity, this study offers insights for policymakers aiming to mitigate the externalize of inadequate truck parking through thoughtful zoning reforms.
+
+## Contribution
+
+This methodology has not been explored before primarily due to data limitations and the recent emergence of the problem.
+Supply chain strains and zoning restrictiveness are relatively recent phenomena.
+For instance, Jason's Law, arguably the most significant legislation addressing truck parking issues, only came into effect in 2012.
+The rise of e-commerce, coupled with aging populations and increasing NIMBY-ism, has exacerbated supply chain challenges in recent years.
+
+Furthermore, the data set used in this study was compiled from digitized versions of trucking directories, which traditionally do not publish their data electronically.
+This data has only recently become available thanks to the efforts of Prof. Ron Yang’s research group, who worked to digitize and organize these records.
+This unique data set and the recency of the issue make our study a novel empirical contribution to the field.
+
+## Data
+
+Our data is (1990-Present) FMCA (Federal Motor Carrier Safety Administration) Crash file from USDOT (Department of Transportation) ([Appendix A](#sec-a.-visualization-of-dataset.-){#sec:appendix-a}).
+We can see type of vehicle (ex. trucks), nature of the crash (ex. Crashed involving a “parked” vehicle), fatalities, injuries, number of vehicles involved, etc.
+We will aslo use WLIURA (zoning restriction index) dataset by @gyourkoNewMeasureLocal2008 and zoning classifications used by @puentesTraditionalReformedReview2006 .
+There are other papers like @liangSafetyInspectionsImprove2021, which use similar data sets.
+
+## **Strategy**
+
+With no truck parking available trucks illegally park causing observed accidents such that plcaes increase truck parking availability, through increase truck stop creation.
+
+No Truck Parking → Trucks will illegally park → **Accidents Occur** (observed)→Truck Parking Demand increases → **Truck Parking Capacity Increase** (observed)
+
+### Event Study Model
+
+The equation to estimate the effect of the Truck Parking Accident (TPA) on the creation of truck stops is specified as follows:
+
+$$
+\Delta \text{NumTruckStop}_{tj} = \sum_{i=-n}^{n} \beta_{ij} \text{Accident}_{ij}\cdot \text{Severity}_{ij} + \gamma_{tj} X_{tj} + \epsilon_{tj}
+$$
+
+Where:
+
+-   $\Delta\text{NumTruckStop}_{tj}$ is the change in truck stop capacity in year $t$ for category $j$.
+
+-   $\beta_{ij}$ are the coefficients for the event dummies ($\text{TPA}_{i,j}$), where $i$ represents the relative time unit to the Truck Parking Accident at $i = 0$.
+
+-   $\text{Accident}_{i,j}$ is the event dummy indicating the presence of a Truck Parking Accident in relative year $i$ for category $j$.
+    Specifically, when $i = 0$, this corresponds to the year in which the Truck Parking Accident occurs.
+
+-   $\text{Severity}_{ij}$ takes the form of fatalities associated with the accident at time $i$ and category $j$.
+
+-   $\gamma$ represents the coefficients for the control variables ($X_{tj}$).
+
+-   $X_{tj}$ are the control variables in year $t$ for category $j$.
+
+-   $\epsilon_{tj}$ is the error term for year $t$ and category $j$.
+
+-   $j$ indicates a specific category used to isolate subsets of the data, discussed below.
+
+To analyze the impact of the Truck Parking Accident across different zoning categories, I will estimate to each corresponding category:
+
+-   Traditional: This category evaluates the effects in conventional settings with typical zoning regulations.
+
+-   Exclusion: This category examines the impacts in areas where truck stops are limited or restricted by zoning laws.
+
+-   Reform: This category focuses on regions undergoing policy or structural reforms related to truck parking.
+
+-   Wild Wild Texas: This category investigates the unique circumstances and effects in Texas, a state known for its lack of zoning regulation.
+
+### Difference-in-Differences (DiD) Model
+
+I will employ a Difference-in-Differences (DiD) design using the WLRUI index data to compare locations with a high restriction index against those with a low restriction index, while controlling for different zoning categories.
+The model is specified as follows:
+
+$$
+Y_{tj} = \sum_{t=-n}^{n} \theta_{tj} HR_{tj} + \sum_{t=-n}^{n} \phi_{tj} Post_{tj} + \sum_{t=-n}^{n} \psi_{tj} (HR_{tj} \times Post_{tj}) + \gamma_{tj} X_{tj} + \epsilon_{tj}
+$$
+
+Where:
+
+-   $Y_{tj}$ denotes the change in truck parking capacity for category $j$ at time $t$.
+-   $HR_{tj}$ indicates the high restriction index for category $j$ at time $t$.
+-   $Post_{tj}$ represents the indicator for the post-TPA period for category $j$ at time $t$.
+-   $HR_{tj} \times Post_{tj}$ is the interaction term that captures the treatment effect of being in a high restriction area following the truck parking accident.
+-   $\theta_{tj}$ represents unique coefficients for the high restriction index across both time periods $t$ and categories $j$.
+-   $\phi_{tj}$ indicates unique coefficients for the post-TPA period across both time periods $t$ and categories $j$.
+-   $\psi_{tj}$ reflects unique coefficients for the interaction term across both time periods $t$ and categories $j$.
+-   $\gamma_{tj}$ denotes unique coefficients for the control variables across both time periods $t$ and categories $j$.
+-   $X_{tj}$ is a vector of control variables for category $j$ at time $t$.
+-   $\epsilon_{tj}$ is the error term.
+
+## **Limitations**
+
+Data only indicates any accidents involving any parked vehicle.
+The parked vehicle in question need not be a truck.
+The parked vehicle may also be a legally parked truck. 
+
+## **Robustness**
+
+Buses, as a category of large vehicles, may be comparable to trucks in some contexts, potentially introducing noise into our results.
+To ensure robustness, we propose conducting the study both with and without buses included in the dataset.
+
+Accidents can be categorized as fatalities, injuries, or vehicles involved, each requiring its own specific dependent variable response.
+To address this, we will run our analysis separately for each category, treating them as controls.
+
+Concerns may arise regarding the time variation of zoning classifications.
+However, this concern can be safely excluded, as zoning regimes or classifications tend to remain relatively stable across municipalities [@mclaughlinLandUseRegulation2012].
+
+## **Improvements**
+
+There are other data sets found in [@NHTSAFileDownloads] or [@FatalityAnalysisReporting] ; .
+That contain data that could potentially be more relevant that addresses any limitations in our design.
+
+Insurance claims dataset are also another dataset worth looking into
+
+[Motor Carrier Crash Data - \| Department of Transportation - Data Portal](https://data.transportation.gov/Trucking-and-Motorcoaches/Motor-Carrier-Crash-Data-/b8e5-isfj/about_data)
+
+@liangSafetyInspectionsImprove2021 points out that state level Texas DOT, has dataset that contain a more detailed infromation on the trucking accident.
+Such as the source, of the accident why it happened who is at fault and so forth.
+It has data on the exact cause of the accident.
+Wheereas FMCA, data only contains general information on the cirucsmtances of teh accident.
+
+## Remarks
+
+Most research on zoning restrictiveness focuses on housing, yet there is no reason to believe that a housing restrictiveness index cannot be adapted for studying industrial zoning restrictiveness.
+
+Ideas to explore would include investigating trade offs between fatigue driving and illegal parking.
+another avenue would be to investigate overall accidents as well, isolating fatigued driving.
+
+## **Appendix**
+
+### **A. Visualization of dataset.** {#sec-a.-visualization-of-dataset.-}
+
+(Present Truck stop parking observatios also available [Truck Stop Parking \| Geospatial at the Bureau of Transportation Statistics](https://data-usdot.opendata.arcgis.com/datasets/usdot::truck-stop-parking/about))
+
+\[ @coWilliamClintCResearchProposalTrucks2024\]
+
+![](images/unnamed.png)
+
+### B. Map of Zoning Categories {#sec-b.-map-of-zoning-categories}
+
+![](images/unnamed%20(1).png)

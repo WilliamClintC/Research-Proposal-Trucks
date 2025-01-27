@@ -1,0 +1,58 @@
+[
+  {
+    "objectID": "ed_template.html#background",
+    "href": "ed_template.html#background",
+    "title": "Progress Update",
+    "section": "Background",
+    "text": "Background\n\n90,056 local governments\nInadequate truck parking has led to dangerous or illegal practices (such as parking on highway shoulders or in unauthorized areas, which heightens traffic accident risks and imposes economic costs like increased fuel consumption, delivery delays, and inflated goods prices)\nlimited empirical research\ntraffic accident data as a proxy for truck parking demand -&gt; land-use regulations -&gt; truck parking availability."
+  },
+  {
+    "objectID": "ed_template.html#zoning-regulation-welfare-enhancing",
+    "href": "ed_template.html#zoning-regulation-welfare-enhancing",
+    "title": "Progress Update",
+    "section": "Zoning regulation welfare-enhancing?",
+    "text": "Zoning regulation welfare-enhancing?\nNo Truck Parking → Trucks will illegally park → Accidents Occur (observed)→Truck Parking Demand increases → Truck Parking Capacity Increase (observed)"
+  },
+  {
+    "objectID": "ed_template.html#zoning-categories",
+    "href": "ed_template.html#zoning-categories",
+    "title": "Progress Update",
+    "section": "4 Zoning Categories",
+    "text": "4 Zoning Categories"
+  },
+  {
+    "objectID": "ed_template.html#data",
+    "href": "ed_template.html#data",
+    "title": "Progress Update",
+    "section": "Data",
+    "text": "Data"
+  },
+  {
+    "objectID": "ed_template.html#event-study-model",
+    "href": "ed_template.html#event-study-model",
+    "title": "Progress Update",
+    "section": "Event Study Model",
+    "text": "Event Study Model\n\\[\n\\Delta \\text{NumTruckStop}_{tj} = \\sum_{i=-n}^{n} \\beta_{ij} \\text{Accident}_{ij}\\cdot \\text{Severity}_{ij} + \\gamma_{tj} X_{tj} \\\\ + \\epsilon_{tj}\n\\]\n\nyear \\(t\\) ,category \\(j\\), time \\(i\\)\n\\(\\Delta\\text{NumTruckStop}_{tj}\\) —- change in truck stop\n\\(\\text{Accident}_{i,j}\\) –- event dummy indicating the presence of a Accident\n\\(\\text{Severity}_{ij}\\) -– fatalities associated with the accident"
+  },
+  {
+    "objectID": "ed_template.html#did-model",
+    "href": "ed_template.html#did-model",
+    "title": "Progress Update",
+    "section": "DiD Model",
+    "text": "DiD Model\n\\[\nY_{tj} = \\sum_{t=-n}^{n} \\theta_{tj} HR_{tj} + \\sum_{t=-n}^{n} \\phi_{tj} Post_{tj} + \\sum_{t=-n}^{n} \\psi_{tj} (HR_{tj} \\times Post_{tj}) \\\\+ \\gamma_{tj} X_{tj} + \\epsilon_{tj}\n\\]\n\ncategory \\(j\\) , time \\(i\\)\n\\(Y_{tj}\\) —- change in truck parking capacity\n\\(HR_{tj}\\) —- high restriction index\n\\(Post_{tj}\\) —- represents the indicator for the post-accident period"
+  },
+  {
+    "objectID": "ed_template.html#yuanning-liang2021",
+    "href": "ed_template.html#yuanning-liang2021",
+    "title": "Progress Update",
+    "section": "(Yuanning Liang,2021)",
+    "text": "(Yuanning Liang,2021)\nUseful and highly relevant data description"
+  },
+  {
+    "objectID": "ed_template.html#references",
+    "href": "ed_template.html#references",
+    "title": "Progress Update",
+    "section": "References",
+    "text": "References"
+  }
+]
