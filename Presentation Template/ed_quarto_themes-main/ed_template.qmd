@@ -63,7 +63,7 @@ $$
 
 -   $\text{Severity}_{ij}$ -– fatalities associated with the accident
 
-## DiD Model 
+## DiD Model (work in progress)
 
 $$
 Y_{tj} = \sum_{t=-n}^{n} \theta_{tj} HR_{tj} + \sum_{t=-n}^{n} \phi_{tj} Post_{tj} + \sum_{t=-n}^{n} \psi_{tj} (HR_{tj} \times Post_{tj}) \\+ \gamma_{tj} X_{tj} + \epsilon_{tj}
