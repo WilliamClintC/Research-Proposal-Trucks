@@ -161,6 +161,25 @@ To analyze the impact of the Truck Parking Accident across different zoning cate
 
 -   Wild Wild Texas: This category investigates the unique circumstances and effects in Texas, a state known for its lack of zoning regulation.
 
+## Adjusted Model for Truck Parking Analysis
+
+Our dataset cannot accommodate the initial model because we only observe changes in truck parking during the years 2007, 2008, 2015, and 2016.
+To address this limitation, we adjust the model as follows:
+
+$$
+\Delta \text{NumTruckStop}_{j,t=2006-2016} = \sum_{i=-2}^{0} \beta_{j,t+i} \text{Accident}_{j,t+i}\cdot \text{Severity}_{j,t+i} + \gamma_{tj} X_{tj} + \epsilon_{tj}
+$$
+
+### Model Explanation
+
+-   \$ \text{TPA}\_{t-i} \$: A lagged dummy variable indicating a severe truck parking accident.
+-   Severity is our measure of severity of the accident which can take the form of 'VEHICLES_IN_ACCIDENT', 'INJURIES' and fatalities
+-   \$ i \$: Represents time units relative to the 2006-2016 period.
+-   \$ X_t \$: Includes control variables.
+-   \$ \epsilon\_t \$: Error term.
+
+This adjustment allows us to analyze the effects of severe truck parking accidents within the available time frame.
+
 ### Difference-in-Differences (DiD) Model
 
 I will employ a Difference-in-Differences (DiD) design using the WLRUI index data to compare locations with a high restriction index against those with a low restriction index, while controlling for different zoning categories.

@@ -63,6 +63,22 @@ $$
 
 -   $\text{Severity}_{ij}$ -– fatalities associated with the accident
 
+## Adjusted Model for Truck Parking Analysis
+
+Our dataset cannot accommodate the initial model because we only observe changes in truck parking during the years 2007, 2008, 2015, and 2016. To address this limitation, we adjust the model as follows:
+
+$$
+\Delta \text{NumTruckStop}_{j,t=2006-2016} = \sum_{i=-2}^{0} \beta_{j,t+i} \text{Accident}_{j,t+i}\cdot \text{Severity}_{j,t+i} + \gamma_{tj} X_{tj} + \epsilon_{tj}
+$$
+
+-   year $t$ ,category $j$, time $i$
+
+-   $\Delta\text{NumTruckStop}_{tj}$ —- change in truck stop
+
+-   $\text{Accident}_{i,j}$ –- event dummy indicating the presence of a Accident
+
+-   $\text{Severity}_{ij}$ -– fatalities associated with the accident
+
 ## DiD Model (work in progress)
 
 $$
