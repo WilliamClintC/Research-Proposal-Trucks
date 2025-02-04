@@ -1,7 +1,7 @@
 [
   {
-    "objectID": "ed_template.html#background",
-    "href": "ed_template.html#background",
+    "objectID": "ed_template.html#background-1",
+    "href": "ed_template.html#background-1",
     "title": "Progress Update",
     "section": "Background",
     "text": "Background\n\n90,056 local governments\nInadequate truck parking has led to dangerous or illegal practices (such as parking on highway shoulders or in unauthorized areas, which heightens traffic accident risks and imposes economic costs like increased fuel consumption, delivery delays, and inflated goods prices)\nlimited empirical research\ntraffic accident data as a proxy for truck parking demand -&gt; land-use regulations -&gt; truck parking availability."
@@ -32,21 +32,105 @@
     "href": "ed_template.html#event-study-model",
     "title": "Progress Update",
     "section": "Event Study Model",
-    "text": "Event Study Model\n\\[\n\\Delta \\text{NumTruckStop}_{tj} = \\sum_{i=-n}^{n} \\beta_{ij} \\text{Accident}_{ij}\\cdot \\text{Severity}_{ij} + \\gamma_{tj} X_{tj} \\\\ + \\epsilon_{tj}\n\\]\n\nyear \\(t\\) ,category \\(j\\), time \\(i\\)\n\\(\\Delta\\text{NumTruckStop}_{tj}\\) —- change in truck stop\n\\(\\text{Accident}_{i,j}\\) –- event dummy indicating the presence of a Accident\n\\(\\text{Severity}_{ij}\\) -– fatalities associated with the accident"
+    "text": "Event Study Model\n\\[\n\\Delta \\text{NumTruckStop}_{tj} = \\sum_{i=-n}^{n} \\beta_{ij} \\text{Accident}_{ij}\\cdot \\text{Severity}_{ij} \\\\ + \\gamma_{tj} X_{tj} + \\epsilon_{tj}\n\\]\nyear \\(t\\) ,category \\(j\\), time \\(i\\)\n\n\\(\\Delta\\text{NumTruckStop}_{tj}\\) —- change in truck stop\n\\(\\text{Accident}_{i,j}\\) –- event dummy indicating the presence of a Accident\n\\(\\text{Severity}_{ij}\\) -– fatalities/injuries/vehicle associated"
   },
   {
-    "objectID": "ed_template.html#did-model",
-    "href": "ed_template.html#did-model",
+    "objectID": "ed_template.html#adjusted-event-model",
+    "href": "ed_template.html#adjusted-event-model",
     "title": "Progress Update",
-    "section": "DiD Model",
-    "text": "DiD Model\n\\[\nY_{tj} = \\sum_{t=-n}^{n} \\theta_{tj} HR_{tj} + \\sum_{t=-n}^{n} \\phi_{tj} Post_{tj} + \\sum_{t=-n}^{n} \\psi_{tj} (HR_{tj} \\times Post_{tj}) \\\\+ \\gamma_{tj} X_{tj} + \\epsilon_{tj}\n\\]\n\ncategory \\(j\\) , time \\(i\\)\n\\(Y_{tj}\\) —- change in truck parking capacity\n\\(HR_{tj}\\) —- high restriction index\n\\(Post_{tj}\\) —- represents the indicator for the post-accident period"
+    "section": "Adjusted Event Model",
+    "text": "Adjusted Event Model\n\\[\n\\Delta \\text{NumTruckStop}_{j,t=2006-2016} = \\\\\\sum_{i=-2}^{0} \\beta_{j,t+i} \\text{Accident}_{j,t+i}\\cdot \\text{Severity}_{j,t+i} + \\gamma_{tj} X_{tj} + \\epsilon_{tj}\n\\]\n\nyear \\(t\\) ,category \\(j\\), time \\(i\\)\n\\(\\Delta\\text{NumTruckStop}_{tj}\\) —- change in truck stop\n\\(\\text{Accident}_{i,j}\\) –- event dummy: presence of a Accident\n\\(\\text{Severity}_{ij}\\) -– fatalities/injuries/vehicle associated"
   },
   {
     "objectID": "ed_template.html#yuanning-liang2021",
     "href": "ed_template.html#yuanning-liang2021",
     "title": "Progress Update",
     "section": "(Yuanning Liang,2021)",
-    "text": "(Yuanning Liang,2021)\nUseful and highly relevant data description"
+    "text": "(Yuanning Liang,2021)\n\nUseful and highly relevant data description"
+  },
+  {
+    "objectID": "ed_template.html#fatalities-model",
+    "href": "ed_template.html#fatalities-model",
+    "title": "Progress Update",
+    "section": "Fatalities Model",
+    "text": "Fatalities Model\nwe see its mostly noise"
+  },
+  {
+    "objectID": "ed_template.html#no-truck-stop-creation-is-related-to-higher-accidents",
+    "href": "ed_template.html#no-truck-stop-creation-is-related-to-higher-accidents",
+    "title": "Progress Update",
+    "section": "No truck stop creation is related to higher accidents",
+    "text": "No truck stop creation is related to higher accidents\nhigh accidents -&gt; less than 1 truck stop made"
+  },
+  {
+    "objectID": "ed_template.html#injuries-model",
+    "href": "ed_template.html#injuries-model",
+    "title": "Progress Update",
+    "section": "Injuries Model",
+    "text": "Injuries Model\nmostly noise"
+  },
+  {
+    "objectID": "ed_template.html#vehicle-model",
+    "href": "ed_template.html#vehicle-model",
+    "title": "Progress Update",
+    "section": "Vehicle Model",
+    "text": "Vehicle Model\nConditioning on places with a high truck stop creation. high accidents -&gt; less truck stop creation"
+  },
+  {
+    "objectID": "ed_template.html#conclusion-and-next-steps",
+    "href": "ed_template.html#conclusion-and-next-steps",
+    "title": "Progress Update",
+    "section": "Conclusion and Next Steps",
+    "text": "Conclusion and Next Steps\n\nWe found evidence supporting that places with high truck stops creation don’t/negatively responds to accidents. This supports the idea that places do not respond to the need for truck stops.\nWe will start categorizing zoning areas into the 4 types of zoning"
+  },
+  {
+    "objectID": "ed_template.html#categories-map",
+    "href": "ed_template.html#categories-map",
+    "title": "Progress Update",
+    "section": "4 Categories (Map)",
+    "text": "4 Categories (Map)"
+  },
+  {
+    "objectID": "ed_template.html#categories-summary-statistics",
+    "href": "ed_template.html#categories-summary-statistics",
+    "title": "Progress Update",
+    "section": "4 Categories (Summary Statistics)",
+    "text": "4 Categories (Summary Statistics)"
+  },
+  {
+    "objectID": "ed_template.html#categories-properties",
+    "href": "ed_template.html#categories-properties",
+    "title": "Progress Update",
+    "section": "4 Categories (Properties)",
+    "text": "4 Categories (Properties)"
+  },
+  {
+    "objectID": "ed_template.html#categories",
+    "href": "ed_template.html#categories",
+    "title": "Progress Update",
+    "section": "4 Categories",
+    "text": "4 Categories\nPlaces exhibit properties we expect and are Stable and Consistent"
+  },
+  {
+    "objectID": "ed_template.html#data-encoding-work-in-progress",
+    "href": "ed_template.html#data-encoding-work-in-progress",
+    "title": "Progress Update",
+    "section": "Data Encoding (work in progress)",
+    "text": "Data Encoding (work in progress)\nZoning types will be incorporated into event study model"
+  },
+  {
+    "objectID": "ed_template.html#how-to-efficiently-fill-uncategorized-data",
+    "href": "ed_template.html#how-to-efficiently-fill-uncategorized-data",
+    "title": "Progress Update",
+    "section": "How to Efficiently Fill uncategorized data?",
+    "text": "How to Efficiently Fill uncategorized data?\n\nOur current data set is richer than zoning categories data set.\nWhat method is best to categorized uncategorized data?\nHow do we efficiently find nearest neighbor to match neighboring category?"
+  },
+  {
+    "objectID": "ed_template.html#did-model-work-in-progress",
+    "href": "ed_template.html#did-model-work-in-progress",
+    "title": "Progress Update",
+    "section": "DiD Model (work in progress)",
+    "text": "DiD Model (work in progress)\n\\[\nY_{tj} = \\sum_{t=-n}^{n} \\theta_{tj} HR_{tj} + \\sum_{t=-n}^{n} \\phi_{tj} Post_{tj} + \\sum_{t=-n}^{n} \\psi_{tj} (HR_{tj} \\times Post_{tj}) \\\\+ \\gamma_{tj} X_{tj} + \\epsilon_{tj}\n\\]\n\ncategory \\(j\\) , time \\(i\\)\n\\(Y_{tj}\\) —- change in truck parking capacity\n\\(HR_{tj}\\) —- high restriction index\n\\(Post_{tj}\\) —- represents the indicator for the post-accident period"
   },
   {
     "objectID": "ed_template.html#references",

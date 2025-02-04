@@ -4,7 +4,7 @@ subtite: ""
 date: today
 format: 
   revealjs:
-    theme: night
+    theme: serif
     chalkboard: true
 editor: visual
 author:
@@ -25,7 +25,13 @@ bibliography: references.bib
 
 1.  Background
 
-2.  **([Yuanning Liang](https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=3113619 "View other papers by this author"),2021)**
+2.  Paper Recommendation ([Yuanning Liang](https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=3113619 "View other papers by this author"),2021)
+
+3.  Current Results of Event Study Model
+
+4.  Next Steps (4 Zoning Types)
+
+# Background
 
 ## Background
 
@@ -52,32 +58,100 @@ No Truck Parking → Trucks will illegally park → **Accidents Occur** (observe
 ## Event Study Model
 
 $$
-\Delta \text{NumTruckStop}_{tj} = \sum_{i=-n}^{n} \beta_{ij} \text{Accident}_{ij}\cdot \text{Severity}_{ij} + \gamma_{tj} X_{tj} \\ + \epsilon_{tj}
+\Delta \text{NumTruckStop}_{tj} = \sum_{i=-n}^{n} \beta_{ij} \text{Accident}_{ij}\cdot \text{Severity}_{ij} \\ + \gamma_{tj} X_{tj} + \epsilon_{tj}
+$$
+
+year $t$ ,category $j$, time $i$
+
+-   $\Delta\text{NumTruckStop}_{tj}$ —- change in truck stop
+
+-   $\text{Accident}_{i,j}$ –- event dummy indicating the presence of a Accident
+
+-   $\text{Severity}_{ij}$ -– fatalities/injuries/vehicle associated
+
+## Adjusted Event Model
+
+$$
+\Delta \text{NumTruckStop}_{j,t=2006-2016} = \\\sum_{i=-2}^{0} \beta_{j,t+i} \text{Accident}_{j,t+i}\cdot \text{Severity}_{j,t+i} + \gamma_{tj} X_{tj} + \epsilon_{tj}
 $$
 
 -   year $t$ ,category $j$, time $i$
 
 -   $\Delta\text{NumTruckStop}_{tj}$ —- change in truck stop
 
--   $\text{Accident}_{i,j}$ –- event dummy indicating the presence of a Accident
+-   $\text{Accident}_{i,j}$ –- event dummy: presence of a Accident
 
--   $\text{Severity}_{ij}$ -– fatalities associated with the accident
+-   $\text{Severity}_{ij}$ -– fatalities/injuries/vehicle associated
 
-## Adjusted Model for Truck Parking Analysis
+## **([Yuanning Liang](https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=3113619 "View other papers by this author"),2021)**
 
-Our dataset cannot accommodate the initial model because we only observe changes in truck parking during the years 2007, 2008, 2015, and 2016. To address this limitation, we adjust the model as follows:
+-   Useful and highly relevant data description
 
-$$
-\Delta \text{NumTruckStop}_{j,t=2006-2016} = \sum_{i=-2}^{0} \beta_{j,t+i} \text{Accident}_{j,t+i}\cdot \text{Severity}_{j,t+i} + \gamma_{tj} X_{tj} + \epsilon_{tj}
-$$
+# Adjusted Even Study Model Results
 
--   year $t$ ,category $j$, time $i$
+## Fatalities Model
 
--   $\Delta\text{NumTruckStop}_{tj}$ —- change in truck stop
+we see its mostly noise
 
--   $\text{Accident}_{i,j}$ –- event dummy indicating the presence of a Accident
+![](images/12.png)
 
--   $\text{Severity}_{ij}$ -– fatalities associated with the accident
+## No truck stop creation is related to higher accidents
+
+high accidents -\> less than 1 truck stop made
+
+![](images/13-01.png)
+
+## Injuries Model
+
+mostly noise
+
+![](images/injuries.png)
+
+## Vehicle Model
+
+Conditioning on places with a high truck stop creation. high accidents -\> less truck stop creation
+
+![](images/vehicle_accidents.png)
+
+## Conclusion and Next Steps
+
+-   We found evidence supporting that places with high truck stops creation don't/negatively responds to accidents. This supports the idea that places do not respond to the need for truck stops.
+
+-   We will start categorizing zoning areas into the 4 types of zoning
+
+# Next Steps: 4 Categories
+
+## 4 Categories (Map)
+
+![](images/unnamed%20(1)-01.png)
+
+## 4 Categories (Summary Statistics)
+
+![](images/Screenshot%202025-02-03%20165306.png)
+
+## 4 Categories (Properties)
+
+![](images/Screenshot%202025-02-03%20171307.png)
+
+## 4 Categories 
+
+Places exhibit properties we expect and are Stable and Consistent
+
+![](images/Screenshot%202025-02-03%20171830.png){width="653"}
+
+## Data Encoding (work in progress)
+
+Zoning types will be incorporated into event study model
+
+![](images/Screenshot%202025-02-03%20172103.png)
+
+## How to Efficiently Fill uncategorized data?
+
+-   Our current data set is richer than zoning categories data set.
+
+-   What method is best to categorized uncategorized data?
+
+-   How do we efficiently find nearest neighbor to match neighboring category?
 
 ## DiD Model (work in progress)
 
@@ -93,8 +167,6 @@ $$
 
 -   $Post_{tj}$ —- represents the indicator for the post-accident period
 
-## **([Yuanning Liang](https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=3113619 "View other papers by this author"),2021)**
-
-Useful and highly relevant data description
+# End. Thank you for reading
 
 ## References

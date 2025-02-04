@@ -7,11 +7,11 @@
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.43">
 
   <meta name="author" content="William Clinton Co">
-  <meta name="dcterms.date" content="2025-01-27">
+  <meta name="dcterms.date" content="2025-02-03">
   <title>Customisable Edinburgh Quarto Theme – Progress Update</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -324,7 +324,7 @@
     }
   </style>
 </head>
-<body class="quarto-dark">
+<body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
@@ -342,17 +342,24 @@ William Clinton Co
     </div>
 </div>
 
-  <p class="date">2025-01-27</p>
+  <p class="date">2025-02-03</p>
 </section>
-<section>
 <section id="updates" class="title-slide slide level1 center">
 <h1>Updates</h1>
 <ol type="1">
 <li><p>Background</p></li>
-<li><p><strong>(<a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=3113619" title="View other papers by this author">Yuanning Liang</a>,2021)</strong></p></li>
+<li><p>Paper Recommendation (<a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=3113619" title="View other papers by this author">Yuanning Liang</a>,2021)</p></li>
+<li><p>Current Results of Event Study Model</p></li>
+<li><p>Next Steps (4 Zoning Types)</p></li>
 </ol>
 </section>
-<section id="background" class="slide level2">
+
+<section>
+<section id="background" class="title-slide slide level1 center">
+<h1>Background</h1>
+
+</section>
+<section id="background-1" class="slide level2">
 <h2>Background</h2>
 <ul>
 <li><p>90,056 local governments</p></li>
@@ -376,17 +383,102 @@ William Clinton Co
 <section id="event-study-model" class="slide level2">
 <h2>Event Study Model</h2>
 <p><span class="math display">\[
-\Delta \text{NumTruckStop}_{tj} = \sum_{i=-n}^{n} \beta_{ij} \text{Accident}_{ij}\cdot \text{Severity}_{ij} + \gamma_{tj} X_{tj} \\ + \epsilon_{tj}
+\Delta \text{NumTruckStop}_{tj} = \sum_{i=-n}^{n} \beta_{ij} \text{Accident}_{ij}\cdot \text{Severity}_{ij} \\ + \gamma_{tj} X_{tj} + \epsilon_{tj}
+\]</span></p>
+<p>year <span class="math inline">\(t\)</span> ,category <span class="math inline">\(j\)</span>, time <span class="math inline">\(i\)</span></p>
+<ul>
+<li><p><span class="math inline">\(\Delta\text{NumTruckStop}_{tj}\)</span> —- change in truck stop</p></li>
+<li><p><span class="math inline">\(\text{Accident}_{i,j}\)</span> –- event dummy indicating the presence of a Accident</p></li>
+<li><p><span class="math inline">\(\text{Severity}_{ij}\)</span> -– fatalities/injuries/vehicle associated</p></li>
+</ul>
+</section>
+<section id="adjusted-event-model" class="slide level2">
+<h2>Adjusted Event Model</h2>
+<p><span class="math display">\[
+\Delta \text{NumTruckStop}_{j,t=2006-2016} = \\\sum_{i=-2}^{0} \beta_{j,t+i} \text{Accident}_{j,t+i}\cdot \text{Severity}_{j,t+i} + \gamma_{tj} X_{tj} + \epsilon_{tj}
 \]</span></p>
 <ul>
 <li><p>year <span class="math inline">\(t\)</span> ,category <span class="math inline">\(j\)</span>, time <span class="math inline">\(i\)</span></p></li>
 <li><p><span class="math inline">\(\Delta\text{NumTruckStop}_{tj}\)</span> —- change in truck stop</p></li>
-<li><p><span class="math inline">\(\text{Accident}_{i,j}\)</span> –- event dummy indicating the presence of a Accident</p></li>
-<li><p><span class="math inline">\(\text{Severity}_{ij}\)</span> -– fatalities associated with the accident</p></li>
+<li><p><span class="math inline">\(\text{Accident}_{i,j}\)</span> –- event dummy: presence of a Accident</p></li>
+<li><p><span class="math inline">\(\text{Severity}_{ij}\)</span> -– fatalities/injuries/vehicle associated</p></li>
 </ul>
 </section>
-<section id="did-model" class="slide level2">
-<h2>DiD Model</h2>
+<section id="yuanning-liang2021" class="slide level2">
+<h2><strong>(<a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=3113619" title="View other papers by this author">Yuanning Liang</a>,2021)</strong></h2>
+<ul>
+<li>Useful and highly relevant data description</li>
+</ul>
+</section></section>
+<section>
+<section id="adjusted-even-study-model-results" class="title-slide slide level1 center">
+<h1>Adjusted Even Study Model Results</h1>
+
+</section>
+<section id="fatalities-model" class="slide level2">
+<h2>Fatalities Model</h2>
+<p>we see its mostly noise</p>
+
+<img data-src="images/12.png" class="r-stretch"></section>
+<section id="no-truck-stop-creation-is-related-to-higher-accidents" class="slide level2">
+<h2>No truck stop creation is related to higher accidents</h2>
+<p>high accidents -&gt; less than 1 truck stop made</p>
+
+<img data-src="images/13-01.png" class="r-stretch"></section>
+<section id="injuries-model" class="slide level2">
+<h2>Injuries Model</h2>
+<p>mostly noise</p>
+
+<img data-src="images/injuries.png" class="r-stretch"></section>
+<section id="vehicle-model" class="slide level2">
+<h2>Vehicle Model</h2>
+<p>Conditioning on places with a high truck stop creation. high accidents -&gt; less truck stop creation</p>
+
+<img data-src="images/vehicle_accidents.png" class="r-stretch"></section>
+<section id="conclusion-and-next-steps" class="slide level2">
+<h2>Conclusion and Next Steps</h2>
+<ul>
+<li><p>We found evidence supporting that places with high truck stops creation don’t/negatively responds to accidents. This supports the idea that places do not respond to the need for truck stops.</p></li>
+<li><p>We will start categorizing zoning areas into the 4 types of zoning</p></li>
+</ul>
+</section></section>
+<section>
+<section id="next-steps-4-categories" class="title-slide slide level1 center">
+<h1>Next Steps: 4 Categories</h1>
+
+</section>
+<section id="categories-map" class="slide level2">
+<h2>4 Categories (Map)</h2>
+
+<img data-src="images/unnamed (1)-01.png" class="r-stretch"></section>
+<section id="categories-summary-statistics" class="slide level2">
+<h2>4 Categories (Summary Statistics)</h2>
+
+<img data-src="images/Screenshot 2025-02-03 165306.png" class="r-stretch"></section>
+<section id="categories-properties" class="slide level2">
+<h2>4 Categories (Properties)</h2>
+
+<img data-src="images/Screenshot 2025-02-03 171307.png" class="r-stretch"></section>
+<section id="categories" class="slide level2">
+<h2>4 Categories</h2>
+<p>Places exhibit properties we expect and are Stable and Consistent</p>
+
+<img data-src="images/Screenshot 2025-02-03 171830.png" width="653" class="r-stretch"></section>
+<section id="data-encoding-work-in-progress" class="slide level2">
+<h2>Data Encoding (work in progress)</h2>
+<p>Zoning types will be incorporated into event study model</p>
+
+<img data-src="images/Screenshot 2025-02-03 172103.png" class="r-stretch"></section>
+<section id="how-to-efficiently-fill-uncategorized-data" class="slide level2">
+<h2>How to Efficiently Fill uncategorized data?</h2>
+<ul>
+<li><p>Our current data set is richer than zoning categories data set.</p></li>
+<li><p>What method is best to categorized uncategorized data?</p></li>
+<li><p>How do we efficiently find nearest neighbor to match neighboring category?</p></li>
+</ul>
+</section>
+<section id="did-model-work-in-progress" class="slide level2">
+<h2>DiD Model (work in progress)</h2>
 <p><span class="math display">\[
 Y_{tj} = \sum_{t=-n}^{n} \theta_{tj} HR_{tj} + \sum_{t=-n}^{n} \phi_{tj} Post_{tj} + \sum_{t=-n}^{n} \psi_{tj} (HR_{tj} \times Post_{tj}) \\+ \gamma_{tj} X_{tj} + \epsilon_{tj}
 \]</span></p>
@@ -396,10 +488,11 @@ Y_{tj} = \sum_{t=-n}^{n} \theta_{tj} HR_{tj} + \sum_{t=-n}^{n} \phi_{tj} Post_{t
 <li><p><span class="math inline">\(HR_{tj}\)</span> —- high restriction index</p></li>
 <li><p><span class="math inline">\(Post_{tj}\)</span> —- represents the indicator for the post-accident period</p></li>
 </ul>
-</section>
-<section id="yuanning-liang2021" class="slide level2">
-<h2><strong>(<a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=3113619" title="View other papers by this author">Yuanning Liang</a>,2021)</strong></h2>
-<p>Useful and highly relevant data description</p>
+</section></section>
+<section>
+<section id="end.-thank-you-for-reading" class="title-slide slide level1 center">
+<h1>End. Thank you for reading</h1>
+
 </section>
 <section id="references" class="slide level2">
 <h2>References</h2>
