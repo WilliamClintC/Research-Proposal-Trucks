@@ -1,0 +1,74 @@
+Metropolitan Area or Part,Region,Family
+Atlanta,S,Middle America
+Austin,S,Austin
+Boston (MA),NE,Exclusion with Restriction
+Boston (NH),NE,Extreme Exclusion
+Buffalo,NE,Middle America
+Charlotte (NC),S,Middle America
+Charlotte (SC),S,*
+Chicago (IL),MW,Middle America
+Chicago (IN),MW,Middle America
+Chicago (WI),MW,Middle America
+Cincinnati (IN),MW,*
+Cincinnati (KY),S,Middle America
+Cincinnati (OH),MW,Middle America
+Cleveland,MW,Middle America
+Columbus,MW,Middle America
+Dallas,S,Dallas-San Antonio
+Denver,W,Growth Control
+Detroit,MW,Middle America
+Grand Rapids,MW,Middle America
+Greensboro,S,Middle America
+Hartford,NE,Middle America
+Houston,S,Houston
+Indianapolis,MW,Middle America
+Jacksonville,S,Growth Management
+Kansas City (KS),MW,Middle America
+Kansas City (MO),MW,Middle America
+Las Vegas (AZ),W,Containment
+Las Vegas (NV),W,Containment-Lite
+Los Angeles,W,Growth Management
+Louisville (IN),MW,Middle America
+Louisville (KY),S,Middle America
+Memphis (AR),S,*
+Memphis (MS),S,*
+Memphis (TN),S,Containment
+Miami,S,Growth Management
+Milwaukee,MW,Middle America
+Minneapolis (MN),MW,Middle America
+Minneapolis (WI),MW,Basic Exclusion
+Nashville,S,Containment
+New Haven,NE,Middle America
+New Orleans,S,Containment-Lite
+New York (NJ),NE,Basic Exclusion
+New York (NY),NE,High Density
+New York (PA),NE,*
+Norfolk (NC),S,*
+Norfolk (VA),S,Middle America
+Oklahoma City,S,Middle America
+Orlando,S,Growth Management
+Philadelphia (DE),S,*
+Philadelphia (MD),S,*
+Philadelphia (PA),NE,Middle America
+Philadelphia (NJ),NE,Basic Exclusion
+Phoenix,W,Growth Management
+Pittsburgh,NE,Middle America
+Portland (OR),W,Containment
+Portland (WA),W,*
+Raleigh,S,Middle America
+Richmond,S,Middle America
+Rochester,NE,Middle America
+Sacramento,W,Growth Management
+Salt Lake City,W,High Density
+San Antonio,S,Dallas-San Antonio
+San Diego,W,Growth Management
+San Francisco,W,Growth Control
+Seattle,W,Containment
+St. Louis (IL),MW,Middle America
+St. Louis (MO),MW,Middle America
+Tampa,S,Growth Management
+Washington (DC),S,*
+Washington (MD),S,Containment-Lite
+Washington (VA),S,Middle America
+Washington (WV),S,*
+West Palm Beach,S,Growth Management

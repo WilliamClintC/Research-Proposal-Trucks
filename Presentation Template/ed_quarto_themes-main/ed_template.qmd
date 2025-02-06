@@ -133,7 +133,7 @@ Conditioning on places with a high truck stop creation. high accidents -\> less 
 
 ![](images/Screenshot%202025-02-03%20171307.png)
 
-## 4 Categories 
+## 4 Categories
 
 Places exhibit properties we expect and are Stable and Consistent
 
