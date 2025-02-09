@@ -1,0 +1,367 @@
+REPORT_DATE,FATALITIES,COUNTY,change_2006_2016,indicator_2002_2006,indicator_1999_2001,indicator_1993_1998,name,Longitude,Latitude,Region,Family,Color,Nearest Neighbor,Region_color,simple_family
+2005-06-06,1,37185,-1.0,1,0,0,Warren,-78.10671227,36.39674307,S,Middle America,orange,Raleigh,#1f77b4,Traditional
+2005-05-14,2,35057,-1.0,1,0,0,Torrance,-105.8505392,34.64043207,W,Growth Control,green,Denver,#d62728,Reform
+2005-12-15,1,37159,0.0,1,0,0,Rowan,-80.52501519,35.64030608,S,Middle America,orange,Charlotte (NC),#1f77b4,Traditional
+2005-12-09,1,32003,-3.0,1,0,0,Clark,-115.0146087,36.21511541,W,Containment,green,Las Vegas (AZ),#d62728,Reform
+2005-07-28,1,34003,-1.0,1,0,0,Bergen,-74.07441147,40.96008351,NE,High Density,orange,New York (NY),#f7b6d2,Traditional
+2005-12-21,1,34015,1.0,1,0,0,Gloucester,-75.14071747,39.71694144,NE,Middle America,orange,Philadelphia (PA),#f7b6d2,Traditional
+2005-10-05,1,4019,0.0,1,0,0,Pima,-111.7896381,32.09723099,W,Growth Management,green,Phoenix,#d62728,Reform
+2005-12-06,1,21071,0.0,1,0,0,Floyd,-82.74545562,37.55729538,S,Middle America,orange,Washington (WV),#1f77b4,Traditional
+2005-11-02,1,12083,1.0,1,0,0,Marion,-82.05662463,29.21028272,S,Growth Management,green,Orlando,#1f77b4,Reform
+2005-09-30,1,4013,4.0,1,0,0,Maricopa,-112.4908888,33.34875974,W,Growth Management,green,Phoenix,#d62728,Reform
+2005-09-30,1,4013,4.0,1,0,0,Maricopa,-112.4908888,33.34875974,W,Growth Management,green,Phoenix,#d62728,Reform
+2005-12-15,1,31055,0.0,1,0,0,Douglas,-96.15494428,41.29533784,MW,Middle America,orange,Kansas City (KS),#9edae5,Traditional
+2005-09-17,1,6047,0.0,1,0,0,Merced,-120.7175058,37.19189197,W,Growth Management,green,Sacramento,#d62728,Reform
+2005-09-26,1,37021,-1.0,1,0,0,Buncombe,-82.53035424,35.6112775,S,Middle America,orange,Charlotte (NC),#1f77b4,Traditional
+2005-05-13,1,39043,2.0,1,0,0,Erie,-82.63799692,41.37421463,MW,Middle America,orange,Cleveland,#9edae5,Traditional
+2005-07-13,1,26163,-5.0,1,0,0,Wayne,-83.28221321,42.28172038,MW,Middle America,orange,Detroit,#9edae5,Traditional
+2005-10-07,1,24013,0.0,1,0,0,Carroll,-77.02256972,39.56320174,S,Containment-Lite,green,Philadelphia (MD),#1f77b4,Reform
+2005-10-12,1,48365,1.0,1,0,0,Panola,-94.30558387,32.16239924,S,Dallas-San Antonio,red,Dallas,#1f77b4,Wild Texas
+2005-07-14,1,48245,0.0,1,0,0,Jefferson,-94.16307113,29.88337578,S,Houston,red,Houston,#1f77b4,Wild Texas
+2005-10-16,5,55035,2.0,1,0,0,Eau Claire,-91.28609183,44.726614,MW,Middle America,orange,Minneapolis (MN),#9edae5,Traditional
+2005-07-29,4,32007,1.0,1,0,0,Elko,-115.3578839,41.14601583,W,High Density,orange,Salt Lake City,#d62728,Traditional
+2005-10-23,1,29510,0.0,1,0,0,St. Louis,-90.24484413,38.63654694,MW,Middle America,orange,St. Louis (MO),#9edae5,Traditional
+2004-06-30,1,9011,1.0,1,0,0,New London,-72.10232387,41.48708483,NE,Middle America,orange,Hartford,#f7b6d2,Traditional
+2000-12-11,1,20061,-1.0,0,1,0,Geary,-96.75251853,39.00227253,MW,Middle America,orange,Kansas City (KS),#9edae5,Traditional
+2001-04-12,1,20059,0.0,0,1,0,Franklin,-95.28621552,38.56442768,MW,Middle America,orange,Kansas City (KS),#9edae5,Traditional
+2005-04-15,2,12127,-1.0,1,0,0,Volusia,-81.18197434,29.05852431,S,Growth Management,green,Orlando,#1f77b4,Reform
+2005-06-03,2,34023,0.0,1,0,0,Middlesex,-74.41108832,40.43949114,NE,High Density,orange,New York (NY),#f7b6d2,Traditional
+2005-10-14,2,47093,-1.0,1,0,0,Knox,-83.93759106,35.99332876,S,Middle America,orange,Atlanta,#1f77b4,Traditional
+2005-09-21,2,5035,-1.0,1,0,0,Crittenden,-90.30924635,35.20762172,S,Containment,green,Memphis (AR),#1f77b4,Reform
+2005-09-01,2,53037,-3.0,1,0,0,Kittitas,-120.679712,47.12448572,W,Containment,green,Seattle,#d62728,Reform
+2005-07-28,1,4013,4.0,1,0,0,Maricopa,-112.4908888,33.34875974,W,Growth Management,green,Phoenix,#d62728,Reform
+2005-08-15,1,19103,0.0,1,0,0,Johnson,-91.58679259,41.67150873,MW,Middle America,orange,St. Louis (MO),#9edae5,Traditional
+2005-02-01,1,37019,0.0,1,0,0,Brunswick,-78.23791614,34.07037851,S,Middle America,orange,Raleigh,#1f77b4,Traditional
+2005-07-16,1,6071,-5.0,1,0,0,San Bernardino,-116.1783784,34.84157876,W,Containment,green,Las Vegas (AZ),#d62728,Reform
+2005-08-29,1,5071,-1.0,1,0,0,Johnson,-93.46000035,35.57001766,S,Containment,green,Memphis (AR),#1f77b4,Reform
+2005-08-23,1,25013,2.0,1,0,0,Hampden,-72.63119338,42.13509064,NE,Middle America,orange,Hartford,#f7b6d2,Traditional
+2005-08-01,1,24031,1.0,1,0,0,Montgomery,-77.20428439,39.13634899,S,Containment-Lite,green,Washington (DC),#1f77b4,Reform
+2005-07-08,1,47043,1.0,1,0,0,Dickson,-87.35658415,36.14932156,S,Containment,green,Nashville,#1f77b4,Reform
+2005-07-26,1,6037,-6.0,1,0,0,Los Angeles,-118.224703,34.32134579,W,Growth Management,green,Los Angeles,#d62728,Reform
+2005-07-16,1,17091,3.0,1,0,0,Kankakee,-87.86189197,41.13747976,MW,Middle America,orange,Chicago (IN),#9edae5,Traditional
+2005-06-22,1,6013,-1.0,1,0,0,Contra Costa,-121.9281273,37.91933375,W,Growth Control,green,San Francisco,#d62728,Reform
+2005-01-29,1,24005,-1.0,1,0,0,Baltimore,-76.63603021,39.4596552,S,Containment-Lite,green,Philadelphia (MD),#1f77b4,Reform
+2004-09-01,1,34001,0.0,1,0,0,Atlantic,-74.66040811,39.47790545,NE,Middle America,orange,Philadelphia (PA),#f7b6d2,Traditional
+2005-05-13,1,39043,2.0,1,0,0,Erie,-82.63799692,41.37421463,MW,Middle America,orange,Cleveland,#9edae5,Traditional
+2005-06-08,2,6089,1.0,1,0,0,Shasta,-122.0409443,40.76391106,W,Growth Management,green,Sacramento,#d62728,Reform
+2005-04-16,1,6101,0.0,1,0,0,Sutter,-121.6946189,39.03464654,W,Growth Management,green,Sacramento,#d62728,Reform
+2004-12-27,2,48473,-1.0,1,0,0,Waller,-95.98754906,30.01059467,S,Houston,red,Houston,#1f77b4,Wild Texas
+2004-09-03,1,6019,1.0,1,0,0,Fresno,-119.6506833,36.75807672,W,Growth Management,green,Sacramento,#d62728,Reform
+2004-09-06,3,36087,2.0,1,0,0,Rockland,-74.02389861,41.15225744,NE,High Density,orange,New York (NY),#f7b6d2,Traditional
+2004-10-24,1,4017,0.0,1,0,0,Navajo,-110.3213121,35.39960537,W,Growth Management,green,Phoenix,#d62728,Reform
+2005-03-26,2,29077,-3.0,1,0,0,Greene,-93.34188307,37.25758647,MW,Middle America,orange,Kansas City (MO),#9edae5,Traditional
+2005-03-05,1,32003,-3.0,1,0,0,Clark,-115.0146087,36.21511541,W,Containment,green,Las Vegas (AZ),#d62728,Reform
+2005-02-13,1,30093,0.0,1,0,0,Silver Bow,-112.6566556,45.90234114,W,High Density,orange,Salt Lake City,#d62728,Traditional
+2004-09-12,1,24021,0.0,1,0,0,Frederick,-77.3978074,39.4720692,S,Containment-Lite,green,Washington (MD),#1f77b4,Reform
+2005-01-17,1,48113,1.0,1,0,0,Dallas,-96.77788947,32.76665041,S,Dallas-San Antonio,red,Dallas,#1f77b4,Wild Texas
+2005-01-29,1,29021,-1.0,1,0,0,Buchanan,-94.80618288,39.65989328,MW,Middle America,orange,Kansas City (KS),#9edae5,Traditional
+2004-10-23,1,55079,0.0,1,0,0,Milwaukee,-87.96698811,43.00700658,MW,Middle America,orange,Milwaukee,#9edae5,Traditional
+2004-10-12,1,24027,-1.0,1,0,0,Howard,-76.93099926,39.25078653,S,Containment-Lite,green,Philadelphia (MD),#1f77b4,Reform
+2004-11-27,1,40135,0.0,1,0,0,Sequoyah,-94.75507825,35.49549888,S,Middle America,orange,Oklahoma City,#1f77b4,Traditional
+2004-05-18,1,24005,-1.0,1,0,0,Baltimore,-76.63603021,39.4596552,S,Containment-Lite,green,Philadelphia (MD),#1f77b4,Reform
+2004-09-21,1,40109,2.0,1,0,0,Oklahoma,-97.4075036,35.55141319,S,Middle America,orange,Oklahoma City,#1f77b4,Traditional
+2004-10-27,1,40149,0.0,1,0,0,Washita,-98.99166621,35.29031759,S,Middle America,orange,Oklahoma City,#1f77b4,Traditional
+2004-09-24,1,20021,0.0,1,0,0,Cherokee,-94.84624572,37.16921917,MW,Middle America,orange,Kansas City (MO),#9edae5,Traditional
+2004-09-13,1,36099,0.0,1,0,0,Seneca,-76.82362358,42.78068586,NE,Middle America,orange,Rochester,#f7b6d2,Traditional
+2004-10-15,2,45075,0.0,1,0,0,Orangeburg,-80.80086358,33.43921301,S,Middle America,orange,Charlotte (NC),#1f77b4,Traditional
+2004-01-27,1,24015,1.0,1,0,0,Cecil,-75.94133759,39.57067423,NE,Middle America,orange,Philadelphia (PA),#f7b6d2,Traditional
+2003-06-13,1,25027,1.0,1,0,0,Worcester,-71.90780992,42.35111931,NE,Extreme Exclusion,blue,Boston (NH),#f7b6d2,Exclusion
+2003-09-15,2,25009,0.0,1,0,0,Essex,-70.9515844,42.67174524,NE,Exclusion with Restriction,blue,Boston (MA),#f7b6d2,Exclusion
+2004-08-27,1,6029,1.0,1,0,0,Kern,-118.72959,35.34292819,W,Growth Management,green,Los Angeles,#d62728,Reform
+2004-07-15,1,6037,-6.0,1,0,0,Los Angeles,-118.224703,34.32134579,W,Growth Management,green,Los Angeles,#d62728,Reform
+2004-08-05,1,48423,0.0,1,0,0,Smith,-95.26908279,32.37521162,S,Dallas-San Antonio,red,Dallas,#1f77b4,Wild Texas
+2004-06-29,5,20115,0.0,1,0,0,Marion,-97.09712874,38.35899873,MW,Middle America,orange,Kansas City (KS),#9edae5,Traditional
+2004-06-29,5,20115,0.0,1,0,0,Marion,-97.09712874,38.35899873,MW,Middle America,orange,Kansas City (KS),#9edae5,Traditional
+2003-07-07,1,37071,0.0,1,0,0,Gaston,-81.18014844,35.29432138,S,Middle America,orange,Charlotte (NC),#1f77b4,Traditional
+2004-01-25,2,37119,0.0,1,0,0,Mecklenburg,-80.83268027,35.24675454,S,Middle America,orange,Charlotte (NC),#1f77b4,Traditional
+2004-08-03,1,19045,1.0,1,0,0,Clinton,-90.53221937,41.89809865,MW,Middle America,orange,Milwaukee,#9edae5,Traditional
+2003-12-09,1,20053,0.0,1,0,0,Ellsworth,-98.20501891,38.6967292,S,Middle America,orange,Oklahoma City,#1f77b4,Traditional
+2004-05-27,1,45051,5.0,1,0,0,Horry,-78.99657939,33.92139357,S,Middle America,orange,Raleigh,#1f77b4,Traditional
+2003-09-23,2,48037,-1.0,1,0,0,Bowie,-94.42378182,33.44693757,S,Dallas-San Antonio,red,Dallas,#1f77b4,Wild Texas
+2004-05-29,1,20063,0.0,1,0,0,Gove,-100.4829436,38.91587321,S,Middle America,orange,Oklahoma City,#1f77b4,Traditional
+2004-06-08,1,6065,2.0,1,0,0,Riverside,-115.9939021,33.74329781,W,Growth Management,green,San Diego,#d62728,Reform
+2004-06-04,1,17031,5.0,1,0,0,Cook,-87.81698762,41.84005007,MW,Middle America,orange,Chicago (IL),#9edae5,Traditional
+2004-05-27,1,30097,0.0,1,0,0,Sweet Grass,-109.939664,45.813756,W,High Density,orange,Salt Lake City,#d62728,Traditional
+2003-07-17,1,36081,-2.0,1,0,0,Queens,-73.81734511,40.70829859,NE,High Density,orange,New York (NY),#f7b6d2,Traditional
+2004-01-26,1,26151,0.0,1,0,0,Sanilac,-82.82063341,43.4237632,MW,Middle America,orange,Detroit,#9edae5,Traditional
+2003-07-17,1,36081,-2.0,1,0,0,Queens,-73.81734511,40.70829859,NE,High Density,orange,New York (NY),#f7b6d2,Traditional
+2003-07-17,1,36081,-2.0,1,0,0,Queens,-73.81734511,40.70829859,NE,High Density,orange,New York (NY),#f7b6d2,Traditional
+2003-08-27,1,36111,1.0,1,0,0,Ulster,-74.25878826,41.888126,NE,High Density,orange,New York (NY),#f7b6d2,Traditional
+2003-12-30,1,6027,0.0,1,0,0,Inyo,-117.4113187,36.51173415,W,Containment,green,Las Vegas (AZ),#d62728,Reform
+2004-03-20,2,48245,0.0,1,0,0,Jefferson,-94.16307113,29.88337578,S,Houston,red,Houston,#1f77b4,Wild Texas
+2004-03-30,1,21099,1.0,1,0,0,Hart,-85.88446619,37.29970852,MW,Middle America,orange,Louisville (IN),#9edae5,Traditional
+2004-01-26,1,26151,0.0,1,0,0,Sanilac,-82.82063341,43.4237632,MW,Middle America,orange,Detroit,#9edae5,Traditional
+2004-03-13,1,45041,2.0,1,0,0,Florence,-79.70224581,34.02447241,S,Middle America,orange,Charlotte (NC),#1f77b4,Traditional
+2003-10-28,1,16039,-1.0,1,0,0,Elmore,-115.4691486,43.35417471,W,High Density,orange,Salt Lake City,#d62728,Traditional
+2003-10-04,1,16001,0.0,1,0,0,Ada,-116.241035,43.45084054,W,High Density,orange,Salt Lake City,#d62728,Traditional
+2004-01-15,1,21151,-1.0,1,0,0,Madison,-84.27808893,37.71989076,MW,Middle America,orange,Cincinnati (OH),#9edae5,Traditional
+2000-09-11,1,6037,-6.0,0,1,0,Los Angeles,-118.224703,34.32134579,W,Growth Management,green,Los Angeles,#d62728,Reform
+2004-01-08,1,48407,-1.0,1,0,0,San Jacinto,-95.1671992,30.57936685,S,Houston,red,Houston,#1f77b4,Wild Texas
+2003-06-11,1,26159,0.0,1,0,0,Van Buren,-86.01839482,42.25166438,MW,Middle America,orange,Grand Rapids,#9edae5,Traditional
+2003-10-24,1,34027,-2.0,1,0,0,Morris,-74.54440839,40.86163004,NE,High Density,orange,New York (NY),#f7b6d2,Traditional
+2003-12-21,1,6023,-1.0,1,0,0,Humboldt,-123.8755258,40.69940115,W,Growth Management,green,Sacramento,#d62728,Reform
+2003-10-01,1,26087,2.0,1,0,0,Lapeer,-83.22153148,43.09052506,MW,Middle America,orange,Detroit,#9edae5,Traditional
+2003-12-17,1,17201,-1.0,1,0,0,Winnebago,-89.16084223,42.33630888,MW,Middle America,orange,Milwaukee,#9edae5,Traditional
+2003-08-14,1,34019,-2.0,1,0,0,Hunterdon,-74.91261058,40.56697742,NE,Middle America,orange,Philadelphia (PA),#f7b6d2,Traditional
+2003-11-01,1,24005,-1.0,1,0,0,Baltimore,-76.63603021,39.4596552,S,Containment-Lite,green,Philadelphia (MD),#1f77b4,Reform
+2003-11-08,2,4025,0.0,1,0,0,Yavapai,-112.5538467,34.59969928,W,Growth Management,green,Phoenix,#d62728,Reform
+2003-12-21,1,56037,-1.0,1,0,0,Sweetwater,-108.8793882,41.6597625,W,High Density,orange,Salt Lake City,#d62728,Traditional
+2003-12-02,1,29099,1.0,1,0,0,Jefferson,-90.53780688,38.26079127,MW,Middle America,orange,St. Louis (MO),#9edae5,Traditional
+2002-07-22,2,34023,0.0,1,0,0,Middlesex,-74.41108832,40.43949114,NE,High Density,orange,New York (NY),#f7b6d2,Traditional
+2003-10-24,1,24033,-3.0,1,0,0,Prince George's,-76.84739072,38.8299677,S,Containment-Lite,green,Washington (DC),#1f77b4,Reform
+2003-10-02,2,6037,-6.0,1,0,0,Los Angeles,-118.224703,34.32134579,W,Growth Management,green,Los Angeles,#d62728,Reform
+2003-08-31,1,24033,-3.0,1,0,0,Prince George's,-76.84739072,38.8299677,S,Containment-Lite,green,Washington (DC),#1f77b4,Reform
+2002-08-30,1,39043,2.0,1,0,0,Erie,-82.63799692,41.37421463,MW,Middle America,orange,Cleveland,#9edae5,Traditional
+2002-07-10,2,35023,0.0,1,0,0,Hidalgo,-108.7148057,31.91398466,W,Growth Management,green,Phoenix,#d62728,Reform
+2002-07-10,2,35023,0.0,1,0,0,Hidalgo,-108.7148057,31.91398466,W,Growth Management,green,Phoenix,#d62728,Reform
+2002-05-19,1,19035,1.0,1,0,0,Cherokee,-95.62389402,42.73538914,MW,Middle America,orange,Minneapolis (MN),#9edae5,Traditional
+2003-01-04,1,9009,-1.0,1,0,0,New Haven,-72.93235204,41.41072833,NE,Middle America,orange,New Haven,#f7b6d2,Traditional
+2003-03-02,1,23019,0.0,1,0,0,Penobscot,-68.64952115,45.40038149,NE,Exclusion with Restriction,blue,Boston (MA),#f7b6d2,Exclusion
+2003-08-19,2,23011,-1.0,1,0,0,Kennebec,-69.76757384,44.40901704,NE,Extreme Exclusion,blue,Boston (NH),#f7b6d2,Exclusion
+2002-06-25,1,25017,0.0,1,0,0,Middlesex,-71.39262102,42.48584344,NE,Exclusion with Restriction,blue,Boston (MA),#f7b6d2,Exclusion
+2003-07-25,1,6031,0.0,1,0,0,Kings,-119.8151995,36.07520008,W,Growth Management,green,Los Angeles,#d62728,Reform
+2003-07-30,1,41061,-1.0,1,0,0,Union,-118.0093556,45.31039084,W,Containment,green,Portland (WA),#d62728,Reform
+2003-01-31,1,34013,-1.0,1,0,0,Essex,-74.24718209,40.78746195,NE,High Density,orange,New York (NY),#f7b6d2,Traditional
+2001-10-26,1,18071,-1.0,0,1,0,Jackson,-86.03756074,38.90634215,MW,Middle America,orange,Cincinnati (IN),#9edae5,Traditional
+2001-02-22,1,39139,1.0,0,1,0,Richland,-82.53676639,40.77482478,MW,Middle America,orange,Columbus,#9edae5,Traditional
+2003-05-08,1,6047,0.0,1,0,0,Merced,-120.7175058,37.19189197,W,Growth Management,green,Sacramento,#d62728,Reform
+2002-11-17,1,35015,-1.0,1,0,0,Eddy,-104.3041733,32.47155056,S,Dallas-San Antonio,red,San Antonio,#1f77b4,Wild Texas
+2003-01-28,1,39171,-1.0,1,0,0,Williams,-84.58816167,41.56027968,MW,Middle America,orange,Detroit,#9edae5,Traditional
+2003-06-14,1,17031,5.0,1,0,0,Cook,-87.81698762,41.84005007,MW,Middle America,orange,Chicago (IL),#9edae5,Traditional
+2001-03-09,1,6037,-6.0,0,1,0,Los Angeles,-118.224703,34.32134579,W,Growth Management,green,Los Angeles,#d62728,Reform
+2001-05-24,1,6113,0.0,0,1,0,Yolo,-121.9015118,38.68648941,W,Growth Management,green,Sacramento,#d62728,Reform
+2003-04-16,1,24043,1.0,1,0,0,Washington,-77.81329014,39.60413752,S,Containment-Lite,green,Washington (MD),#1f77b4,Reform
+2002-03-28,1,25027,1.0,1,0,0,Worcester,-71.90780992,42.35111931,NE,Extreme Exclusion,blue,Boston (NH),#f7b6d2,Exclusion
+2002-07-01,1,25017,0.0,1,0,0,Middlesex,-71.39262102,42.48584344,NE,Exclusion with Restriction,blue,Boston (MA),#f7b6d2,Exclusion
+2003-02-07,1,24033,-3.0,1,0,0,Prince George's,-76.84739072,38.8299677,S,Containment-Lite,green,Washington (DC),#1f77b4,Reform
+2002-12-04,1,12127,-1.0,1,0,0,Volusia,-81.18197434,29.05852431,S,Growth Management,green,Orlando,#1f77b4,Reform
+2002-11-12,1,4003,1.0,1,0,0,Cochise,-109.7510129,31.87959362,W,Growth Management,green,Phoenix,#d62728,Reform
+2003-03-10,1,23017,0.0,1,0,0,Oxford,-70.75611419,44.49924446,NE,Extreme Exclusion,blue,Boston (NH),#f7b6d2,Exclusion
+2003-02-07,1,19095,0.0,1,0,0,Iowa,-92.06369553,41.68621637,MW,Middle America,orange,Minneapolis (MN),#9edae5,Traditional
+2003-03-03,1,23027,1.0,1,0,0,Waldo,-69.14427892,44.50136648,NE,Exclusion with Restriction,blue,Boston (MA),#f7b6d2,Exclusion
+2001-06-20,1,12111,-1.0,0,1,0,St. Lucie,-80.47111892,27.377528,S,Growth Management,green,West Palm Beach,#1f77b4,Reform
+2002-12-10,1,39143,1.0,1,0,0,Sandusky,-83.14419942,41.35730372,MW,Middle America,orange,Detroit,#9edae5,Traditional
+2002-10-05,1,24005,-1.0,1,0,0,Baltimore,-76.63603021,39.4596552,S,Containment-Lite,green,Philadelphia (MD),#1f77b4,Reform
+2002-10-25,1,24043,1.0,1,0,0,Washington,-77.81329014,39.60413752,S,Containment-Lite,green,Washington (MD),#1f77b4,Reform
+2002-10-30,1,39089,-1.0,1,0,0,Licking,-82.48290477,40.09170112,MW,Middle America,orange,Columbus,#9edae5,Traditional
+2002-10-21,1,39165,0.0,1,0,0,Warren,-84.16728624,39.42735056,MW,Middle America,orange,Cincinnati (OH),#9edae5,Traditional
+2002-02-14,1,16047,1.0,1,0,0,Gooding,-114.8116615,42.97094353,W,High Density,orange,Salt Lake City,#d62728,Traditional
+2002-02-23,1,6099,-1.0,1,0,0,Stanislaus,-120.9979524,37.55851635,W,Growth Management,green,Sacramento,#d62728,Reform
+2002-02-05,3,6019,1.0,1,0,0,Fresno,-119.6506833,36.75807672,W,Growth Management,green,Sacramento,#d62728,Reform
+2001-12-24,1,36081,-2.0,0,1,0,Queens,-73.81734511,40.70829859,NE,High Density,orange,New York (NY),#f7b6d2,Traditional
+2002-10-07,1,29047,-1.0,1,0,0,Clay,-94.42122576,39.31045251,MW,Middle America,orange,Kansas City (MO),#9edae5,Traditional
+2001-10-20,1,34023,0.0,0,1,0,Middlesex,-74.41108832,40.43949114,NE,High Density,orange,New York (NY),#f7b6d2,Traditional
+2002-11-05,1,27147,-2.0,1,0,0,Steele,-93.22627088,44.02240351,MW,Middle America,orange,Minneapolis (MN),#9edae5,Traditional
+2002-08-29,2,36051,0.0,1,0,0,Livingston,-77.77517835,42.72855751,NE,Middle America,orange,Rochester,#f7b6d2,Traditional
+2002-08-08,1,13185,0.0,1,0,0,Lowndes,-83.26738819,30.83391096,S,Growth Management,green,Jacksonville,#1f77b4,Reform
+2002-05-18,1,4013,4.0,1,0,0,Maricopa,-112.4908888,33.34875974,W,Growth Management,green,Phoenix,#d62728,Reform
+1994-01-13,1,44003,0.0,0,0,1,Kent,-71.59305645,41.6720081,NE,Exclusion with Restriction,blue,Boston (MA),#f7b6d2,Exclusion
+1995-06-30,2,44007,3.0,0,0,1,Providence,-71.58004041,41.8721229,NE,Exclusion with Restriction,blue,Boston (MA),#f7b6d2,Exclusion
+1999-10-30,1,42049,-3.0,0,1,0,Erie,-80.03257439,41.9921752,NE,Middle America,orange,Buffalo,#f7b6d2,Traditional
+1998-08-11,1,42011,1.0,0,0,1,Berks,-75.92604322,40.41644424,NE,Middle America,orange,Philadelphia (PA),#f7b6d2,Traditional
+1998-06-20,7,42061,0.0,0,0,1,Huntingdon,-77.98140696,40.41688617,S,Containment-Lite,green,Washington (MD),#1f77b4,Reform
+1997-01-22,1,42025,-1.0,0,0,1,Carbon,-75.70851105,40.91846484,NE,Middle America,orange,Philadelphia (PA),#f7b6d2,Traditional
+1997-01-13,1,42125,-1.0,0,0,1,Washington,-80.24855447,40.18935898,NE,Middle America,orange,Pittsburgh,#f7b6d2,Traditional
+2000-11-10,1,42009,0.0,0,1,0,Bedford,-78.49051194,40.00670558,S,Containment-Lite,green,Washington (MD),#1f77b4,Reform
+2000-07-03,1,42075,-1.0,0,1,0,Lebanon,-76.45759104,40.36716938,NE,Containment-Lite,green,New York (PA),#f7b6d2,Reform
+2000-01-29,1,42101,0.0,0,1,0,Philadelphia,-75.13324284,40.00806441,NE,Middle America,orange,Philadelphia (PA),#f7b6d2,Traditional
+2001-05-21,1,36103,0.0,0,1,0,Suffolk,-72.84423227,40.87024178,NE,Middle America,orange,New Haven,#f7b6d2,Traditional
+1995-03-22,1,41067,0.0,0,0,1,Washington,-123.0985728,45.55989124,W,Containment,green,Portland (WA),#d62728,Reform
+1999-12-09,1,40089,-1.0,0,1,0,McCurtain,-94.77145458,34.1162239,S,Dallas-San Antonio,red,Dallas,#1f77b4,Wild Texas
+1999-11-23,2,40087,0.0,0,1,0,McClain,-97.44298086,35.00888538,S,Middle America,orange,Oklahoma City,#1f77b4,Traditional
+1999-10-05,3,40133,-1.0,0,1,0,Seminole,-96.61546183,35.1672074,S,Middle America,orange,Oklahoma City,#1f77b4,Traditional
+1999-05-19,1,40131,-3.0,0,1,0,Rogers,-95.60476511,36.37196654,S,Middle America,orange,Oklahoma City,#1f77b4,Traditional
+1999-03-14,1,40039,0.0,0,1,0,Custer,-99.0014123,35.63856198,S,Middle America,orange,Oklahoma City,#1f77b4,Traditional
+1997-11-03,1,39003,0.0,0,0,1,Allen,-84.10584177,40.77151716,MW,Middle America,orange,Columbus,#9edae5,Traditional
+1997-05-27,1,39069,1.0,0,0,1,Henry,-84.06830637,41.3339642,MW,Middle America,orange,Detroit,#9edae5,Traditional
+1995-08-28,1,39005,1.0,0,0,1,Ashland,-82.27061922,40.84592901,MW,Middle America,orange,Cleveland,#9edae5,Traditional
+1994-12-17,2,39011,0.0,0,0,1,Auglaize,-84.22168058,40.56085701,MW,Middle America,orange,Columbus,#9edae5,Traditional
+1999-05-05,1,36037,-4.0,0,1,0,Genesee,-78.19407819,43.00056703,NE,Middle America,orange,Rochester,#f7b6d2,Traditional
+1997-04-04,1,36105,-2.0,0,0,1,Sullivan,-74.7681497,41.71624399,NE,High Density,orange,New York (NY),#f7b6d2,Traditional
+1997-10-19,1,36001,0.0,0,0,1,Albany,-73.97341306,42.59987237,NE,Middle America,orange,Hartford,#f7b6d2,Traditional
+1997-03-06,1,36089,-2.0,0,0,1,St. Lawrence,-75.06907698,44.49647794,NE,Basic Exclusion,blue,Philadelphia (NJ),#f7b6d2,Exclusion
+1997-09-21,1,36043,1.0,0,0,1,Herkimer,-74.96255405,43.41936241,NE,Basic Exclusion,blue,Philadelphia (NJ),#f7b6d2,Exclusion
+1996-02-01,1,36119,0.0,0,0,1,Westchester,-73.75591281,41.16176335,NE,High Density,orange,New York (NY),#f7b6d2,Traditional
+2000-10-03,1,36103,0.0,0,1,0,Suffolk,-72.84423227,40.87024178,NE,Middle America,orange,New Haven,#f7b6d2,Traditional
+2000-05-15,1,36119,0.0,0,1,0,Westchester,-73.75591281,41.16176335,NE,High Density,orange,New York (NY),#f7b6d2,Traditional
+2001-10-16,1,32003,-3.0,0,1,0,Clark,-115.0146087,36.21511541,W,Containment,green,Las Vegas (AZ),#d62728,Reform
+1999-06-10,1,32007,1.0,0,1,0,Elko,-115.3578839,41.14601583,W,High Density,orange,Salt Lake City,#d62728,Traditional
+1997-03-25,1,35035,0.0,0,0,1,Otero,-105.7417441,32.61323163,W,Growth Management,green,Phoenix,#d62728,Reform
+1997-10-06,1,34039,-3.0,0,0,1,Union,-74.30721513,40.65928966,NE,High Density,orange,New York (NY),#f7b6d2,Traditional
+1995-03-24,1,31019,0.0,0,0,1,Buffalo,-99.07510068,40.85504881,MW,Middle America,orange,Kansas City (KS),#9edae5,Traditional
+1994-08-02,1,31047,0.0,0,0,1,Dawson,-99.81946635,40.86987625,W,Growth Control,green,Denver,#d62728,Reform
+1998-08-10,1,31019,0.0,0,0,1,Buffalo,-99.07510068,40.85504881,MW,Middle America,orange,Kansas City (KS),#9edae5,Traditional
+1997-07-20,1,38043,0.0,0,0,1,Kidder,-99.78013842,46.98013909,MW,Middle America,orange,Minneapolis (MN),#9edae5,Traditional
+1996-02-02,1,37059,0.0,0,0,1,Davie,-80.54428142,35.92957297,S,Middle America,orange,Charlotte (NC),#1f77b4,Traditional
+1995-11-15,1,37183,-3.0,0,0,1,Wake,-78.65050164,35.78982367,S,Middle America,orange,Raleigh,#1f77b4,Traditional
+2000-10-28,1,37195,0.0,0,1,0,Wilson,-77.9189122,35.70531169,S,Middle America,orange,Raleigh,#1f77b4,Traditional
+2000-03-30,3,37127,2.0,0,1,0,Nash,-77.9861842,35.96771851,S,Middle America,orange,Raleigh,#1f77b4,Traditional
+2000-09-26,1,37197,-1.0,0,1,0,Yadkin,-80.66532457,36.1604416,S,Middle America,orange,Greensboro,#1f77b4,Traditional
+1998-11-18,1,37037,0.0,0,0,1,Chatham,-79.25545829,35.70266277,S,Middle America,orange,Raleigh,#1f77b4,Traditional
+1998-08-28,1,37119,0.0,0,0,1,Mecklenburg,-80.83268027,35.24675454,S,Middle America,orange,Charlotte (NC),#1f77b4,Traditional
+1999-10-15,1,28159,-1.0,0,1,0,Winston,-89.03430894,33.0883872,S,Containment,green,Memphis (MS),#1f77b4,Reform
+1999-04-26,1,28027,-1.0,0,1,0,Coahoma,-90.60273114,34.22906962,S,Containment,green,Memphis (AR),#1f77b4,Reform
+1999-02-13,1,28051,-1.0,0,1,0,Holmes,-90.09171669,33.12367405,S,Containment,green,Memphis (AR),#1f77b4,Reform
+1996-03-08,2,28121,-1.0,0,0,1,Rankin,-89.94594839,32.26422272,S,Containment-Lite,green,New Orleans,#1f77b4,Reform
+2001-01-23,1,28047,-2.0,0,1,0,Harrison,-89.11140872,30.50439082,S,Containment-Lite,green,New Orleans,#1f77b4,Reform
+1999-03-17,1,29123,1.0,0,1,0,Madison,-90.34465099,37.47823462,MW,Middle America,orange,St. Louis (MO),#9edae5,Traditional
+1998-11-09,1,29510,0.0,0,0,1,St. Louis,-90.24484413,38.63654694,MW,Middle America,orange,St. Louis (MO),#9edae5,Traditional
+1996-12-23,1,29219,0.0,0,0,1,Warren,-91.16024978,38.76446133,MW,Middle America,orange,St. Louis (MO),#9edae5,Traditional
+1995-07-22,1,29099,1.0,0,0,1,Jefferson,-90.53780688,38.26079127,MW,Middle America,orange,St. Louis (MO),#9edae5,Traditional
+2001-06-10,1,29219,0.0,0,1,0,Warren,-91.16024978,38.76446133,MW,Middle America,orange,St. Louis (MO),#9edae5,Traditional
+2000-04-27,1,29105,0.0,0,1,0,Laclede,-92.59043082,37.65865829,MW,Middle America,orange,Kansas City (MO),#9edae5,Traditional
+2000-08-31,1,27169,0.0,0,1,0,Winona,-91.77934467,43.98683746,MW,Middle America,orange,Minneapolis (MN),#9edae5,Traditional
+1997-09-24,1,26027,0.0,0,0,1,Cass,-85.99403741,41.91545547,MW,Middle America,orange,Grand Rapids,#9edae5,Traditional
+1995-06-06,1,26025,0.0,0,0,1,Calhoun,-85.00508394,42.24636617,MW,Middle America,orange,Grand Rapids,#9edae5,Traditional
+2000-01-25,1,26037,0.0,0,1,0,Clinton,-84.60138451,42.9439517,MW,Middle America,orange,Grand Rapids,#9edae5,Traditional
+2000-11-20,1,24025,1.0,0,1,0,Harford,-76.31717004,39.56126248,S,Containment-Lite,green,Philadelphia (MD),#1f77b4,Reform
+2000-04-27,1,24023,0.0,0,1,0,Garrett,-79.27376451,39.52849306,NE,Middle America,orange,Pittsburgh,#f7b6d2,Traditional
+1997-06-09,1,24015,1.0,0,0,1,Cecil,-75.94133759,39.57067423,NE,Middle America,orange,Philadelphia (PA),#f7b6d2,Traditional
+1998-08-25,1,24033,-3.0,0,0,1,Prince George's,-76.84739072,38.8299677,S,Containment-Lite,green,Washington (DC),#1f77b4,Reform
+1996-12-17,1,24003,1.0,0,0,1,Anne Arundel,-76.60335105,39.0057724,S,Containment-Lite,green,Philadelphia (MD),#1f77b4,Reform
+1997-11-11,1,24013,0.0,0,0,1,Carroll,-77.02256972,39.56320174,S,Containment-Lite,green,Philadelphia (MD),#1f77b4,Reform
+1997-12-16,1,24033,-3.0,0,0,1,Prince George's,-76.84739072,38.8299677,S,Containment-Lite,green,Washington (DC),#1f77b4,Reform
+1996-11-04,1,24021,0.0,0,0,1,Frederick,-77.3978074,39.4720692,S,Containment-Lite,green,Washington (MD),#1f77b4,Reform
+1995-10-14,2,24021,0.0,0,0,1,Frederick,-77.3978074,39.4720692,S,Containment-Lite,green,Washington (MD),#1f77b4,Reform
+1994-10-26,1,24005,-1.0,0,0,1,Baltimore,-76.63603021,39.4596552,S,Containment-Lite,green,Philadelphia (MD),#1f77b4,Reform
+1998-06-20,2,24045,-1.0,0,0,1,Wicomico,-75.62218411,38.37287229,S,Containment-Lite,green,Philadelphia (MD),#1f77b4,Reform
+1996-01-11,1,24043,1.0,0,0,1,Washington,-77.81329014,39.60413752,S,Containment-Lite,green,Washington (MD),#1f77b4,Reform
+1995-10-27,1,24005,-1.0,0,0,1,Baltimore,-76.63603021,39.4596552,S,Containment-Lite,green,Philadelphia (MD),#1f77b4,Reform
+1999-10-14,1,24025,1.0,0,1,0,Harford,-76.31717004,39.56126248,S,Containment-Lite,green,Philadelphia (MD),#1f77b4,Reform
+1998-05-31,1,25021,-1.0,0,0,1,Norfolk,-71.20690516,42.1624614,NE,Exclusion with Restriction,blue,Boston (MA),#f7b6d2,Exclusion
+1996-05-05,2,22005,0.0,0,0,1,Ascension,-90.91101939,30.20335229,S,Containment-Lite,green,New Orleans,#1f77b4,Reform
+1996-12-22,1,22017,3.0,0,0,1,Caddo,-93.88236667,32.5802177,S,Dallas-San Antonio,red,Dallas,#1f77b4,Wild Texas
+1995-05-28,1,22027,1.0,0,0,1,Claiborne,-92.99565971,32.82277025,S,Containment,green,Memphis (AR),#1f77b4,Reform
+1996-01-20,1,22001,2.0,0,0,1,Acadia,-92.41163568,30.29064732,S,Containment-Lite,green,New Orleans,#1f77b4,Reform
+1998-01-16,1,22073,1.0,0,0,1,Ouachita,-92.15486108,32.47822702,S,Containment-Lite,green,New Orleans,#1f77b4,Reform
+1998-01-16,1,22073,1.0,0,0,1,Ouachita,-92.15486108,32.47822702,S,Containment-Lite,green,New Orleans,#1f77b4,Reform
+1995-12-29,1,21061,0.0,0,0,1,Edmonson,-86.23847919,37.20904677,MW,Middle America,orange,Louisville (IN),#9edae5,Traditional
+1998-10-21,1,21151,-1.0,0,0,1,Madison,-84.27808893,37.71989076,MW,Middle America,orange,Cincinnati (OH),#9edae5,Traditional
+1997-09-07,1,21195,0.0,0,0,1,Pike,-82.39537783,37.46909859,S,Middle America,orange,Washington (WV),#1f77b4,Traditional
+1995-08-18,1,21067,-2.0,0,0,1,Fayette,-84.4589719,38.04287124,MW,Middle America,orange,Cincinnati (OH),#9edae5,Traditional
+1996-06-05,1,21037,1.0,0,0,1,Campbell,-84.3791722,38.94658952,MW,Middle America,orange,Cincinnati (OH),#9edae5,Traditional
+1998-05-01,1,21111,0.0,0,0,1,Jefferson,-85.65772828,38.18834895,MW,Middle America,orange,Louisville (IN),#9edae5,Traditional
+2000-05-09,1,21029,0.0,0,1,0,Bullitt,-85.69808753,37.97000785,MW,Middle America,orange,Louisville (IN),#9edae5,Traditional
+1999-02-11,1,21199,-1.0,0,1,0,Pulaski,-84.57709045,37.10380837,MW,Middle America,orange,Louisville (IN),#9edae5,Traditional
+2000-12-11,1,20061,-1.0,0,1,0,Geary,-96.75251853,39.00227253,MW,Middle America,orange,Kansas City (KS),#9edae5,Traditional
+1999-10-02,1,20177,0.0,0,1,0,Shawnee,-95.75652721,39.04138192,MW,Middle America,orange,Kansas City (KS),#9edae5,Traditional
+1999-08-31,2,20087,-1.0,0,1,0,Jefferson,-95.38360115,39.23530705,MW,Middle America,orange,Kansas City (KS),#9edae5,Traditional
+1999-07-01,1,20185,0.0,0,1,0,Stafford,-98.71763136,38.03102509,S,Middle America,orange,Oklahoma City,#1f77b4,Traditional
+1999-07-07,2,18127,0.0,0,1,0,Porter,-87.06793187,41.46066332,MW,Middle America,orange,Chicago (IN),#9edae5,Traditional
+1998-08-28,3,18109,3.0,0,0,1,Morgan,-86.44647098,39.48166964,MW,Middle America,orange,Indianapolis,#9edae5,Traditional
+1998-04-20,1,18097,0.0,0,0,1,Marion,-86.13826325,39.78163624,MW,Middle America,orange,Indianapolis,#9edae5,Traditional
+1997-03-01,1,18097,0.0,0,0,1,Marion,-86.13826325,39.78163624,MW,Middle America,orange,Indianapolis,#9edae5,Traditional
+1996-04-29,1,18053,1.0,0,0,1,Grant,-85.65468702,40.51587228,MW,Middle America,orange,Indianapolis,#9edae5,Traditional
+2000-11-11,1,18089,0.0,0,1,0,Lake,-87.38221633,41.41685156,MW,Middle America,orange,Chicago (IN),#9edae5,Traditional
+2000-09-18,1,18075,0.0,0,1,0,Jay,-85.00574703,40.43780769,MW,Middle America,orange,Indianapolis,#9edae5,Traditional
+2000-08-02,1,18091,1.0,0,1,0,LaPorte,-86.74045399,41.5459356,MW,Middle America,orange,Chicago (IN),#9edae5,Traditional
+1997-12-03,1,17085,2.0,0,0,1,Jo Daviess,-90.21246462,42.36542788,MW,Middle America,orange,Milwaukee,#9edae5,Traditional
+1999-01-08,1,17095,0.0,0,1,0,Knox,-90.2133034,40.93148779,MW,Middle America,orange,St. Louis (MO),#9edae5,Traditional
+1998-06-04,1,17113,2.0,0,0,1,McLean,-88.84769482,40.49061752,MW,Middle America,orange,Chicago (IN),#9edae5,Traditional
+1998-04-26,1,17031,5.0,0,0,1,Cook,-87.81698762,41.84005007,MW,Middle America,orange,Chicago (IL),#9edae5,Traditional
+1998-05-27,1,17031,5.0,0,0,1,Cook,-87.81698762,41.84005007,MW,Middle America,orange,Chicago (IL),#9edae5,Traditional
+2000-10-30,1,6099,-1.0,0,1,0,Stanislaus,-120.9979524,37.55851635,W,Growth Management,green,Sacramento,#d62728,Reform
+2001-03-20,3,16047,1.0,0,1,0,Gooding,-114.8116615,42.97094353,W,High Density,orange,Salt Lake City,#d62728,Traditional
+1997-04-04,2,19111,-1.0,0,0,1,Lee,-91.47949968,40.64219925,MW,Middle America,orange,St. Louis (MO),#9edae5,Traditional
+1995-10-20,1,19055,2.0,0,0,1,Delaware,-91.36741055,42.4713865,MW,Middle America,orange,Minneapolis (MN),#9edae5,Traditional
+1994-07-12,1,19013,0.0,0,0,1,Black Hawk,-92.30867416,42.47009403,MW,Middle America,orange,Minneapolis (MN),#9edae5,Traditional
+1996-02-15,3,19049,-1.0,0,0,1,Dallas,-94.03970701,41.68489264,MW,Middle America,orange,Kansas City (KS),#9edae5,Traditional
+1998-06-15,1,13207,0.0,0,0,1,Monroe,-83.91905929,33.0139317,S,Middle America,orange,Atlanta,#1f77b4,Traditional
+1995-07-02,1,13049,0.0,0,0,1,Charlton,-82.13757286,30.7815722,S,Growth Management,green,Jacksonville,#1f77b4,Reform
+1994-06-20,1,13121,-1.0,0,0,1,Fulton,-84.46714878,33.79038574,S,Middle America,orange,Atlanta,#1f77b4,Traditional
+1994-01-31,1,13175,0.0,0,0,1,Laurens,-82.92233434,32.46355824,S,Middle America,orange,Atlanta,#1f77b4,Traditional
+2000-09-11,1,13135,1.0,0,1,0,Gwinnett,-84.02400746,33.9614268,S,Middle America,orange,Atlanta,#1f77b4,Traditional
+1999-11-15,1,13063,-1.0,0,1,0,Clayton,-84.35751271,33.54043935,S,Middle America,orange,Atlanta,#1f77b4,Traditional
+2000-03-03,1,13153,-1.0,0,1,0,Houston,-83.66625831,32.45919716,S,Middle America,orange,Atlanta,#1f77b4,Traditional
+2000-10-23,1,12115,1.0,0,1,0,Sarasota,-82.33141981,27.18432942,S,Growth Management,green,Tampa,#1f77b4,Reform
+1999-01-16,2,12097,-1.0,0,1,0,Osceola,-81.14924253,28.06245875,S,Growth Management,green,Orlando,#1f77b4,Reform
+1999-09-19,1,12057,-3.0,0,1,0,Hillsborough,-82.30867294,27.92948052,S,Growth Management,green,Tampa,#1f77b4,Reform
+2000-03-08,2,12121,-1.0,0,1,0,Suwannee,-82.99147597,30.19562156,S,Growth Management,green,Jacksonville,#1f77b4,Reform
+2000-10-29,1,12119,1.0,0,1,0,Sumter,-82.08128977,28.70520781,S,Growth Management,green,Orlando,#1f77b4,Reform
+1999-06-28,1,12021,0.0,0,1,0,Collier,-81.34769003,26.11069361,S,Growth Management,green,Miami,#1f77b4,Reform
+1995-12-06,1,12053,0.0,0,0,1,Hernando,-82.42535431,28.55404893,S,Growth Management,green,Tampa,#1f77b4,Reform
+1994-07-05,1,12111,-1.0,0,0,1,St. Lucie,-80.47111892,27.377528,S,Growth Management,green,West Palm Beach,#1f77b4,Reform
+1997-03-16,1,10003,0.0,0,0,1,New Castle,-75.64791441,39.58150592,NE,Middle America,orange,Philadelphia (PA),#f7b6d2,Traditional
+1994-04-12,1,9003,1.0,0,0,1,Hartford,-72.73301048,41.80669859,NE,Middle America,orange,Hartford,#f7b6d2,Traditional
+1998-05-19,1,9001,-1.0,0,0,1,Fairfield,-73.38919037,41.26973285,NE,Middle America,orange,New Haven,#f7b6d2,Traditional
+1997-09-15,2,9009,-1.0,0,0,1,New Haven,-72.93235204,41.41072833,NE,Middle America,orange,New Haven,#f7b6d2,Traditional
+1999-07-27,2,8075,0.0,0,1,0,Logan,-103.1101132,40.72463929,W,Growth Control,green,Denver,#d62728,Reform
+1997-04-11,1,8009,-2.0,0,0,1,Baca,-102.5601186,37.31923997,W,Growth Control,green,Denver,#d62728,Reform
+1999-07-01,1,6085,0.0,0,1,0,Santa Clara,-121.6951016,37.23169965,W,Growth Control,green,San Francisco,#d62728,Reform
+2000-10-20,1,4025,0.0,0,1,0,Yavapai,-112.5538467,34.59969928,W,Growth Management,green,Phoenix,#d62728,Reform
+1999-07-28,2,4005,0.0,0,1,0,Coconino,-111.7705493,35.83875351,W,Growth Management,green,Phoenix,#d62728,Reform
+1999-01-18,1,4019,0.0,0,1,0,Pima,-111.7896381,32.09723099,W,Growth Management,green,Phoenix,#d62728,Reform
+1999-01-07,1,4013,4.0,0,1,0,Maricopa,-112.4908888,33.34875974,W,Growth Management,green,Phoenix,#d62728,Reform
+1997-04-26,1,4013,4.0,0,0,1,Maricopa,-112.4908888,33.34875974,W,Growth Management,green,Phoenix,#d62728,Reform
+1996-03-07,1,5117,0.0,0,0,1,Prairie,-91.55194184,34.83010091,S,Containment,green,Memphis (AR),#1f77b4,Reform
+1998-02-18,1,1127,-1.0,0,0,1,Walker,-87.29727889,33.80316281,S,Containment,green,Nashville,#1f77b4,Reform
+1998-02-16,1,1053,3.0,0,0,1,Escambia,-87.16176056,31.12613571,S,Containment-Lite,green,New Orleans,#1f77b4,Reform
+1994-12-19,1,1053,3.0,0,0,1,Escambia,-87.16176056,31.12613571,S,Containment-Lite,green,New Orleans,#1f77b4,Reform
+2000-02-17,1,1113,1.0,0,1,0,Russell,-85.18428296,32.28806204,S,Middle America,orange,Atlanta,#1f77b4,Traditional
+2000-09-01,1,1097,1.0,0,1,0,Mobile,-88.20659057,30.77909854,S,Containment-Lite,green,New Orleans,#1f77b4,Reform
+2000-07-23,1,1047,1.0,0,1,0,Dallas,-87.10649231,32.32606741,S,Middle America,orange,Atlanta,#1f77b4,Traditional
+2000-06-26,1,1087,1.0,0,1,0,Macon,-85.69260703,32.38585029,S,Middle America,orange,Atlanta,#1f77b4,Traditional
+2002-03-02,1,21093,-2.0,1,0,0,Hardin,-85.96366674,37.69820941,MW,Middle America,orange,Louisville (IN),#9edae5,Traditional
+2002-06-26,1,29095,-3.0,1,0,0,Jackson,-94.34603332,39.00926211,MW,Middle America,orange,Kansas City (MO),#9edae5,Traditional
+2002-02-13,1,21061,0.0,1,0,0,Edmonson,-86.23847919,37.20904677,MW,Middle America,orange,Louisville (IN),#9edae5,Traditional
+2002-04-18,2,31047,0.0,1,0,0,Dawson,-99.81946635,40.86987625,W,Growth Control,green,Denver,#d62728,Reform
+2002-04-18,2,31047,0.0,1,0,0,Dawson,-99.81946635,40.86987625,W,Growth Control,green,Denver,#d62728,Reform
+2002-06-23,1,1089,0.0,1,0,0,Madison,-86.55056927,34.76292257,S,Containment,green,Nashville,#1f77b4,Reform
+2001-10-24,2,31055,0.0,0,1,0,Douglas,-96.15494428,41.29533784,MW,Middle America,orange,Kansas City (KS),#9edae5,Traditional
+2002-02-13,1,24031,1.0,1,0,0,Montgomery,-77.20428439,39.13634899,S,Containment-Lite,green,Washington (DC),#1f77b4,Reform
+2001-12-28,1,34039,-3.0,0,1,0,Union,-74.30721513,40.65928966,NE,High Density,orange,New York (NY),#f7b6d2,Traditional
+2002-04-13,1,24033,-3.0,1,0,0,Prince George's,-76.84739072,38.8299677,S,Containment-Lite,green,Washington (DC),#1f77b4,Reform
+2001-12-18,1,32003,-3.0,0,1,0,Clark,-115.0146087,36.21511541,W,Containment,green,Las Vegas (AZ),#d62728,Reform
+2001-10-06,1,8043,0.0,0,1,0,Fremont,-105.4399703,38.47306423,W,Growth Control,green,Denver,#d62728,Reform
+2001-12-21,1,18039,1.0,0,1,0,Elkhart,-85.85885682,41.59771704,MW,Middle America,orange,Grand Rapids,#9edae5,Traditional
+1996-02-13,1,47059,0.0,0,0,1,Greene,-82.84564638,36.17587226,S,Middle America,orange,Charlotte (NC),#1f77b4,Traditional
+2000-05-22,1,34039,-3.0,0,1,0,Union,-74.30721513,40.65928966,NE,High Density,orange,New York (NY),#f7b6d2,Traditional
+2002-03-29,1,40121,-2.0,1,0,0,Pittsburg,-95.74895216,34.92386502,S,Middle America,orange,Oklahoma City,#1f77b4,Traditional
+2002-02-06,1,29061,0.0,1,0,0,Daviess,-93.98514508,39.96169076,MW,Middle America,orange,Kansas City (MO),#9edae5,Traditional
+2002-03-03,3,40101,3.0,1,0,0,Muskogee,-95.37949187,35.61612948,S,Middle America,orange,Oklahoma City,#1f77b4,Traditional
+2001-05-17,2,31157,-1.0,0,1,0,Scotts Bluff,-103.7084612,41.85095717,W,Growth Control,green,Denver,#d62728,Reform
+2001-12-13,1,42045,-1.0,0,1,0,Delaware,-75.39915513,39.9166501,NE,Middle America,orange,Philadelphia (PA),#f7b6d2,Traditional
+2000-06-21,1,6037,-6.0,0,1,0,Los Angeles,-118.224703,34.32134579,W,Growth Management,green,Los Angeles,#d62728,Reform
+2001-03-23,1,34015,1.0,0,1,0,Gloucester,-75.14071747,39.71694144,NE,Middle America,orange,Philadelphia (PA),#f7b6d2,Traditional
+2001-10-02,1,26115,-1.0,0,1,0,Monroe,-83.53769332,41.92832154,MW,Middle America,orange,Detroit,#9edae5,Traditional
+2002-02-15,1,8123,1.0,1,0,0,Weld,-104.3930144,40.55487277,W,Growth Control,green,Denver,#d62728,Reform
+2001-11-27,1,13021,0.0,0,1,0,Bibb,-83.69682554,32.80691473,S,Middle America,orange,Atlanta,#1f77b4,Traditional
+2001-11-05,1,37067,1.0,0,1,0,Forsyth,-80.25626566,36.13057844,S,Middle America,orange,Greensboro,#1f77b4,Traditional
+2001-03-08,1,25017,0.0,0,1,0,Middlesex,-71.39262102,42.48584344,NE,Exclusion with Restriction,blue,Boston (MA),#f7b6d2,Exclusion
+2000-10-28,1,48375,-1.0,0,1,0,Potter,-101.893964,35.40133773,S,Middle America,orange,Oklahoma City,#1f77b4,Traditional
+2001-03-10,2,8059,0.0,0,1,0,Jefferson,-105.2504738,39.58646067,W,Growth Control,green,Denver,#d62728,Reform
+2001-04-25,1,18173,-2.0,0,1,0,Warrick,-87.2717425,38.09237205,MW,Middle America,orange,Cincinnati (IN),#9edae5,Traditional
+2001-09-25,1,17113,2.0,0,1,0,McLean,-88.84769482,40.49061752,MW,Middle America,orange,Chicago (IN),#9edae5,Traditional
+1998-10-01,1,25009,0.0,0,0,1,Essex,-70.9515844,42.67174524,NE,Exclusion with Restriction,blue,Boston (MA),#f7b6d2,Exclusion
+2001-07-09,1,37109,1.0,0,1,0,Lincoln,-81.22393811,35.48589556,S,Middle America,orange,Charlotte (NC),#1f77b4,Traditional
+2001-07-25,1,47065,1.0,0,1,0,Hamilton,-85.1644476,35.18133492,S,Middle America,orange,Atlanta,#1f77b4,Traditional
+1998-01-21,1,41001,-2.0,0,0,1,Baker,-117.6755473,44.70919815,W,Containment,green,Portland (WA),#d62728,Reform
+1999-01-03,1,41059,0.0,0,1,0,Umatilla,-118.736681,45.59148273,W,Containment,green,Portland (WA),#d62728,Reform
+1997-11-17,1,41019,-1.0,0,0,1,Douglas,-123.1658435,43.2796987,W,Containment,green,Portland (WA),#d62728,Reform
+1997-05-03,1,41051,-1.0,0,0,1,Multnomah,-122.4157429,45.54693681,W,Containment,green,Portland (WA),#d62728,Reform
+2001-08-01,1,50007,-1.0,0,1,0,Chittenden,-73.08101275,44.46109238,NE,Extreme Exclusion,blue,Boston (NH),#f7b6d2,Exclusion
+1999-09-17,1,56007,1.0,0,1,0,Carbon,-106.9303916,41.69413999,W,Growth Control,green,Denver,#d62728,Reform
+1998-06-21,1,56007,1.0,0,0,1,Carbon,-106.9303916,41.69413999,W,Growth Control,green,Denver,#d62728,Reform
+1995-04-07,1,56007,1.0,0,0,1,Carbon,-106.9303916,41.69413999,W,Growth Control,green,Denver,#d62728,Reform
+1999-06-21,1,55007,0.0,0,1,0,Bayfield,-91.20077484,46.52418284,MW,Middle America,orange,Minneapolis (MN),#9edae5,Traditional
+1997-01-22,1,55071,1.0,0,0,1,Manitowoc,-87.80948518,44.11990639,MW,Middle America,orange,Milwaukee,#9edae5,Traditional
+1995-12-27,1,53011,0.0,0,0,1,Clark,-122.4823115,45.77919832,W,Containment,green,Portland (WA),#d62728,Reform
+1998-08-08,1,50021,1.0,0,0,1,Rutland,-73.03669897,43.57983752,NE,Extreme Exclusion,blue,Boston (NH),#f7b6d2,Exclusion
+2000-08-14,1,50013,-1.0,0,1,0,Grand Isle,-73.29488547,44.79689986,NE,Extreme Exclusion,blue,Boston (NH),#f7b6d2,Exclusion
+1997-03-15,1,50007,-1.0,0,0,1,Chittenden,-73.08101275,44.46109238,NE,Extreme Exclusion,blue,Boston (NH),#f7b6d2,Exclusion
+1999-02-04,1,49003,-1.0,0,1,0,Box Elder,-113.0821456,41.52095018,W,High Density,orange,Salt Lake City,#d62728,Traditional
+1997-02-06,1,49015,0.0,0,0,1,Emery,-110.7004925,38.99637448,W,High Density,orange,Salt Lake City,#d62728,Traditional
+1994-10-05,1,49023,0.0,0,0,1,Juab,-112.7847328,39.70284831,W,High Density,orange,Salt Lake City,#d62728,Traditional
+1999-02-11,1,48273,1.0,0,1,0,Kleberg,-97.72430027,27.43132443,S,Dallas-San Antonio,red,San Antonio,#1f77b4,Wild Texas
+1996-07-15,2,48113,1.0,0,0,1,Dallas,-96.77788947,32.76665041,S,Dallas-San Antonio,red,Dallas,#1f77b4,Wild Texas
+1995-11-19,2,48359,1.0,0,0,1,Oldham,-102.6027421,35.40425708,W,Growth Control,green,Denver,#d62728,Reform
+1995-05-18,1,48097,-2.0,0,0,1,Cooke,-97.21276751,33.63940669,S,Dallas-San Antonio,red,Dallas,#1f77b4,Wild Texas
+1996-02-13,1,47059,0.0,0,0,1,Greene,-82.84564638,36.17587226,S,Middle America,orange,Charlotte (NC),#1f77b4,Traditional
+1998-10-01,1,25009,0.0,0,0,1,Essex,-70.9515844,42.67174524,NE,Exclusion with Restriction,blue,Boston (MA),#f7b6d2,Exclusion
+1998-10-08,2,47037,1.0,0,0,1,Davidson,-86.78502875,36.16932462,S,Containment,green,Nashville,#1f77b4,Reform
+1998-08-03,1,47189,0.0,0,0,1,Wilson,-86.29778739,36.15428192,S,Containment,green,Nashville,#1f77b4,Reform
+1995-08-27,2,47065,1.0,0,0,1,Hamilton,-85.1644476,35.18133492,S,Middle America,orange,Atlanta,#1f77b4,Traditional
+1999-10-23,3,47089,-1.0,0,1,0,Jefferson,-83.44652522,36.0513409,S,Middle America,orange,Atlanta,#1f77b4,Traditional
+2000-08-06,2,47055,-1.0,0,1,0,Giles,-87.03541784,35.20194268,S,Containment,green,Nashville,#1f77b4,Reform
+1999-06-14,2,47145,0.0,0,1,0,Roane,-84.52335538,35.84762955,S,Middle America,orange,Atlanta,#1f77b4,Traditional
+1999-06-03,5,47117,0.0,0,1,0,Marshall,-86.76591028,35.46843385,S,Containment,green,Nashville,#1f77b4,Reform
