@@ -23,7 +23,7 @@ editor:
 
 ## Agenda
 
-1.  Quantifying Truck Parking Shortage. 
+1.  Quantifying Truck Parking Shortage
 
 2.  Do local economies respond to the need for truck parking or is it hindered?
 
@@ -55,10 +55,6 @@ However, the lack of available parking forces drivers into suboptimal decisions,
 According to ATRI, approximately 70% of drivers report difficulty in securing safe and legal parking, while over 90% indicate that this challenge negatively impacts their quality of life.
 The Federal Highway Administration further corroborates these findings, reporting that 98% of truck drivers experience difficulties locating secure rest areas, which contributes to stress, fatigue, and long-term health issues among drivers.
 
-Despite the widespread recognition of this issue, efforts to mitigate the crisis have been hindered by public opposition to the construction of new truck parking facilities.
-Surveys indicate that while the majority of respondents acknowledge the necessity of additional truck parking, 80% oppose the construction of such facilities within a three-mile radius of their residences, with 5% rejecting the notion outright.
-This incongruity between awareness and action complicates policymaking and infrastructure development efforts aimed at resolving the crisis.
-
 ### Economic and Infrastructure Implications
 
 The economic ramifications of the truck parking crisis extend beyond individual truck drivers to the broader freight transportation industry and national economy.
@@ -84,6 +80,10 @@ In 2009, Rivenburg, a truck driver, was murdered during a robbery while parked a
 His death led to the enactment of Jason's Law (2012), a federal initiative aimed at increasing funding for truck parking facilities to enhance driver safety.
 
 ### Zoning
+
+Despite the widespread recognition of this issue, efforts to mitigate the crisis have been hindered by public opposition to the construction of new truck parking facilities.
+Surveys indicate that while the majority of respondents acknowledge the necessity of additional truck parking, 80% oppose the construction of such facilities within a three-mile radius of their residences, with 5% rejecting the notion outright.
+This incongruity between awareness and action complicates policymaking and infrastructure development efforts aimed at resolving the crisis.
 
 The United States hosts 90,056 local governments, each imposing unique zoning restrictions that shape land use.
 Cities with bustling economies require robust transportation logistics, including an adequate trucking supply chain, to support economic growth.

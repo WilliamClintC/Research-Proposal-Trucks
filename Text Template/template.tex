@@ -41,28 +41,14 @@
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \setcounter{secnumdepth}{5}
 % Make \paragraph and \subparagraph free-standing
-\makeatletter
 \ifx\paragraph\undefined\else
   \let\oldparagraph\paragraph
-  \renewcommand{\paragraph}{
-    \@ifstar
-      \xxxParagraphStar
-      \xxxParagraphNoStar
-  }
-  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
-  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
+  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
 \fi
 \ifx\subparagraph\undefined\else
   \let\oldsubparagraph\subparagraph
-  \renewcommand{\subparagraph}{
-    \@ifstar
-      \xxxSubParagraphStar
-      \xxxSubParagraphNoStar
-  }
-  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
-  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
+  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
-\makeatother
 
 
 \providecommand{\tightlist}{%
@@ -95,6 +81,10 @@
 \addtolength{\textwidth}{1in}%
 \addtolength{\textheight}{1.7in}%
 \addtolength{\topmargin}{-1in}%
+\makeatletter
+\makeatother
+\makeatletter
+\makeatother
 \makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \AtBeginDocument{%
@@ -131,18 +121,25 @@
 \newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
 \makeatother
 \makeatletter
-\makeatother
-\makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
+\makeatother
+\makeatletter
+\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
 \makeatother
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
 \usepackage[]{natbib}
 \bibliographystyle{agsm}
-\usepackage{bookmark}
-
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
@@ -165,7 +162,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\date{February 3, 2025}
+\date{February 10, 2025}
 \title{\bf Zoning: A Barrier or Solution to Truck Parking Infrastructure
 Shortages?}
 \author{
@@ -190,13 +187,15 @@ low-restrictive areas.
 
 \newpage
 \spacingset{1.9} % DON'T change the spacing!
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, sharp corners, enhanced, interior hidden, frame hidden, borderline west={3pt}{0pt}{shadecolor}, breakable]}{\end{tcolorbox}}\fi
 
-\section{Agenda}\label{agenda}
+\hypertarget{agenda}{%
+\section{Agenda}\label{agenda}}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  Quantifying Truck Parking Shortage.~
+  Quantifying Truck Parking Shortage
 \item
   Do local economies respond to the need for truck parking or is it
   hindered?
@@ -204,13 +203,16 @@ low-restrictive areas.
   Does land regulation limit truck parking creation?
 \end{enumerate}
 
-\section{Research Question}\label{research-question}
+\hypertarget{research-question}{%
+\section{Research Question}\label{research-question}}
 
 What is the effect of truck parking accidents on truck stop creation?
 
-\section{Motivation}\label{motivation}
+\hypertarget{motivation}{%
+\section{Motivation}\label{motivation}}
 
-\subsection{Magnitude}\label{magnitude}
+\hypertarget{magnitude}{%
+\subsection{Magnitude}\label{magnitude}}
 
 The ongoing truck parking crisis in the United States presents
 significant challenges to truck drivers, the freight transportation
@@ -224,8 +226,9 @@ Statistics and Statistics Canada, this translates to an industry-wide
 financial loss of \$21.69 billion annually, exacerbating economic strain
 on a sector crucial to national and international commerce.
 
+\hypertarget{truck-parking-as-a-primary-industry-concern}{%
 \subsection{Truck Parking as a Primary Industry
-Concern}\label{truck-parking-as-a-primary-industry-concern}
+Concern}\label{truck-parking-as-a-primary-industry-concern}}
 
 The scarcity of truck parking has consistently ranked as the most
 pressing issue within the trucking industry, as identified in ATRI's
@@ -253,18 +256,9 @@ drivers experience difficulties locating secure rest areas, which
 contributes to stress, fatigue, and long-term health issues among
 drivers.
 
-Despite the widespread recognition of this issue, efforts to mitigate
-the crisis have been hindered by public opposition to the construction
-of new truck parking facilities. Surveys indicate that while the
-majority of respondents acknowledge the necessity of additional truck
-parking, 80\% oppose the construction of such facilities within a
-three-mile radius of their residences, with 5\% rejecting the notion
-outright. This incongruity between awareness and action complicates
-policymaking and infrastructure development efforts aimed at resolving
-the crisis.
-
+\hypertarget{economic-and-infrastructure-implications}{%
 \subsection{Economic and Infrastructure
-Implications}\label{economic-and-infrastructure-implications}
+Implications}\label{economic-and-infrastructure-implications}}
 
 The economic ramifications of the truck parking crisis extend beyond
 individual truck drivers to the broader freight transportation industry
@@ -285,8 +279,9 @@ Such practices not only jeopardize driver safety but also endanger other
 motorists by reducing roadway visibility and increasing the probability
 of collisions.
 
+\hypertarget{health-and-safety-concerns}{%
 \subsection{Health and Safety
-Concerns}\label{health-and-safety-concerns}
+Concerns}\label{health-and-safety-concerns}}
 
 The shortage of truck parking also has significant implications for the
 physical and mental well-being of truck drivers. Extended searches for
@@ -309,7 +304,18 @@ overnight parking. His death led to the enactment of Jason's Law (2012),
 a federal initiative aimed at increasing funding for truck parking
 facilities to enhance driver safety.
 
-\subsection{Zoning}\label{zoning}
+\hypertarget{zoning}{%
+\subsection{Zoning}\label{zoning}}
+
+Despite the widespread recognition of this issue, efforts to mitigate
+the crisis have been hindered by public opposition to the construction
+of new truck parking facilities. Surveys indicate that while the
+majority of respondents acknowledge the necessity of additional truck
+parking, 80\% oppose the construction of such facilities within a
+three-mile radius of their residences, with 5\% rejecting the notion
+outright. This incongruity between awareness and action complicates
+policymaking and infrastructure development efforts aimed at resolving
+the crisis.
 
 The United States hosts 90,056 local governments, each imposing unique
 zoning restrictions that shape land use. Cities with bustling economies
@@ -345,8 +351,9 @@ Addressing the growing need for truck stops in cities with strict zoning
 regulations is essential to ensuring the safety of truckers and the
 public while supporting the supply chain vital to these economies.
 
+\hypertarget{remark-scale-of-truck-parking-challenges-vs.-homelessness}{%
 \section{Remark: Scale of Truck Parking Challenges
-vs.~Homelessness}\label{remark-scale-of-truck-parking-challenges-vs.-homelessness}
+vs.~Homelessness}\label{remark-scale-of-truck-parking-challenges-vs.-homelessness}}
 
 While homelessness is a critical and deeply concerning issue in North
 America, the shortage of truck parking presents a significantly larger
@@ -376,7 +383,8 @@ truck parking crisis, making it an even larger problem---if not at least
 as significant---as the homelessness crisis affecting all of North
 America.
 
-\section{Conceptual Framework}\label{conceptual-framework}
+\hypertarget{conceptual-framework}{%
+\section{Conceptual Framework}\label{conceptual-framework}}
 
 Is zoning regulation welfare-enhancing? This paper examines this
 question through the lens of trucking accidents. Areas with a high
@@ -410,7 +418,7 @@ Specifically, this research aims to test two hypotheses:
 this study employs an event study design, categorizing zoning regimes
 into four types---Traditional, Exclusion, Reform, and Wild Wild
 Texas---based on \citep{puentesTraditionalReformedReview2006} (See
-\phantomsection\label{sec:appendix-b}\hyperref[sec-b.-map-of-zoning-categories]{Appendi}\hyperref[sec:appendix-b]{x
+\protect\hypertarget{sec:appendix-b}{\protect\hyperlink{sec-b.-map-of-zoning-categories}{Appendi}}\protect\hyperlink{sec:appendix-b}{x
 B}) . We hypothesize that restrictive zoning regimes (Traditional and
 Exclusion) are less responsive to truck parking demand compared to
 flexible regimes (Reform and Wild Wild Texas), resulting in lower truck
@@ -426,7 +434,8 @@ capacity and whether high-restrictive regimes exacerbate the challenges
 associated with truck parking shortages in the aftermath of such
 incidents.
 
-\section{Related Literature}\label{related-literature}
+\hypertarget{related-literature}{%
+\section{Related Literature}\label{related-literature}}
 
 Existing studies on zoning provide valuable context but are limited in
 scope. Research often focuses on single areas (Chicago, Eastern
@@ -465,7 +474,8 @@ this study offers insights for policymakers aiming to mitigate the
 externalize of inadequate truck parking through thoughtful zoning
 reforms.
 
-\section{Contribution}\label{contribution}
+\hypertarget{contribution}{%
+\section{Contribution}\label{contribution}}
 
 This methodology has not been explored before primarily due to data
 limitations and the recent emergence of the problem. Supply chain
@@ -483,12 +493,13 @@ digitize and organize these records. This unique data set and the
 recency of the issue make our study a novel empirical contribution to
 the field.
 
-\section{Data}\label{data}
+\hypertarget{data}{%
+\section{Data}\label{data}}
 
 Our data is (1990-Present) FMCA (Federal Motor Carrier Safety
 Administration) Crash file from USDOT (Department of Transportation)
-(\phantomsection\label{sec:appendix-a}\hyperref[sec-a.-visualization-of-dataset.-]{Appendix
-A}). We can see type of vehicle (ex. trucks), nature of the crash (ex.
+(\protect\hypertarget{sec:appendix-a}{\protect\hyperlink{sec-a.-visualization-of-dataset.-}{Appendix
+A}}). We can see type of vehicle (ex. trucks), nature of the crash (ex.
 Crashed involving a ``parked'' vehicle), fatalities, injuries, number of
 vehicles involved, etc. We will aslo use WLIURA (zoning restriction
 index) dataset by \citet{gyourkoNewMeasureLocal2008} and zoning
@@ -496,7 +507,8 @@ classifications used by \citet{puentesTraditionalReformedReview2006} .
 There are other papers like \citet{liangSafetyInspectionsImprove2021},
 which use similar data sets.
 
-\section{\texorpdfstring{\textbf{Strategy}}{Strategy}}\label{strategy}
+\hypertarget{strategy}{%
+\section{\texorpdfstring{\textbf{Strategy}}{Strategy}}\label{strategy}}
 
 With no truck parking available trucks illegally park causing observed
 accidents such that plcaes increase truck parking availability, through
@@ -506,7 +518,8 @@ No Truck Parking → Trucks will illegally park → \textbf{Accidents Occur}
 (observed)→Truck Parking Demand increases → \textbf{Truck Parking
 Capacity Increase} (observed)
 
-\subsection{Event Study Model}\label{event-study-model}
+\hypertarget{event-study-model}{%
+\subsection{Event Study Model}\label{event-study-model}}
 
 The equation to estimate the effect of the Truck Parking Accident (TPA)
 on the creation of truck stops is specified as follows:
@@ -563,8 +576,9 @@ zoning categories, I will estimate to each corresponding category:
   and effects in Texas, a state known for its lack of zoning regulation.
 \end{itemize}
 
+\hypertarget{adjusted-model-for-truck-parking-analysis}{%
 \section{Adjusted Model for Truck Parking
-Analysis}\label{adjusted-model-for-truck-parking-analysis}
+Analysis}\label{adjusted-model-for-truck-parking-analysis}}
 
 Our dataset cannot accommodate the initial model because we only observe
 changes in truck parking during the years 2007, 2008, 2015, and 2016. To
@@ -574,7 +588,8 @@ address this limitation, we adjust the model as follows:
 \Delta \text{NumTruckStop}_{j,t=2006-2016} = \sum_{i=-2}^{0} \beta_{j,t+i} \text{Accident}_{j,t+i}\cdot \text{Severity}_{j,t+i} + \gamma_{tj} X_{tj} + \epsilon_{tj}
 \]
 
-\subsection{Model Explanation}\label{model-explanation}
+\hypertarget{model-explanation}{%
+\subsection{Model Explanation}\label{model-explanation}}
 
 \begin{itemize}
 \tightlist
@@ -595,8 +610,9 @@ address this limitation, we adjust the model as follows:
 This adjustment allows us to analyze the effects of severe truck parking
 accidents within the available time frame.
 
+\hypertarget{difference-in-differences-did-model}{%
 \subsection{Difference-in-Differences (DiD)
-Model}\label{difference-in-differences-did-model}
+Model}\label{difference-in-differences-did-model}}
 
 I will employ a Difference-in-Differences (DiD) design using the WLRUI
 index data to compare locations with a high restriction index against
@@ -643,7 +659,8 @@ Where:
   \(\epsilon_{tj}\) is the error term.
 \end{itemize}
 
-\section{\texorpdfstring{\textbf{Limitations}}{Limitations}}\label{limitations}
+\hypertarget{limitations}{%
+\section{\texorpdfstring{\textbf{Limitations}}{Limitations}}\label{limitations}}
 
 Data only indicates any accidents involving any parked vehicle. The
 parked vehicle in question need not be a truck. The parked vehicle may
@@ -656,7 +673,8 @@ the accident. A sedan could be drunk on hit a pillagely parked truck
 time variation. it may be the case that places change but we are only
 observing 2006 and not 2024.
 
-\section{\texorpdfstring{\textbf{Robustness}}{Robustness}}\label{robustness}
+\hypertarget{robustness}{%
+\section{\texorpdfstring{\textbf{Robustness}}{Robustness}}\label{robustness}}
 
 Buses, as a category of large vehicles, may be comparable to trucks in
 some contexts, potentially introducing noise into our results. To ensure
@@ -673,7 +691,8 @@ classifications. However, this concern can be safely excluded, as zoning
 regimes or classifications tend to remain relatively stable across
 municipalities \citep{mclaughlinLandUseRegulation2012}.
 
-\section{\texorpdfstring{\textbf{Improvements}}{Improvements}}\label{improvements}
+\hypertarget{improvements}{%
+\section{\texorpdfstring{\textbf{Improvements}}{Improvements}}\label{improvements}}
 
 There are other data sets found in \citep{NHTSAFileDownloads} or
 \citep{FatalityAnalysisReporting} ; . That contain data that could
@@ -693,7 +712,8 @@ who is at fault and so forth. It has data on the exact cause of the
 accident. Wheereas FMCA, data only contains general information on the
 cirucsmtances of teh accident.
 
-\section{Remarks}\label{remarks}
+\hypertarget{remarks}{%
+\section{Remarks}\label{remarks}}
 
 Most research on zoning restrictiveness focuses on housing, yet there is
 no reason to believe that a housing restrictiveness index cannot be
@@ -703,10 +723,12 @@ Ideas to explore would include investigating trade offs between fatigue
 driving and illegal parking. another avenue would be to investigate
 overall accidents as well, isolating fatigued driving.
 
-\section{\texorpdfstring{\textbf{Appendix}}{Appendix}}\label{appendix}
+\hypertarget{appendix}{%
+\section{\texorpdfstring{\textbf{Appendix}}{Appendix}}\label{appendix}}
 
+\hypertarget{sec-a.-visualization-of-dataset.-}{%
 \subsection{\texorpdfstring{\textbf{A. Visualization of
-dataset.}}{A. Visualization of dataset.}}\label{sec-a.-visualization-of-dataset.-}
+dataset.}}{A. Visualization of dataset.}}\label{sec-a.-visualization-of-dataset.-}}
 
 (Present Truck stop parking observatios also available
 \href{https://data-usdot.opendata.arcgis.com/datasets/usdot::truck-stop-parking/about}{Truck
@@ -717,8 +739,9 @@ Statistics})
 
 \includegraphics{images/unnamed.png}
 
+\hypertarget{sec-b.-map-of-zoning-categories}{%
 \subsection{B. Map of Zoning
-Categories}\label{sec-b.-map-of-zoning-categories}
+Categories}\label{sec-b.-map-of-zoning-categories}}
 
 \includegraphics{images/unnamed (1).png}
 
