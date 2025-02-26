@@ -170,12 +170,12 @@ This unique data set and the recency of the issue make our study a novel empiric
 
 Our data is (1990-Present) FMCA (Federal Motor Carrier Safety Administration) Crash file from USDOT (Department of Transportation) ([Appendix A](#sec-a.-visualization-of-dataset.-){#sec:appendix-a}).
 We can see type of vehicle (ex. trucks), nature of the crash (ex. Crashed involving a “parked” vehicle), fatalities, injuries, number of vehicles involved, etc.
-We will aslo use WLIURA (zoning restriction index) dataset by @gyourkoNewMeasureLocal2008 and zoning classifications used by @puentesTraditionalReformedReview2006 .
+We will aslo use WLIURA (zoning restriction index) data set by @gyourkoNewMeasureLocal2008 and zoning classifications used by @puentesTraditionalReformedReview2006 .
 There are other papers like @liangSafetyInspectionsImprove2021, which use similar data sets.
 
 ## **Strategy**
 
-With no truck parking available trucks illegally park causing observed accidents such that plcaes increase truck parking availability, through increase truck stop creation.
+With no truck parking available trucks illegally park causing observed accidents such that places increase truck parking availability, through increase truck stop creation.
 
 No Truck Parking → Trucks will illegally park → **Accidents Occur** (observed)→Truck Parking Demand increases → **Truck Parking Capacity Increase** (observed)
 
@@ -273,6 +273,8 @@ it may be the case that places change but we are only observing 2006 and not 202
 
 ## **Robustness**
 
+make sure to remove buses from my dataset
+
 Buses, as a category of large vehicles, may be comparable to trucks in some contexts, potentially introducing noise into our results.
 To ensure robustness, we propose conducting the study both with and without buses included in the dataset.
 
@@ -283,6 +285,11 @@ Concerns may arise regarding the time variation of zoning classifications.
 However, this concern can be safely excluded, as zoning regimes or classifications tend to remain relatively stable across municipalities [@mclaughlinLandUseRegulation2012].
 
 ## **Improvements**
+
+put high WLIURA as contorls
+
+Previous research, such as @liangSafetyInspectionsImprove2021, has utilized similar datasets to examine the impact of safety inspections on crash rates.
+Our study builds on this foundation by integrating additional spatial and regulatory dimensions, providing a more comprehensive understanding of the factors influencing truck-related accidents.
 
 There are other data sets found in [@NHTSAFileDownloads] or [@FatalityAnalysisReporting] ; .
 That contain data that could potentially be more relevant that addresses any limitations in our design.

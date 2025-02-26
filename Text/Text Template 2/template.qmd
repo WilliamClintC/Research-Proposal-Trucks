@@ -1,0 +1,84 @@
+---
+title: "Zoning: A Barrier or Solution to Truck Parking Infrastructure Shortages?"
+format:
+  jasa-pdf:
+    fontsize: 8pt
+    keep-tex: true  
+    journal:
+      blinded: false
+  jasa-html: default
+date: last-modified
+author:
+  - name: William Co
+    acknowledgements: |
+    affiliations:
+      - name: University of British Columbia
+        department: Department of Economics
+abstract: |
+  Assignment No.2
+bibliography: bibliography.bib  
+editor: 
+  markdown: 
+    wrap: sentence
+---
+
+## Institutional Setting
+
+The Federal Motor Carrier Safety Administration (FMCSA), maintains a comprehensive database known as the Crash File.
+This dataset records all reported motor vehicle crashes in the United States, providing detailed insights into the nature and conditions of each accident.
+Key attributes include the type of vehicle involved (e.g., trucks, motorcycles, or buses), the circumstances of the crash (e.g., involving a parked vehicle), the number of vehicles involved, any fatalities or injuries, and relevant weather conditions, and observations.
+Our data is (1990-Present) FMCA Crash file from USDOT ([Appendix A](#sec-a.-visualization-of-dataset.-){#sec:appendix-a}).
+
+Our dataset spans from 1990 to the present, with a focus on records from 1993 to 2016.
+A unique feature of this dataset is its ability to distinguish trucks as a specific variable, allowing for a granular analysis of truck-involved collisions.
+Furthermore, it offers detailed information on accident circumstances, such as whether a truck was illegally parked, a distinction not commonly found in other datasets.
+
+We also incorporate a digitized data set tracking truck stop creation from 2006 to 2016.
+This data set enables us to analyze the impact of new truck stops on accident patterns at the county level.
+Notably, this period lacks significant policy reforms or major events that could confound our analysis.
+
+Additionally, we utilize the Wharton Land Use Regulation Index (WLIURA) dataset by @gyourkoNewMeasureLocal2008, which measures the zoning restrictiveness of various locations.
+This dataset allows us to examine the influence of local zoning laws on crash patterns.
+We further refine our analysis by incorporating zoning classifications from @puentesTraditionalReformedReview2006, which categorize land use regulations into four distinct zoning types.
+These classifications serve as control variables in our study.
+
+## Event Study Model
+
+The change in the number of truck stops from 2006 to 2016 is modeled as:
+
+$$
+\Delta \text{NumTruckStop}_{t=[2006-2016]} = 
+\sum_{i=1993}^{2006} \beta_{t=i} \text{Accident}_{t=i}\cdot \text{Severity}_{t=i} + \gamma_{t} X_{t} + \epsilon_{t}
+$$
+
+where year $t$ represents time $i$, $\Delta\text{NumTruckStop}_{t}$ denotes the change in truck stops, $\text{Accident}_{i}$ is an event dummy indicating the presence of an accident, and $\text{Severity}_{i}$ represents associated fatalities, injuries, or vehicle involvement.
+$X_{t}$ consists of control variables, including zoning categories: Traditional (zoning unchanging), Exclusion (zoning difficult), Reform (zoning friendly), and Wild Wild Texas (no zoning).
+Finally, $\epsilon_{t}$ represents the error term for year $t$.
+We also add 2 dummy controls for counties with high and low zoning restriction.
+More possible controls would include,region, county budget, county weather patterns and population.
+
+The identification assumption is that in the absence of designated truck parking, trucks will resort to illegal parking, leading to observable accidents.
+In response, counties, driven by public safety concerns and the goal of reducing accidents, are incentive to increase truck parking availability.
+This, in turn, results in the creation of additional truck stops.
+The causal mechanism can be summarized as follows:
+
+*Insufficient Truck Parking → Illegal Truck Parking → Observed Accidents → Increased Demand for Truck Parking → Observed Increase in Truck Parking Capacity.*
+
+We can test this assumption by observing the coefficients surrounding, each zoning category and high/low restriction coefficient.
+We expect to see Traditional (zoning unchanging) with a insignificant coefficient, Exclusion (zoning difficult) with a negative coefficient, Reform (zoning friendly) with a positive coefficient, and Wild Wild Texas (no zoning) with a positive coefficient.
+High restriction places will have
+
+Potential sources of bias would be overestimation of accidents.
+It is really difficult for a truck to legally park anywhere.
+It could be well the case that the truck did every reasonable measure to park properly but would still get into a accident.
+This would overestimate accidents and underestimate our coefficient.
+Another source of bias would be underestimation of severity of accidents.
+Counties have a incentive to maintain a safe public image, which would include minimizing severity of accidents, underestimating our coefficient estimate.
+Furthermore, zoning classifications literature, support the idea that time variation of counties overtime follow their zoning categories.
+For example, Exclusion (zoning difficult) would become more difficult over time and vice versa[@mclaughlinLandUseRegulation2012].
+This would overestimate our coefficient estimates as t increases.
+
+We will cluster standard error by region.
+This is because different regions have vastly different accident and trucking profiles.
+Some regions for example may have a bigger trucking culture than another.
+Regional weather may also contribute to the accident profile of regions and the ease of truck stop construction.
