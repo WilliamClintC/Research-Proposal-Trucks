@@ -271,6 +271,9 @@ A sedan could be drunk on hit a pillagely parked truck
 time variation.
 it may be the case that places change but we are only observing 2006 and not 2024.
 
+we have no information on truck parking capacity.
+we observe number of truck stops change but we have no information on capacity change whatsoever.
+
 ## **Robustness**
 
 make sure to remove buses from my dataset

@@ -15,7 +15,6 @@ author:
       - name: University of British Columbia
         department: Department of Economics
 abstract: |
-  Assignment No.2
 bibliography: bibliography.bib  
 editor: 
   markdown: 
@@ -48,14 +47,19 @@ The change in the number of truck stops from 2006 to 2016 is modeled as:
 
 $$
 \Delta \text{NumTruckStop}_{t=[2006-2016]} = 
-\sum_{i=1993}^{2006} \beta_{t=i} \text{Accident}_{t=i}\cdot \text{Severity}_{t=i} + \gamma_{t} X_{t} + \epsilon_{t}
+\sum_{i=1993}^{2006} \beta_{t=i} \text{Accident}_{t=i}\cdot \text{Fatalities}_{t=i} + \gamma_{t} X_{t} + \epsilon_{t}
 $$
 
-where year $t$ represents time $i$, $\Delta\text{NumTruckStop}_{t}$ denotes the change in truck stops, $\text{Accident}_{i}$ is an event dummy indicating the presence of an accident, and $\text{Severity}_{i}$ represents associated fatalities, injuries, or vehicle involvement.
+where year $t$ represents time $i$, $\Delta\text{NumTruckStop}_{t}$ denotes the change in truck stops, $\text{Accident}_{i}$ is an event dummy indicating the presence of an accident, and $\text{Fatalities}_{i}$ represents associated fatalities.
 $X_{t}$ consists of control variables, including zoning categories: Traditional (zoning unchanging), Exclusion (zoning difficult), Reform (zoning friendly), and Wild Wild Texas (no zoning).
 Finally, $\epsilon_{t}$ represents the error term for year $t$.
 We also add 2 dummy controls for counties with high and low zoning restriction.
 More possible controls would include,region, county budget, county weather patterns and population.
+In this model, we assume that the occurrence of accidents and their severity are uncorrelated with the error term, ensuring that any estimated effect of these variables on the change in truck stops is not biased by omitted factors.
+In addition, the model includes several zoning measures specifically the categories Traditional, Exclusion, Reform, and Wild Wild Texas, as well as dummy controls for high and low zoning restrictions.
+It is assumed that these zoning variables are not perfectly collinear, allowing for valid coefficient estimation and clear identification of each variable’s effect.
+Furthermore, the model is based on the assumption of unidirectional causality, meaning that changes in the number of truck stops do not lead to an increase in accidents.
+This assumption is critical to ensure that the estimated relationships truly reflect the impact of accidents and severity on truck stop changes, rather than the reverse.
 
 The identification assumption is that in the absence of designated truck parking, trucks will resort to illegal parking, leading to observable accidents.
 In response, counties, driven by public safety concerns and the goal of reducing accidents, are incentive to increase truck parking availability.
@@ -78,7 +82,10 @@ Furthermore, zoning classifications literature, support the idea that time varia
 For example, Exclusion (zoning difficult) would become more difficult over time and vice versa[@mclaughlinLandUseRegulation2012].
 This would overestimate our coefficient estimates as t increases.
 
-We will cluster standard error by region.
-This is because different regions have vastly different accident and trucking profiles.
-Some regions for example may have a bigger trucking culture than another.
-Regional weather may also contribute to the accident profile of regions and the ease of truck stop construction.
+We will cluster standard errors at the state level because different regions exhibit distinct accident and trucking profiles.
+Some states may have a more prominent trucking culture than others, leading to systematic differences in accident rates and truck stop availability.
+Additionally, regional weather conditions may influence both the frequency of accidents and the feasibility of truck stop construction.
+
+By clustering at the state level, we assume that observations within each state are correlated, while observations across different states remain independent.
+This accounts for within-state dependencies, such as shared infrastructure, regulations, and economic conditions.
+Clustering at this level also ensures a sufficient number of clusters, which is crucial for obtaining reliable standard error estimates.

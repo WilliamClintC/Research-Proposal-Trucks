@@ -1,0 +1,127 @@
+---
+title: "Progress Update"
+subtite: ""
+date: today
+format: 
+  revealjs:
+    theme: serif
+    chalkboard: true
+editor: visual
+author:
+  - name: "William Clinton Co"
+    id: 
+    orcid: 
+    email: 
+    affiliation: 
+      - name: The University of British Columbia
+        city: 
+        url: ""
+logo: /content/ubc-logo.png
+footer: ""
+bibliography: references.bib
+---
+
+# Updates
+
+1.  Background
+
+2.  Paper Recommendation ([Yuanning Liang](https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=3113619 "View other papers by this author"),2021)
+
+3.  Current Results of Event Study Model
+
+4.  Next Steps (4 Zoning Types)
+
+# Background
+
+## Background
+
+-   90,056 local governments
+
+-   Inadequate truck parking has led to dangerous or illegal practices (such as **parking on highway shoulders** or in unauthorized areas, which heightens traffic accident risks ....)
+
+-   limited empirical research
+
+-   traffic accident data as a proxy for truck parking demand -\> land-use regulations -\> truck parking availability.
+
+## Zoning regulation welfare-enhancing?
+
+No Truck Parking → Trucks will illegally park → **Accidents Occur** (observed)→Truck Parking Demand increases → **Truck Parking Capacity Increase** (observed)
+
+## 4 Zoning Categories
+
+![](images/unnamed%20(1).png)
+
+## Data
+
+![](images/unnamed.png)
+
+## Event Study Model
+
+$$
+\Delta \text{NumTruckStop}_{t=[2006-2016]} = 
+\sum_{i=1993}^{2006} \beta_{t=i} \text{Accident}_{t=i}\cdot \text{Fatalities}_{t=i} + \gamma_{t} X_{t} + \epsilon_{t}
+$$
+
+year $t$ ,category $j$, time $i$
+
+-   $\Delta\text{NumTruckStop}_{tj}$ —- change in truck stop
+
+-   $\text{Accident}_{i,j}$ –- event dummy indicating the presence of a Accident in year $i$
+
+-   $\text{Severity}_{ij}$ -– fatalities\>3 (90% percentile)
+
+## **([Yuanning Liang](https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=3113619 "View other papers by this author"),2021)**
+
+-   Useful and highly relevant data description
+
+# Adjusted Even Study Model Results
+
+## 4 Categories (Map)
+
+![](images/unnamed%20(1)-01.png)
+
+## 4 Categories (Summary Statistics)
+
+![](images/Screenshot%202025-02-03%20165306.png)
+
+## 4 Categories (Properties)
+
+![](images/Screenshot%202025-02-03%20171307.png)
+
+## 4 Categories
+
+Places exhibit properties we expect and are Stable and Consistent
+
+![](images/Screenshot%202025-02-03%20171830.png){width="653"}
+
+## Mapping
+
+Existing Encoded Data
+
+![](images/output.png){width="979"}
+
+## Mapping (Zoning Categories)
+
+![](images/output-01.png){width="1005"}
+
+## Mapping (Region Categories)
+
+![](images/output-02.png){width="1152"}
+
+## DiD Model (work in progress)
+
+$$
+Y_{tj} = \sum_{t=-n}^{n} \theta_{tj} HR_{tj} + \sum_{t=-n}^{n} \phi_{tj} Post_{tj} + \sum_{t=-n}^{n} \psi_{tj} (HR_{tj} \times Post_{tj}) \\+ \gamma_{tj} X_{tj} + \epsilon_{tj}
+$$
+
+-   category $j$ , time $i$
+
+-   $Y_{tj}$ —- change in truck parking capacity
+
+-   $HR_{tj}$ —- high restriction index
+
+-   $Post_{tj}$ —- represents the indicator for the post-accident period
+
+# End. Thank you for reading
+
+## References
