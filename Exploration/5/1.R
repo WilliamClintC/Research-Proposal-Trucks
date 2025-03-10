@@ -2,7 +2,8 @@
 library(dplyr)
 library(ggplot2)
 library(stargazer)
-library(broom)
+install.packages("fixest")
+library(fixest)
 
 # Load the data from the CSV file
 df <- read.csv("C:/Users/clint/Desktop/Research-Paper-Trucks/Exploration/5/df_6.csv")
@@ -13,197 +14,52 @@ df <- df %>%
 
 # Filter data for years 2006 and earlier
 df <- df %>% 
-  filter(format(REPORT_DATE, "%Y") <= 2006)
+  filter(as.numeric(format(REPORT_DATE, "%Y")) <= 2006)
 
-# Create a dummy variable for FATALITIES
+# Create a dummy variable for FATALITIES (1 if FATALITIES >= 3, else 0)
 df <- df %>% 
   mutate(FATALITIES_DUMMY = ifelse(FATALITIES >= 3, 1, 0))
 
-# Create time indicator variables for each 2-year period
+# Create a time variable (2-year groups)
 df <- df %>% 
   mutate(year_group = floor(as.numeric(format(REPORT_DATE, "%Y")) / 2) * 2)
 
-year_groups <- unique(df$year_group)
-for (year_group in year_groups) {
-  df <- df %>% 
-    mutate(!!paste0("indicator_", year_group) := ifelse(year_group == !!year_group, 1, 0))
-}
-
-# Create interaction terms between each time indicator and FATALITIES_DUMMY
-for (year_group in year_groups) {
-  df <- df %>% 
-    mutate(!!paste0("interaction_", year_group) := !!sym(paste0("indicator_", year_group)) * FATALITIES_DUMMY)
-}
-
-# Remove interaction_1994 from the interaction terms
-interaction_terms <- paste0("interaction_", year_groups[year_groups != 1994], collapse = " + ")
-
-# Run the original event study model with all interaction terms except interaction_1994
-formula <- as.formula(paste("change_2006_2016 ~", interaction_terms))
-model1 <- lm(formula, data = df)
-
-# Ensure simple_family is treated as a factor
+# Ensure categorical variables are factors
 df <- df %>% 
-  mutate(simple_family = as.factor(simple_family))
+  mutate(simple_family = as.factor(simple_family),
+         Region = as.factor(Region),
+         STATE = as.factor(STATE))
 
-# Run the new event study model with all interaction terms except interaction_1994 and simple_family variable
-formula_with_simple_family <- as.formula(paste("change_2006_2016 ~", interaction_terms, "+ simple_family"))
-model2 <- lm(formula_with_simple_family, data = df)
+# Set the baseline as the most recent year group
+baseline_year <- max(df$year_group, na.rm = TRUE)
 
-# Ensure Region is treated as a factor
-df <- df %>% 
-  mutate(Region = as.factor(Region))
+# Run event study models using fixest's i() function:
+# The i() function automatically creates dummies for each year_group interacted with FATALITIES_DUMMY.
+# The ref = baseline_year argument sets the most recent year group as the baseline.
 
-# Run the new event study model with all interaction terms except interaction_1994, simple_family, and Region variable
-formula_with_simple_family_and_region <- as.formula(paste("change_2006_2016 ~", interaction_terms, "+ simple_family + Region"))
-model3 <- lm(formula_with_simple_family_and_region, data = df)
+# Model 1: No fixed effects (i.e. the original event study model)
+model1 <- feols(change_2006_2016 ~ i(year_group, FATALITIES_DUMMY, ref = baseline_year), data = df)
 
-# Ensure STATE is treated as a factor
-df <- df %>% 
-  mutate(STATE = as.factor(STATE))
+# Model 2: Controlling for zoning categories (simple_family)
+model2 <- feols(change_2006_2016 ~ i(year_group, FATALITIES_DUMMY, ref = baseline_year) | simple_family, data = df)
 
-# Run the new event study model with all interaction terms except interaction_1994, simple_family, and STATE variable
-formula_with_simple_family_and_state <- as.formula(paste("change_2006_2016 ~", interaction_terms, "+ simple_family + STATE"))
-model4 <- lm(formula_with_simple_family_and_state, data = df)
+# Model 3: Controlling for simple_family and Region
+model3 <- feols(change_2006_2016 ~ i(year_group, FATALITIES_DUMMY, ref = baseline_year) | simple_family + Region, data = df)
 
-# Summary of the models
+# Model 4: Controlling for simple_family and STATE
+model4 <- feols(change_2006_2016 ~ i(year_group, FATALITIES_DUMMY, ref = baseline_year) | simple_family + STATE, data = df)
+
+# Display summaries of the models
 summary(model1)
 summary(model2)
 summary(model3)
 summary(model4)
 
-# Display the model summaries using stargazer
+# Optionally, display the model summaries using stargazer
 stargazer(model1, model2, model3, model4, type = "html", title = "Event Study Model Results", 
-          column.labels = c("Original Model", "Model with Zoning Categories", "Model with Zoning Categories and Region", "Model with Zoning Categories and State"), 
+          column.labels = c("Original Model", "Model with Zoning Categories", 
+                            "Model with Zoning Categories and Region", "Model with Zoning Categories and State"), 
           out = "C:/Users/clint/Desktop/Research-Paper-Trucks/Exploration/5/model_summary_combined.html")
 
-# Extract coefficients and confidence intervals for model1
-coefficients_model1 <- tidy(model1)
-coefficients_model1 <- coefficients_model1 %>% 
-  filter(term != "(Intercept)") %>% 
-  mutate(year_group = as.numeric(gsub("interaction_", "", term)))
-
-# Extract coefficients and confidence intervals for model2
-coefficients_model2 <- tidy(model2)
-
-# Separate interaction terms and simple_family coefficients for model2
-interaction_coefficients_model2 <- coefficients_model2 %>% 
-  filter(grepl("interaction_", term)) %>% 
-  mutate(year_group = as.numeric(gsub("interaction_", "", term)))
-
-simple_family_coefficients_model2 <- coefficients_model2 %>% 
-  filter(grepl("simple_family", term)) %>% 
-  mutate(simple_family = gsub("simple_family", "", term))
-
-# Extract coefficients and confidence intervals for model3
-coefficients_model3 <- tidy(model3)
-
-# Separate interaction terms, simple_family coefficients, and Region coefficients for model3
-interaction_coefficients_model3 <- coefficients_model3 %>% 
-  filter(grepl("interaction_", term)) %>% 
-  mutate(year_group = as.numeric(gsub("interaction_", "", term)))
-
-simple_family_coefficients_model3 <- coefficients_model3 %>% 
-  filter(grepl("simple_family", term)) %>% 
-  mutate(simple_family = gsub("simple_family", "", term))
-
-region_coefficients_model3 <- coefficients_model3 %>% 
-  filter(grepl("Region", term)) %>% 
-  mutate(Region = gsub("Region", "", term))
-
-# Extract coefficients and confidence intervals for model4
-coefficients_model4 <- tidy(model4)
-
-# Separate interaction terms, simple_family coefficients, and STATE coefficients for model4
-interaction_coefficients_model4 <- coefficients_model4 %>% 
-  filter(grepl("interaction_", term)) %>% 
-  mutate(year_group = as.numeric(gsub("interaction_", "", term)))
-
-simple_family_coefficients_model4 <- coefficients_model4 %>% 
-  filter(grepl("simple_family", term)) %>% 
-  mutate(simple_family = gsub("simple_family", "", term))
-
-state_coefficients_model4 <- coefficients_model4 %>% 
-  filter(grepl("STATE", term)) %>% 
-  mutate(STATE = gsub("STATE", "", term))
-
-# Plot the coefficients for model1
-ggplot(coefficients_model1, aes(x = year_group, y = estimate)) +
-  geom_point() +
-  geom_errorbar(aes(ymin = estimate - std.error, ymax = estimate + std.error), width = 0.2) +
-  labs(title = "Coefficients of Fatality * Year Terms VS Change in Truck Stops (Original Model)",
-       x = "Year Group",
-       y = "Coefficient Estimate") +
-  theme_minimal()
-
-# Plot the interaction coefficients for model2
-ggplot(interaction_coefficients_model2, aes(x = year_group, y = estimate)) +
-  geom_point() +
-  geom_errorbar(aes(ymin = estimate - std.error, ymax = estimate + std.error), width = 0.2) +
-  labs(title = "Coefficients of Fatality * Year Terms VS Change in Truck Stops (Model with Zoning Categories)",
-       x = "Year Group",
-       y = "Coefficient Estimate") +
-  theme_minimal()
-
-# Plot the simple_family coefficients for model2
-ggplot(simple_family_coefficients_model2, aes(x = simple_family, y = estimate)) +
-  geom_point() +
-  geom_errorbar(aes(ymin = estimate - std.error, ymax = estimate + std.error), width = 0.2) +
-  labs(title = "Coefficients of Zoning Category VS Change in Truck Stops (Model with Zoning Categories)",
-       x = "Zoning Category",
-       y = "Coefficient Estimate") +
-  theme_minimal()
-
-# Plot the interaction coefficients for model3
-ggplot(interaction_coefficients_model3, aes(x = year_group, y = estimate)) +
-  geom_point() +
-  geom_errorbar(aes(ymin = estimate - std.error, ymax = estimate + std.error), width = 0.2) +
-  labs(title = "Coefficients of Fatality * Year Terms VS Change in Truck Stops (Model with Zoning Categories and Region)",
-       x = "Year Group",
-       y = "Coefficient Estimate") +
-  theme_minimal()
-
-# Plot the simple_family coefficients for model3
-ggplot(simple_family_coefficients_model3, aes(x = simple_family, y = estimate)) +
-  geom_point() +
-  geom_errorbar(aes(ymin = estimate - std.error, ymax = estimate + std.error), width = 0.2) +
-  labs(title = "Coefficients of Zoning Category VS Change in Truck Stops (Model with Zoning Categories and Region)",
-       x = "Zoning Category",
-       y = "Coefficient Estimate") +
-  theme_minimal()
-
-# Plot the Region coefficients for model3
-ggplot(region_coefficients_model3, aes(x = Region, y = estimate)) +
-  geom_point() +
-  geom_errorbar(aes(ymin = estimate - std.error, ymax = estimate + std.error), width = 0.2) +
-  labs(title = "Coefficients of Region VS Change in Truck Stops (Model with Zoning Categories and Region)",
-       x = "Region",
-       y = "Coefficient Estimate") +
-  theme_minimal()
-
-# Plot the interaction coefficients for model4
-ggplot(interaction_coefficients_model4, aes(x = year_group, y = estimate)) +
-  geom_point() +
-  geom_errorbar(aes(ymin = estimate - std.error, ymax = estimate + std.error), width = 0.2) +
-  labs(title = "Coefficients of Fatality * Year Terms VS Change in Truck Stops (Model with Zoning Categories and State)",
-       x = "Year Group",
-       y = "Coefficient Estimate") +
-  theme_minimal()
-
-# Plot the simple_family coefficients for model4
-ggplot(simple_family_coefficients_model4, aes(x = simple_family, y = estimate)) +
-  geom_point() +
-  geom_errorbar(aes(ymin = estimate - std.error, ymax = estimate + std.error), width = 0.2) +
-  labs(title = "Coefficients of Zoning Category VS Change in Truck Stops (Model with Zoning Categories and State)",
-       x = "Zoning Category",
-       y = "Coefficient Estimate") +
-  theme_minimal()
-
-# Plot the STATE coefficients for model4
-ggplot(state_coefficients_model4, aes(x = STATE, y = estimate)) +
-  geom_point() +
-  geom_errorbar(aes(ymin = estimate - std.error, ymax = estimate + std.error), width = 0.2) +
-  labs(title = "Coefficients of STATE VS Change in Truck Stops (Model with Zoning Categories and State)",
-       x = "STATE",
-       y = "Coefficient Estimate") +
-  theme_minimal()
+# Plot the event study coefficients for model1 using fixest's built-in iplot function.
+iplot(model1, main = paste("Event Study Coefficients (Baseline:", baseline_year, ")"))

@@ -82,10 +82,10 @@ Furthermore, zoning classifications literature, support the idea that time varia
 For example, Exclusion (zoning difficult) would become more difficult over time and vice versa[@mclaughlinLandUseRegulation2012].
 This would overestimate our coefficient estimates as t increases.
 
-We will cluster standard errors at the state level because different regions exhibit distinct accident and trucking profiles.
-Some states may have a more prominent trucking culture than others, leading to systematic differences in accident rates and truck stop availability.
+We will cluster standard errors at the region/state level because different regions/state exhibit distinct accident and trucking profiles.
+Some regions/states may have a more prominent trucking culture than others, leading to systematic differences in accident rates and truck stop availability.
 Additionally, regional weather conditions may influence both the frequency of accidents and the feasibility of truck stop construction.
 
-By clustering at the state level, we assume that observations within each state are correlated, while observations across different states remain independent.
+By clustering at the region/state level, we assume that observations within each region/state are correlated, while observations across different states remain independent.
 This accounts for within-state dependencies, such as shared infrastructure, regulations, and economic conditions.
 Clustering at this level also ensures a sufficient number of clusters, which is crucial for obtaining reliable standard error estimates.

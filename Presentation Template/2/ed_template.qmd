@@ -29,13 +29,13 @@ bibliography: references.bib
 
 2.  ([Yuanning Liang](https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=3113619 "View other papers by this author"),2021)
 
-3.  Event Study Model Progress
+3.  Event Study Model
 
-4.  Results
+4.  DID Model
 
-5.  Conclusion
+5.  Results
 
-6.  Next Steps
+6.  Conclusion
 
 # Background
 
@@ -64,19 +64,19 @@ No Truck Parking → Trucks will illegally park → **Accidents Occur** (observe
 ## Event Study Model
 
 $$
-\Delta \text{NumTruckStop}_{t=[2006-2016]} = 
-\sum_{i=1993}^{2006} \beta_{t=i} \text{Accident}_{t=i}\cdot \text{Fatality}_{t=i} + 
+\Delta \text{NumTruckStop}_{j,t=[2006-2016]} = 
+\sum_{i=1993}^{2006} \text{Accident}_{j,t=i}\cdot \text{Fatality}_{j,t=i} + 
 \\
-\gamma_{t} X_{t} + \epsilon_{t}
+\gamma_{j}+ \lambda_{t}+ \epsilon_{tj}
 $$
 
-year $t$ ,category $j$, time $i$
+year $t$ , time $i$, category $j$
 
 -   $\Delta\text{NumTruckStop}_{t}$ —- change in truck stop
 
 -   $\text{Accident}_{i}$ –- event dummy indicating the presence of a Accident in year $i$
 
--   $\text{Fatality}_{i}$ -– dummy variable for fatalities\>3 (90th percentile)
+-   $\text{Fatality}_{i}$ -– dummy variable for fatalities\>3
 
 ## **([Yuanning Liang](https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=3113619 "View other papers by this author"),2021)**
 
@@ -135,67 +135,41 @@ parallel trends hold
 
 # Results
 
-## Results
+## Fatality Accident Results
 
-![](images/1-01.png)
+Truck stop creation responds to accidents
 
-## Results
+![](images/Rplot-02.png)
 
-![](images/2-01.png)
+## Zoning Category Results
 
-## Results
-
-![](images/3-01.png)
-
-## Results
-
-![](images/4-01.png)
-
-## Results
-
-State seems to be the most informative control
+![](images/Rplot01-02.png)
 
 ## Discussion
 
-| Zoning Category        | Hypothesis | Result        |
-|------------------------|------------|---------------|
-| Reform                 | Positive   | Negative      |
-| Traditional            | Negative   | Negative/Null |
-| Wild Texas (No Zoning) | Positive   | Negative/Null |
+| Zoning Category | Hypothesis | Result   |
+|-----------------|------------|----------|
+| Reform          | Positive   | Negative |
+| Wild Texas      | Positive   | Null     |
+| Exclusion       | Negative   | Positive |
 
-Zoning categories seem to play a limited role in truck stop creation.
+Zoning categories deviate from our expectations. We can possibly group/subgroup different categories together for distinct effects.
 
-## Results
+## Region Results
 
-![](images/Rplot.png)
+in line with expectations
 
-## Results
+![](images/Rplot03.png)
 
-![](images/Rplot01.png)
+## State Results
 
-## Results
-
-![](images/Rplot02.png)
-
-## Minor Observations
-
-NE and West is negative (expected)
-
-![](images/Rplot-01.png)
-
-## Minor Observations
-
-states are inline with expectations
-
-![](images/Rplot01-01.png)
+![](images/Rplot04.png)
 
 ## Data Integrity?
 
 -   There is a issue with the data. Truck stop counts and changes do not add up
 
 -   Our results seem to be reasonable despite this
-
-# Next Steps
 
 ## DID
 
@@ -206,15 +180,39 @@ treatment \~ accident between 2008-2015
 ## DiD Model
 
 $$
-\Delta \text{NumTruckStop}_t = \sum_{t=2007}^{2016} \theta_{t} \text{Accident}_{t} + \sum_{t=2007}^{2016} \phi_{t} \text{Post}_{t} \\+ \sum_{t=2007}^{2016} \psi_{t} (\text{Accident}_{t} \times \text{Post}_{t}) + \gamma_{tj} X_{tj} + \epsilon_{tj}
+\Delta \text{NumTruckStop}_{jt} = \gamma_j + \theta_t + \beta \cdot (\text{Accident}_{jt} \cdot \text{Post}_{t}) + \epsilon_{jt}
 $$
+
+year $t$ , time $i$, category $j$
 
 -   $\Delta \text{NumTruckStop}_t$ \~ change in truck stop
 
--   $\text{Accident}_{t}$ \~ indicator variable if accident occurs (2008 to 2015)
+-   $\text{Accident}_{tj}$ \~ indicator variable for high fatality accident
 
--   $Post_{t}$ \~ indicator for post-accident period (after 2015)
+-   $Post_{t}$ \~ indicator for post-accident period ($t \geq2016$)
+
+## DiD Model Coefficients
+
+Results seem insignificant
+
+![](images/Rplot-06.png)
+
+# Appendix
+
+## Summary Table Coefficients DID
+
+![](images/Rplot01-03.png)
+
+## Summary Table Coefficients Zoning
+
+![](images/Rplot05.png)
+
+## Summary Table Coefficients Time
+
+![](images/Screenshot%202025-03-09%20225540.png)
 
 # End. Thank you for Reading
+
+-   Other Tasks?
 
 ## References

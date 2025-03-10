@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.5.43">
 
   <meta name="author" content="William Clinton Co">
-  <meta name="dcterms.date" content="2025-03-07">
+  <meta name="dcterms.date" content="2025-03-10">
   <title>Customisable Edinburgh Quarto Theme – Progress Update</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -342,17 +342,17 @@ William Clinton Co
     </div>
 </div>
 
-  <p class="date">2025-03-07</p>
+  <p class="date">2025-03-10</p>
 </section>
 <section id="updates" class="title-slide slide level1 center">
 <h1>Updates</h1>
 <ol type="1">
 <li><p>Background</p></li>
 <li><p>(<a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=3113619" title="View other papers by this author">Yuanning Liang</a>,2021)</p></li>
-<li><p>Event Study Model Progress</p></li>
+<li><p>Event Study Model</p></li>
+<li><p>DID Model</p></li>
 <li><p>Results</p></li>
 <li><p>Conclusion</p></li>
-<li><p>Next Steps</p></li>
 </ol>
 </section>
 
@@ -385,16 +385,16 @@ William Clinton Co
 <section id="event-study-model" class="slide level2">
 <h2>Event Study Model</h2>
 <p><span class="math display">\[
-\Delta \text{NumTruckStop}_{t=[2006-2016]} =
-\sum_{i=1993}^{2006} \beta_{t=i} \text{Accident}_{t=i}\cdot \text{Fatality}_{t=i} +
+\Delta \text{NumTruckStop}_{j,t=[2006-2016]} =
+\sum_{i=1993}^{2006} \text{Accident}_{j,t=i}\cdot \text{Fatality}_{j,t=i} +
 \\
-\gamma_{t} X_{t} + \epsilon_{t}
+\gamma_{j}+ \lambda_{t}+ \epsilon_{tj}
 \]</span></p>
-<p>year <span class="math inline">\(t\)</span> ,category <span class="math inline">\(j\)</span>, time <span class="math inline">\(i\)</span></p>
+<p>year <span class="math inline">\(t\)</span> , time <span class="math inline">\(i\)</span>, category <span class="math inline">\(j\)</span></p>
 <ul>
 <li><p><span class="math inline">\(\Delta\text{NumTruckStop}_{t}\)</span> —- change in truck stop</p></li>
 <li><p><span class="math inline">\(\text{Accident}_{i}\)</span> –- event dummy indicating the presence of a Accident in year <span class="math inline">\(i\)</span></p></li>
-<li><p><span class="math inline">\(\text{Fatality}_{i}\)</span> -– dummy variable for fatalities&gt;3 (90th percentile)</p></li>
+<li><p><span class="math inline">\(\text{Fatality}_{i}\)</span> -– dummy variable for fatalities&gt;3</p></li>
 </ul>
 </section>
 <section id="yuanning-liang2021" class="slide level2">
@@ -458,26 +458,15 @@ William Clinton Co
 <h1>Results</h1>
 
 </section>
-<section id="results-1" class="slide level2">
-<h2>Results</h2>
+<section id="fatality-accident-results" class="slide level2">
+<h2>Fatality Accident Results</h2>
+<p>Truck stop creation responds to accidents</p>
 
-<img data-src="images/1-01.png" class="r-stretch"></section>
-<section id="results-2" class="slide level2">
-<h2>Results</h2>
+<img data-src="images/Rplot-02.png" class="r-stretch"></section>
+<section id="zoning-category-results" class="slide level2">
+<h2>Zoning Category Results</h2>
 
-<img data-src="images/2-01.png" class="r-stretch"></section>
-<section id="results-3" class="slide level2">
-<h2>Results</h2>
-
-<img data-src="images/3-01.png" class="r-stretch"></section>
-<section id="results-4" class="slide level2">
-<h2>Results</h2>
-
-<img data-src="images/4-01.png" class="r-stretch"></section>
-<section id="results-5" class="slide level2">
-<h2>Results</h2>
-<p>State seems to be the most informative control</p>
-</section>
+<img data-src="images/Rplot01-02.png" class="r-stretch"></section>
 <section id="discussion" class="slide level2">
 <h2>Discussion</h2>
 <table class="caption-top">
@@ -495,52 +484,34 @@ William Clinton Co
 <td>Negative</td>
 </tr>
 <tr class="even">
-<td>Traditional</td>
-<td>Negative</td>
-<td>Negative/Null</td>
+<td>Wild Texas</td>
+<td>Positive</td>
+<td>Null</td>
 </tr>
 <tr class="odd">
-<td>Wild Texas (No Zoning)</td>
+<td>Exclusion</td>
+<td>Negative</td>
 <td>Positive</td>
-<td>Negative/Null</td>
 </tr>
 </tbody>
 </table>
-<p>Zoning categories seem to play a limited role in truck stop creation.</p>
+<p>Zoning categories deviate from our expectations. We can possibly group/subgroup different categories together for distinct effects.</p>
 </section>
-<section id="results-6" class="slide level2">
-<h2>Results</h2>
+<section id="region-results" class="slide level2">
+<h2>Region Results</h2>
+<p>in line with expectations</p>
 
-<img data-src="images/Rplot.png" class="r-stretch"></section>
-<section id="results-7" class="slide level2">
-<h2>Results</h2>
+<img data-src="images/Rplot03.png" class="r-stretch"></section>
+<section id="state-results" class="slide level2">
+<h2>State Results</h2>
 
-<img data-src="images/Rplot01.png" class="r-stretch"></section>
-<section id="results-8" class="slide level2">
-<h2>Results</h2>
-
-<img data-src="images/Rplot02.png" class="r-stretch"></section>
-<section id="minor-observations" class="slide level2">
-<h2>Minor Observations</h2>
-<p>NE and West is negative (expected)</p>
-
-<img data-src="images/Rplot-01.png" class="r-stretch"></section>
-<section id="minor-observations-1" class="slide level2">
-<h2>Minor Observations</h2>
-<p>states are inline with expectations</p>
-
-<img data-src="images/Rplot01-01.png" class="r-stretch"></section>
+<img data-src="images/Rplot04.png" class="r-stretch"></section>
 <section id="data-integrity" class="slide level2">
 <h2>Data Integrity?</h2>
 <ul>
 <li><p>There is a issue with the data. Truck stop counts and changes do not add up</p></li>
 <li><p>Our results seem to be reasonable despite this</p></li>
 </ul>
-</section></section>
-<section>
-<section id="next-steps" class="title-slide slide level1 center">
-<h1>Next Steps</h1>
-
 </section>
 <section id="did" class="slide level2">
 <h2>DID</h2>
@@ -550,18 +521,43 @@ William Clinton Co
 <section id="did-model" class="slide level2">
 <h2>DiD Model</h2>
 <p><span class="math display">\[
-\Delta \text{NumTruckStop}_t = \sum_{t=2007}^{2016} \theta_{t} \text{Accident}_{t} + \sum_{t=2007}^{2016} \phi_{t} \text{Post}_{t} \\+ \sum_{t=2007}^{2016} \psi_{t} (\text{Accident}_{t} \times \text{Post}_{t}) + \gamma_{tj} X_{tj} + \epsilon_{tj}
+\Delta \text{NumTruckStop}_{jt} = \gamma_j + \theta_t + \beta \cdot (\text{Accident}_{jt} \cdot \text{Post}_{t}) + \epsilon_{jt}
 \]</span></p>
+<p>year <span class="math inline">\(t\)</span> , time <span class="math inline">\(i\)</span>, category <span class="math inline">\(j\)</span></p>
 <ul>
 <li><p><span class="math inline">\(\Delta \text{NumTruckStop}_t\)</span> ~ change in truck stop</p></li>
-<li><p><span class="math inline">\(\text{Accident}_{t}\)</span> ~ indicator variable if accident occurs (2008 to 2015)</p></li>
-<li><p><span class="math inline">\(Post_{t}\)</span> ~ indicator for post-accident period (after 2015)</p></li>
+<li><p><span class="math inline">\(\text{Accident}_{tj}\)</span> ~ indicator variable for high fatality accident</p></li>
+<li><p><span class="math inline">\(Post_{t}\)</span> ~ indicator for post-accident period (<span class="math inline">\(t \geq2016\)</span>)</p></li>
 </ul>
-</section></section>
+</section>
+<section id="did-model-coefficients" class="slide level2">
+<h2>DiD Model Coefficients</h2>
+<p>Results seem insignificant</p>
+
+<img data-src="images/Rplot-06.png" class="r-stretch"></section></section>
+<section>
+<section id="appendix" class="title-slide slide level1 center">
+<h1>Appendix</h1>
+
+</section>
+<section id="summary-table-coefficients-did" class="slide level2">
+<h2>Summary Table Coefficients DID</h2>
+
+<img data-src="images/Rplot01-03.png" class="r-stretch"></section>
+<section id="summary-table-coefficients-zoning" class="slide level2">
+<h2>Summary Table Coefficients Zoning</h2>
+
+<img data-src="images/Rplot05.png" class="r-stretch"></section>
+<section id="summary-table-coefficients-time" class="slide level2">
+<h2>Summary Table Coefficients Time</h2>
+
+<img data-src="images/Screenshot 2025-03-09 225540.png" class="r-stretch"></section></section>
 <section>
 <section id="end.-thank-you-for-reading" class="title-slide slide level1 center">
 <h1>End. Thank you for Reading</h1>
-
+<ul>
+<li>Other Tasks?</li>
+</ul>
 </section>
 <section id="references" class="slide level2">
 <h2>References</h2>

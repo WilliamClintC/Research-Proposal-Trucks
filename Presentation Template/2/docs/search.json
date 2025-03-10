@@ -32,7 +32,7 @@
     "href": "ed_template.html#event-study-model",
     "title": "Progress Update",
     "section": "Event Study Model",
-    "text": "Event Study Model\n\\[\n\\Delta \\text{NumTruckStop}_{t=[2006-2016]} =\n\\sum_{i=1993}^{2006} \\beta_{t=i} \\text{Accident}_{t=i}\\cdot \\text{Fatality}_{t=i} +\n\\\\\n\\gamma_{t} X_{t} + \\epsilon_{t}\n\\]\nyear \\(t\\) ,category \\(j\\), time \\(i\\)\n\n\\(\\Delta\\text{NumTruckStop}_{t}\\) —- change in truck stop\n\\(\\text{Accident}_{i}\\) –- event dummy indicating the presence of a Accident in year \\(i\\)\n\\(\\text{Fatality}_{i}\\) -– dummy variable for fatalities&gt;3 (90th percentile)"
+    "text": "Event Study Model\n\\[\n\\Delta \\text{NumTruckStop}_{j,t=[2006-2016]} =\n\\sum_{i=1993}^{2006} \\text{Accident}_{j,t=i}\\cdot \\text{Fatality}_{j,t=i} +\n\\\\\n\\gamma_{j}+ \\lambda_{t}+ \\epsilon_{tj}\n\\]\nyear \\(t\\) , time \\(i\\), category \\(j\\)\n\n\\(\\Delta\\text{NumTruckStop}_{t}\\) —- change in truck stop\n\\(\\text{Accident}_{i}\\) –- event dummy indicating the presence of a Accident in year \\(i\\)\n\\(\\text{Fatality}_{i}\\) -– dummy variable for fatalities&gt;3"
   },
   {
     "objectID": "ed_template.html#yuanning-liang2021",
@@ -112,81 +112,39 @@
     "text": "Parallel Trends\nparallel trends hold"
   },
   {
-    "objectID": "ed_template.html#results-1",
-    "href": "ed_template.html#results-1",
+    "objectID": "ed_template.html#fatality-accident-results",
+    "href": "ed_template.html#fatality-accident-results",
     "title": "Progress Update",
-    "section": "Results",
-    "text": "Results"
+    "section": "Fatality Accident Results",
+    "text": "Fatality Accident Results\nTruck stop creation responds to accidents"
   },
   {
-    "objectID": "ed_template.html#results-2",
-    "href": "ed_template.html#results-2",
+    "objectID": "ed_template.html#zoning-category-results",
+    "href": "ed_template.html#zoning-category-results",
     "title": "Progress Update",
-    "section": "Results",
-    "text": "Results"
-  },
-  {
-    "objectID": "ed_template.html#results-3",
-    "href": "ed_template.html#results-3",
-    "title": "Progress Update",
-    "section": "Results",
-    "text": "Results"
-  },
-  {
-    "objectID": "ed_template.html#results-4",
-    "href": "ed_template.html#results-4",
-    "title": "Progress Update",
-    "section": "Results",
-    "text": "Results"
-  },
-  {
-    "objectID": "ed_template.html#results-5",
-    "href": "ed_template.html#results-5",
-    "title": "Progress Update",
-    "section": "Results",
-    "text": "Results\nState seems to be the most informative control"
+    "section": "Zoning Category Results",
+    "text": "Zoning Category Results"
   },
   {
     "objectID": "ed_template.html#discussion",
     "href": "ed_template.html#discussion",
     "title": "Progress Update",
     "section": "Discussion",
-    "text": "Discussion\n\n\n\nZoning Category\nHypothesis\nResult\n\n\n\n\nReform\nPositive\nNegative\n\n\nTraditional\nNegative\nNegative/Null\n\n\nWild Texas (No Zoning)\nPositive\nNegative/Null\n\n\n\nZoning categories seem to play a limited role in truck stop creation."
+    "text": "Discussion\n\n\n\nZoning Category\nHypothesis\nResult\n\n\n\n\nReform\nPositive\nNegative\n\n\nWild Texas\nPositive\nNull\n\n\nExclusion\nNegative\nPositive\n\n\n\nZoning categories deviate from our expectations. We can possibly group/subgroup different categories together for distinct effects."
   },
   {
-    "objectID": "ed_template.html#results-6",
-    "href": "ed_template.html#results-6",
+    "objectID": "ed_template.html#region-results",
+    "href": "ed_template.html#region-results",
     "title": "Progress Update",
-    "section": "Results",
-    "text": "Results"
+    "section": "Region Results",
+    "text": "Region Results\nin line with expectations"
   },
   {
-    "objectID": "ed_template.html#results-7",
-    "href": "ed_template.html#results-7",
+    "objectID": "ed_template.html#state-results",
+    "href": "ed_template.html#state-results",
     "title": "Progress Update",
-    "section": "Results",
-    "text": "Results"
-  },
-  {
-    "objectID": "ed_template.html#results-8",
-    "href": "ed_template.html#results-8",
-    "title": "Progress Update",
-    "section": "Results",
-    "text": "Results"
-  },
-  {
-    "objectID": "ed_template.html#minor-observations",
-    "href": "ed_template.html#minor-observations",
-    "title": "Progress Update",
-    "section": "Minor Observations",
-    "text": "Minor Observations\nNE and West is negative (expected)"
-  },
-  {
-    "objectID": "ed_template.html#minor-observations-1",
-    "href": "ed_template.html#minor-observations-1",
-    "title": "Progress Update",
-    "section": "Minor Observations",
-    "text": "Minor Observations\nstates are inline with expectations"
+    "section": "State Results",
+    "text": "State Results"
   },
   {
     "objectID": "ed_template.html#data-integrity",
@@ -207,7 +165,35 @@
     "href": "ed_template.html#did-model",
     "title": "Progress Update",
     "section": "DiD Model",
-    "text": "DiD Model\n\\[\n\\Delta \\text{NumTruckStop}_t = \\sum_{t=2007}^{2016} \\theta_{t} \\text{Accident}_{t} + \\sum_{t=2007}^{2016} \\phi_{t} \\text{Post}_{t} \\\\+ \\sum_{t=2007}^{2016} \\psi_{t} (\\text{Accident}_{t} \\times \\text{Post}_{t}) + \\gamma_{tj} X_{tj} + \\epsilon_{tj}\n\\]\n\n\\(\\Delta \\text{NumTruckStop}_t\\) ~ change in truck stop\n\\(\\text{Accident}_{t}\\) ~ indicator variable if accident occurs (2008 to 2015)\n\\(Post_{t}\\) ~ indicator for post-accident period (after 2015)"
+    "text": "DiD Model\n\\[\n\\Delta \\text{NumTruckStop}_{jt} = \\gamma_j + \\theta_t + \\beta \\cdot (\\text{Accident}_{jt} \\cdot \\text{Post}_{t}) + \\epsilon_{jt}\n\\]\nyear \\(t\\) , time \\(i\\), category \\(j\\)\n\n\\(\\Delta \\text{NumTruckStop}_t\\) ~ change in truck stop\n\\(\\text{Accident}_{tj}\\) ~ indicator variable for high fatality accident\n\\(Post_{t}\\) ~ indicator for post-accident period (\\(t \\geq2016\\))"
+  },
+  {
+    "objectID": "ed_template.html#did-model-coefficients",
+    "href": "ed_template.html#did-model-coefficients",
+    "title": "Progress Update",
+    "section": "DiD Model Coefficients",
+    "text": "DiD Model Coefficients\nResults seem insignificant"
+  },
+  {
+    "objectID": "ed_template.html#summary-table-coefficients-did",
+    "href": "ed_template.html#summary-table-coefficients-did",
+    "title": "Progress Update",
+    "section": "Summary Table Coefficients DID",
+    "text": "Summary Table Coefficients DID"
+  },
+  {
+    "objectID": "ed_template.html#summary-table-coefficients-zoning",
+    "href": "ed_template.html#summary-table-coefficients-zoning",
+    "title": "Progress Update",
+    "section": "Summary Table Coefficients Zoning",
+    "text": "Summary Table Coefficients Zoning"
+  },
+  {
+    "objectID": "ed_template.html#summary-table-coefficients-time",
+    "href": "ed_template.html#summary-table-coefficients-time",
+    "title": "Progress Update",
+    "section": "Summary Table Coefficients Time",
+    "text": "Summary Table Coefficients Time"
   },
   {
     "objectID": "ed_template.html#references",
