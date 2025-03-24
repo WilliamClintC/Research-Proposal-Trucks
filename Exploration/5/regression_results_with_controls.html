@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tinytable_c0fpgm7ckvvefkbtmb59</title>
+    <title>tinytable_o2mmrd5b2anljehwjxtu</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   </head>
   <body>
@@ -12,8 +12,8 @@
 
     <script>
 
-      function styleCell_c0fpgm7ckvvefkbtmb59(i, j, css_id) {
-          var table = document.getElementById("tinytable_c0fpgm7ckvvefkbtmb59");
+      function styleCell_o2mmrd5b2anljehwjxtu(i, j, css_id) {
+          var table = document.getElementById("tinytable_o2mmrd5b2anljehwjxtu");
           var cell = table.rows[i]?.cells[j];  // Safe navigation to avoid errors
           if (cell) {
               console.log(`Styling cell at (${i}, ${j}) with class ${css_id}`);
@@ -23,7 +23,7 @@
           }
       }
       function insertSpanRow(i, colspan, content) {
-        var table = document.getElementById('tinytable_c0fpgm7ckvvefkbtmb59');
+        var table = document.getElementById('tinytable_o2mmrd5b2anljehwjxtu');
         var newRow = table.insertRow(i);
         var newCell = newRow.insertCell(0);
         newCell.setAttribute("colspan", colspan);
@@ -31,8 +31,8 @@
         // this may be unsafe, but innerText does not interpret <br>
         newCell.innerHTML = content;
       }
-      function spanCell_c0fpgm7ckvvefkbtmb59(i, j, rowspan, colspan) {
-        var table = document.getElementById("tinytable_c0fpgm7ckvvefkbtmb59");
+      function spanCell_o2mmrd5b2anljehwjxtu(i, j, rowspan, colspan) {
+        var table = document.getElementById("tinytable_o2mmrd5b2anljehwjxtu");
         const targetRow = table.rows[i];
         const targetCell = targetRow.cells[j];
         for (let r = 0; r < rowspan; r++) {
@@ -62,20 +62,20 @@
       window.addEventListener('load', function () {
           var cellsToStyle = [
             // tinytable style arrays after
-          { positions: [ { i: 12, j: 0 },  ], css_id: 'tinytable_css_v30o856haebuhvgiknmw',}, 
-          { positions: [ { i: 0, j: 0 },  ], css_id: 'tinytable_css_s820vb15d6reil7opw1i',}, 
-          { positions: [ { i: 3, j: 1 }, { i: 4, j: 1 }, { i: 1, j: 1 }, { i: 7, j: 1 }, { i: 8, j: 1 }, { i: 9, j: 1 }, { i: 6, j: 1 }, { i: 11, j: 1 }, { i: 7, j: 2 }, { i: 13, j: 1 }, { i: 14, j: 1 }, { i: 2, j: 1 }, { i: 16, j: 1 }, { i: 7, j: 3 }, { i: 5, j: 1 }, { i: 1, j: 2 }, { i: 2, j: 2 }, { i: 3, j: 2 }, { i: 4, j: 2 }, { i: 10, j: 1 }, { i: 6, j: 2 }, { i: 2, j: 3 }, { i: 8, j: 2 }, { i: 9, j: 2 }, { i: 15, j: 1 }, { i: 11, j: 2 }, { i: 2, j: 4 }, { i: 13, j: 2 }, { i: 14, j: 2 }, { i: 15, j: 2 }, { i: 16, j: 2 }, { i: 7, j: 4 }, { i: 5, j: 2 }, { i: 1, j: 3 }, { i: 15, j: 3 }, { i: 3, j: 3 }, { i: 4, j: 3 }, { i: 10, j: 2 }, { i: 6, j: 3 }, { i: 15, j: 4 }, { i: 8, j: 3 }, { i: 9, j: 3 }, { i: 10, j: 3 }, { i: 11, j: 3 }, { i: 16, j: 3 }, { i: 13, j: 3 }, { i: 14, j: 3 }, { i: 10, j: 4 }, { i: 6, j: 4 }, { i: 3, j: 4 }, { i: 5, j: 3 }, { i: 1, j: 4 }, { i: 14, j: 4 }, { i: 11, j: 4 }, { i: 4, j: 4 }, { i: 5, j: 4 }, { i: 8, j: 4 }, { i: 9, j: 4 }, { i: 16, j: 4 }, { i: 13, j: 4 },  ], css_id: 'tinytable_css_r30jwm448q3scrxo6n4o',}, 
-          { positions: [ { i: 12, j: 3 }, { i: 12, j: 4 }, { i: 12, j: 2 }, { i: 12, j: 1 },  ], css_id: 'tinytable_css_ghyhxp6hswmyt8y0hfys',}, 
-          { positions: [ { i: 1, j: 0 }, { i: 2, j: 0 }, { i: 3, j: 0 }, { i: 4, j: 0 }, { i: 5, j: 0 }, { i: 6, j: 0 }, { i: 7, j: 0 }, { i: 8, j: 0 }, { i: 9, j: 0 }, { i: 10, j: 0 }, { i: 11, j: 0 }, { i: 16, j: 0 }, { i: 13, j: 0 }, { i: 14, j: 0 }, { i: 15, j: 0 },  ], css_id: 'tinytable_css_3iejj9amrm2wouk17fwc',}, 
-          { positions: [ { i: 17, j: 2 }, { i: 17, j: 1 }, { i: 17, j: 3 }, { i: 17, j: 4 },  ], css_id: 'tinytable_css_35pezlmrljpilhzk515k',}, 
-          { positions: [ { i: 17, j: 0 },  ], css_id: 'tinytable_css_24x83h2zs6x5uulis5l9',}, 
-          { positions: [ { i: 0, j: 1 }, { i: 0, j: 2 }, { i: 0, j: 4 }, { i: 0, j: 3 },  ], css_id: 'tinytable_css_18kl8l4wxo81dxcdly5o',}, 
+          { positions: [ { i: 0, j: 0 },  ], css_id: 'tinytable_css_xe5vyhjrd6qhc3531l6s',}, 
+          { positions: [ { i: 0, j: 1 }, { i: 0, j: 2 }, { i: 0, j: 4 }, { i: 0, j: 3 },  ], css_id: 'tinytable_css_q8605lqbd1od94m98ik4',}, 
+          { positions: [ { i: 12, j: 0 },  ], css_id: 'tinytable_css_q7rlwl1eu8ffx9l1zsmh',}, 
+          { positions: [ { i: 17, j: 2 }, { i: 17, j: 1 }, { i: 17, j: 3 }, { i: 17, j: 4 },  ], css_id: 'tinytable_css_needeovt9pi1avyud2s2',}, 
+          { positions: [ { i: 1, j: 0 }, { i: 2, j: 0 }, { i: 3, j: 0 }, { i: 4, j: 0 }, { i: 5, j: 0 }, { i: 6, j: 0 }, { i: 7, j: 0 }, { i: 8, j: 0 }, { i: 9, j: 0 }, { i: 10, j: 0 }, { i: 11, j: 0 }, { i: 16, j: 0 }, { i: 13, j: 0 }, { i: 14, j: 0 }, { i: 15, j: 0 },  ], css_id: 'tinytable_css_hnqykvjdu0wwmau01j51',}, 
+          { positions: [ { i: 3, j: 1 }, { i: 4, j: 1 }, { i: 1, j: 1 }, { i: 7, j: 1 }, { i: 8, j: 1 }, { i: 9, j: 1 }, { i: 6, j: 1 }, { i: 11, j: 1 }, { i: 7, j: 2 }, { i: 13, j: 1 }, { i: 14, j: 1 }, { i: 2, j: 1 }, { i: 16, j: 1 }, { i: 7, j: 3 }, { i: 5, j: 1 }, { i: 1, j: 2 }, { i: 2, j: 2 }, { i: 3, j: 2 }, { i: 4, j: 2 }, { i: 10, j: 1 }, { i: 6, j: 2 }, { i: 2, j: 3 }, { i: 8, j: 2 }, { i: 9, j: 2 }, { i: 15, j: 1 }, { i: 11, j: 2 }, { i: 2, j: 4 }, { i: 13, j: 2 }, { i: 14, j: 2 }, { i: 15, j: 2 }, { i: 16, j: 2 }, { i: 7, j: 4 }, { i: 5, j: 2 }, { i: 1, j: 3 }, { i: 15, j: 3 }, { i: 3, j: 3 }, { i: 4, j: 3 }, { i: 10, j: 2 }, { i: 6, j: 3 }, { i: 15, j: 4 }, { i: 8, j: 3 }, { i: 9, j: 3 }, { i: 10, j: 3 }, { i: 11, j: 3 }, { i: 16, j: 3 }, { i: 13, j: 3 }, { i: 14, j: 3 }, { i: 10, j: 4 }, { i: 6, j: 4 }, { i: 3, j: 4 }, { i: 5, j: 3 }, { i: 1, j: 4 }, { i: 14, j: 4 }, { i: 11, j: 4 }, { i: 4, j: 4 }, { i: 5, j: 4 }, { i: 8, j: 4 }, { i: 9, j: 4 }, { i: 16, j: 4 }, { i: 13, j: 4 },  ], css_id: 'tinytable_css_ap4ez722wb6b6uwcfyvq',}, 
+          { positions: [ { i: 17, j: 0 },  ], css_id: 'tinytable_css_85w6x2jsmugean1knmf5',}, 
+          { positions: [ { i: 12, j: 3 }, { i: 12, j: 4 }, { i: 12, j: 2 }, { i: 12, j: 1 },  ], css_id: 'tinytable_css_1qsf4i451k8amtvsir9e',}, 
           ];
 
           // Loop over the arrays to style the cells
           cellsToStyle.forEach(function (group) {
               group.positions.forEach(function (cell) {
-                  styleCell_c0fpgm7ckvvefkbtmb59(cell.i, cell.j, group.css_id);
+                  styleCell_o2mmrd5b2anljehwjxtu(cell.i, cell.j, group.css_id);
               });
           });
       });
@@ -83,17 +83,17 @@
 
     <style>
       /* tinytable css entries after */
-      .table td.tinytable_css_v30o856haebuhvgiknmw, .table th.tinytable_css_v30o856haebuhvgiknmw { text-align: left; border-bottom: solid black 0.05em; }
-      .table td.tinytable_css_s820vb15d6reil7opw1i, .table th.tinytable_css_s820vb15d6reil7opw1i { text-align: left; border-top: solid #d3d8dc 0.1em; border-bottom: solid #d3d8dc 0.05em; }
-      .table td.tinytable_css_r30jwm448q3scrxo6n4o, .table th.tinytable_css_r30jwm448q3scrxo6n4o { text-align: center; }
-      .table td.tinytable_css_ghyhxp6hswmyt8y0hfys, .table th.tinytable_css_ghyhxp6hswmyt8y0hfys { text-align: center; border-bottom: solid black 0.05em; }
-      .table td.tinytable_css_3iejj9amrm2wouk17fwc, .table th.tinytable_css_3iejj9amrm2wouk17fwc { text-align: left; }
-      .table td.tinytable_css_35pezlmrljpilhzk515k, .table th.tinytable_css_35pezlmrljpilhzk515k { text-align: center; border-bottom: solid #d3d8dc 0.1em; }
-      .table td.tinytable_css_24x83h2zs6x5uulis5l9, .table th.tinytable_css_24x83h2zs6x5uulis5l9 { text-align: left; border-bottom: solid #d3d8dc 0.1em; }
-      .table td.tinytable_css_18kl8l4wxo81dxcdly5o, .table th.tinytable_css_18kl8l4wxo81dxcdly5o { text-align: center; border-top: solid #d3d8dc 0.1em; border-bottom: solid #d3d8dc 0.05em; }
+      .table td.tinytable_css_xe5vyhjrd6qhc3531l6s, .table th.tinytable_css_xe5vyhjrd6qhc3531l6s { text-align: left; border-top: solid #d3d8dc 0.1em; border-bottom: solid #d3d8dc 0.05em; }
+      .table td.tinytable_css_q8605lqbd1od94m98ik4, .table th.tinytable_css_q8605lqbd1od94m98ik4 { text-align: center; border-top: solid #d3d8dc 0.1em; border-bottom: solid #d3d8dc 0.05em; }
+      .table td.tinytable_css_q7rlwl1eu8ffx9l1zsmh, .table th.tinytable_css_q7rlwl1eu8ffx9l1zsmh { text-align: left; border-bottom: solid black 0.05em; }
+      .table td.tinytable_css_needeovt9pi1avyud2s2, .table th.tinytable_css_needeovt9pi1avyud2s2 { text-align: center; border-bottom: solid #d3d8dc 0.1em; }
+      .table td.tinytable_css_hnqykvjdu0wwmau01j51, .table th.tinytable_css_hnqykvjdu0wwmau01j51 { text-align: left; }
+      .table td.tinytable_css_ap4ez722wb6b6uwcfyvq, .table th.tinytable_css_ap4ez722wb6b6uwcfyvq { text-align: center; }
+      .table td.tinytable_css_85w6x2jsmugean1knmf5, .table th.tinytable_css_85w6x2jsmugean1knmf5 { text-align: left; border-bottom: solid #d3d8dc 0.1em; }
+      .table td.tinytable_css_1qsf4i451k8amtvsir9e, .table th.tinytable_css_1qsf4i451k8amtvsir9e { text-align: center; border-bottom: solid black 0.05em; }
     </style>
     <div class="container">
-      <table class="table table-borderless" id="tinytable_c0fpgm7ckvvefkbtmb59" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing='true'>
+      <table class="table table-borderless" id="tinytable_o2mmrd5b2anljehwjxtu" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing='true'>
         <thead>
         <caption>Effect of High-Fatality Crashes on Truck Stop Construction</caption>
               <tr>
@@ -109,101 +109,101 @@
         <tbody>
                 <tr>
                   <td>(Intercept)</td>
-                  <td>−0.202*</td>
+                  <td>−0.342***</td>
                   <td></td>
                   <td></td>
                   <td></td>
                 </tr>
                 <tr>
                   <td></td>
-                  <td>(0.088)</td>
+                  <td>(0.020)</td>
                   <td></td>
                   <td></td>
                   <td></td>
                 </tr>
                 <tr>
                   <td>1996-1997 × High Fatality</td>
-                  <td>−0.798</td>
-                  <td>−0.993***</td>
-                  <td>−1.286***</td>
-                  <td>−1.429***</td>
+                  <td>−0.658</td>
+                  <td>−0.794***</td>
+                  <td>−1.168***</td>
+                  <td>−1.015***</td>
                 </tr>
                 <tr>
                   <td></td>
-                  <td>(1.749)</td>
-                  <td>(0.002)</td>
-                  <td>(0.016)</td>
+                  <td>(1.894)</td>
+                  <td>(0.000)</td>
+                  <td>(0.001)</td>
                   <td>(0.000)</td>
                 </tr>
                 <tr>
                   <td>1998-1999 × High Fatality</td>
-                  <td>0.402</td>
-                  <td>0.419*</td>
-                  <td>0.227</td>
-                  <td>0.409</td>
+                  <td>0.542</td>
+                  <td>0.625**</td>
+                  <td>0.516</td>
+                  <td>0.306</td>
                 </tr>
                 <tr>
                   <td></td>
-                  <td>(0.786)</td>
-                  <td>(0.075)</td>
-                  <td>(0.837)</td>
-                  <td>(0.757)</td>
+                  <td>(0.847)</td>
+                  <td>(0.084)</td>
+                  <td>(0.758)</td>
+                  <td>(0.668)</td>
                 </tr>
                 <tr>
                   <td>2000-2001 × High Fatality</td>
-                  <td>1.702</td>
-                  <td>1.507***</td>
-                  <td>1.576*</td>
-                  <td>1.591***</td>
+                  <td>1.842</td>
+                  <td>1.706***</td>
+                  <td>2.031*</td>
+                  <td>1.778***</td>
                 </tr>
                 <tr>
                   <td></td>
-                  <td>(1.238)</td>
-                  <td>(0.002)</td>
-                  <td>(0.310)</td>
-                  <td>(0.379)</td>
+                  <td>(1.340)</td>
+                  <td>(0.000)</td>
+                  <td>(0.473)</td>
+                  <td>(0.423)</td>
                 </tr>
                 <tr>
                   <td>2002-2003 × High Fatality</td>
-                  <td>2.202+</td>
-                  <td>2.272*</td>
-                  <td>2.295*</td>
-                  <td>3.233***</td>
+                  <td>2.342+</td>
+                  <td>2.480*</td>
+                  <td>2.618*</td>
+                  <td>3.426***</td>
                 </tr>
                 <tr>
                   <td></td>
-                  <td>(1.238)</td>
-                  <td>(0.607)</td>
-                  <td>(0.506)</td>
-                  <td>(0.253)</td>
+                  <td>(1.340)</td>
+                  <td>(0.593)</td>
+                  <td>(0.650)</td>
+                  <td>(0.168)</td>
                 </tr>
                 <tr>
                   <td>2004-2005 × High Fatality</td>
-                  <td>1.202</td>
-                  <td>1.007***</td>
-                  <td>1.009</td>
-                  <td>1.595*</td>
+                  <td>1.342</td>
+                  <td>1.206***</td>
+                  <td>1.165</td>
+                  <td>1.657**</td>
                 </tr>
                 <tr>
                   <td></td>
-                  <td>(0.786)</td>
-                  <td>(0.002)</td>
-                  <td>(0.597)</td>
-                  <td>(0.614)</td>
+                  <td>(0.847)</td>
+                  <td>(0.000)</td>
+                  <td>(0.590)</td>
+                  <td>(0.503)</td>
                 </tr>
                 <tr>
                   <td>Num.Obs.</td>
-                  <td>411</td>
-                  <td>411</td>
-                  <td>411</td>
-                  <td>411</td>
+                  <td>8921</td>
+                  <td>8921</td>
+                  <td>8921</td>
+                  <td>8921</td>
                 </tr>
                 <tr>
                   <td>RMSE</td>
-                  <td>1.73</td>
-                  <td>1.71</td>
-                  <td>1.69</td>
-                  <td>1.42</td>
+                  <td>1.89</td>
+                  <td>1.87</td>
+                  <td>1.85</td>
+                  <td>1.57</td>
                 </tr>
                 <tr>
                   <td>Zoning Category FE</td>

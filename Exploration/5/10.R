@@ -433,18 +433,99 @@ models_list <- list(
   "Year + State FE" = model_state
 )
 
-# Create summary table for zoning categories - FIXED coef_map
-modelsummary(models_list,
-             stars = TRUE,
-             title = "Effect of Zoning Categories on Truck Stop Construction (2006-2016)",
-             coef_map = c("simple_family::Agriculture" = "Agriculture",
-                          "simple_family::Commercial" = "Commercial",
-                          "simple_family::Industrial" = "Industrial",
-                          "simple_family::Mixed" = "Mixed",
-                          "simple_family::Other" = "Other",
-                          "simple_family::Residential" = "Residential"),
-             gof_map = c("nobs", "r2", "adj.r2", "rmse"),
-             note = paste("Reference category: Traditional.",
-                          "All models include year fixed effects.",
-                          "Stars indicate statistical significance: * p<0.1, ** p<0.05, *** p<0.01"),
-             output = "zoning_category_effects_with_year_fe.html")
+# part last 
+
+
+
+# Take the combined_coefs dataframe that's already created in your code
+# Calculate average effect size for each category
+category_avg <- combined_coefs %>%
+  group_by(category) %>%
+  summarize(avg_effect = mean(estimate, na.rm = TRUE)) %>%
+  arrange(avg_effect)
+
+# Find the midpoint category (closest to median effect)
+median_effect <- median(category_avg$avg_effect)
+midpoint_idx <- which.min(abs(category_avg$avg_effect - median_effect))
+midpoint_category <- category_avg$category[midpoint_idx]
+
+# Print information about the reference category
+print(paste("Using midpoint category as reference:", midpoint_category))
+print(paste("Midpoint category average effect:", 
+            round(category_avg$avg_effect[midpoint_idx], 4)))
+
+# Adjust all estimates relative to the midpoint category
+combined_coefs_adjusted <- combined_coefs %>%
+  group_by(model) %>%
+  mutate(
+    # Find the estimate for the midpoint category in this model
+    reference_value = estimate[category == midpoint_category],
+    # Adjust all estimates relative to the reference
+    adjusted_estimate = estimate - reference_value,
+    # Standard errors remain the same
+    adjusted_se = std.error
+  ) %>%
+  ungroup()
+
+# Calculate confidence intervals explicitly
+combined_coefs_adjusted <- combined_coefs_adjusted %>%
+  mutate(
+    lower_ci = adjusted_estimate - 1.96 * adjusted_se,
+    upper_ci = adjusted_estimate + 1.96 * adjusted_se
+  )
+
+# Check for NAs in standard errors
+print(paste("Number of NAs in adjusted_se:", sum(is.na(combined_coefs_adjusted$adjusted_se))))
+
+# Replace any NA standard errors with a small value to avoid plotting issues
+combined_coefs_adjusted <- combined_coefs_adjusted %>%
+  mutate(
+    adjusted_se = ifelse(is.na(adjusted_se), 0.01, adjusted_se),
+    lower_ci = adjusted_estimate - 1.96 * adjusted_se,
+    upper_ci = adjusted_estimate + 1.96 * adjusted_se
+  )
+
+# Order categories by adjusted effect
+adjusted_category_avg <- combined_coefs_adjusted %>%
+  group_by(category) %>%
+  summarize(avg_effect = mean(adjusted_estimate, na.rm = TRUE)) %>%
+  arrange(avg_effect)
+
+# Set factor levels for proper ordering
+combined_coefs_adjusted$category <- factor(combined_coefs_adjusted$category, 
+                                           levels = adjusted_category_avg$category)
+
+# Create plot with explicit error bars
+ggplot(combined_coefs_adjusted, aes(x = category, y = adjusted_estimate)) +
+  # First add a reference line at zero
+  geom_hline(yintercept = 0, linetype = "dashed", color = "gray50") +
+  # Add point estimates with dodging
+  geom_point(aes(color = model, shape = model), 
+             position = position_dodge(width = 0.8), 
+             size = 3) +
+  # Add error bars with very explicit parameters
+  geom_errorbar(
+    aes(ymin = lower_ci, ymax = upper_ci, color = model),
+    position = position_dodge(width = 0.8),
+    width = 0.4,
+    linewidth = 1.2,
+    show.legend = FALSE
+  ) +
+  # Formatting
+  theme_minimal() +
+  labs(
+    title = "Impact of Zoning Categories on Truck Stop Construction (2006-2016)",
+    subtitle = paste("Reference category (0):", midpoint_category),
+    y = "Relative Effect on Truck Stop Construction",
+    x = "Zoning Category",
+    color = "Model Specification",
+    shape = "Model Specification",
+    caption = "Error bars represent 95% confidence intervals"
+  ) +
+  theme(
+    legend.position = "bottom",
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    plot.caption = element_text(hjust = 0, face = "italic")
+  ) +
+  guides(color = guide_legend(nrow = 2)) +
+  scale_color_brewer(palette = "Set2") # Match the color palette from your original plot
