@@ -12,7 +12,7 @@ df <- read.csv("C:/Users/clint/Desktop/Research-Paper-Trucks/Exploration/5/df_6.
   mutate(REPORT_DATE = as.Date(REPORT_DATE)) %>%
   filter(format(REPORT_DATE, "%Y") <= 2006) %>%
   # Create fatalities dummy (1 if fatalities >= 3, otherwise 0)
-  mutate(FATALITIES_DUMMY = ifelse(FATALITIES >= 3, 1, 0)) %>%
+  mutate(FATALITIES_DUMMY = ifelse(FATALITIES >= 1, 1, 0)) %>%
   # Group years into 2-year periods
   mutate(year_group = floor(as.numeric(format(REPORT_DATE, "%Y")) / 2) * 2)
 
@@ -31,15 +31,18 @@ df <- df %>%
 # Set "Traditional" as the reference category
 df$simple_family <- relevel(df$simple_family, ref = "Traditional")
 
-# Run models with year fixed effects
+# Run models with year fixed effects and clustered standard errors
 model_explicit <- feols(change_2006_2016 ~ i(year_group, FATALITIES_DUMMY, ref = latest_year) + simple_family | year_group, 
-                        data = df)
+                        data = df,
+                        cluster = "Region")  # Cluster at Region level
 
 model_region <- feols(change_2006_2016 ~ i(year_group, FATALITIES_DUMMY, ref = latest_year) + simple_family | year_group + Region, 
-                      data = df)
+                      data = df,
+                      cluster = "Region")  # Cluster at Region level
 
 model_state <- feols(change_2006_2016 ~ i(year_group, FATALITIES_DUMMY, ref = latest_year) + simple_family | year_group + STATE, 
-                     data = df)
+                     data = df,
+                     cluster = "Region")  # Cluster at Region level
 
 # Check the actual coefficient names
 coef_names <- names(coef(model_explicit))

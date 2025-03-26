@@ -127,18 +127,22 @@ ggplot(coef_data, aes(x = year_label, y = estimate, color = model, shape = model
   guides(color = guide_legend(nrow = 2))
 
 #part 2
+
 # Set "Traditional" as the reference category
 df$simple_family <- relevel(df$simple_family, ref = "Traditional")
 
-# Run models with year fixed effects
+# Run models with year fixed effects and clustered standard errors at the Region level
 model_explicit <- feols(change_2006_2016 ~ i(year_group, FATALITIES_DUMMY, ref = latest_year) + simple_family | year_group, 
-                        data = df)
+                        data = df,
+                        cluster = "Region")  # Cluster standard errors at Region level
 
 model_region <- feols(change_2006_2016 ~ i(year_group, FATALITIES_DUMMY, ref = latest_year) + simple_family | year_group + Region, 
-                      data = df)
+                      data = df,
+                      cluster = "Region")  # Cluster standard errors at Region level
 
 model_state <- feols(change_2006_2016 ~ i(year_group, FATALITIES_DUMMY, ref = latest_year) + simple_family | year_group + STATE, 
-                     data = df)
+                     data = df,
+                     cluster = "Region")  # Cluster standard errors at Region level
 
 # Combine coefficients and clean up labels - directly filter for simple_family
 combined_coefs <- bind_rows(
@@ -190,7 +194,7 @@ ggplot(combined_coefs, aes(x = model, y = estimate, color = category, shape = ca
   scale_x_discrete(limits = model_order) +
   theme_minimal() +
   labs(title = "Fixed Effect Zoning Categories on Truck Stop Construction (2006-2016)",
-       subtitle = paste(ref_label, "- All models include year fixed effects"),
+       subtitle = paste(ref_label, "- All models include year fixed effects with Region-clustered SEs"),
        x = "Model Specifications",
        y = "Coefficients (Truck Stop Construction)",
        color = "Zoning Category",
@@ -199,6 +203,8 @@ ggplot(combined_coefs, aes(x = model, y = estimate, color = category, shape = ca
         legend.position = "bottom") +
   scale_color_brewer(palette = "Set2") +
   guides(color = guide_legend(nrow = 2))
+
+
 
 # PART 3 - MODIFIED TO USE MEDIAN VALUE AS REFERENCE (without REF label)
 # Fixed approach to select reference levels and robust plotting

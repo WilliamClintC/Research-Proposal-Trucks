@@ -1,0 +1,230 @@
+<!-- preamble start -->
+<!DOCTYPE html> 
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tinytable_wsh0yka2lsg2ni878yn9</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+<!-- preamble end -->
+
+    <script>
+
+      function styleCell_wsh0yka2lsg2ni878yn9(i, j, css_id) {
+          var table = document.getElementById("tinytable_wsh0yka2lsg2ni878yn9");
+          var cell = table.rows[i]?.cells[j];  // Safe navigation to avoid errors
+          if (cell) {
+              console.log(`Styling cell at (${i}, ${j}) with class ${css_id}`);
+              cell.classList.add(css_id);
+          } else {
+              console.warn(`Cell at (${i}, ${j}) not found.`);
+          }
+      }
+      function insertSpanRow(i, colspan, content) {
+        var table = document.getElementById('tinytable_wsh0yka2lsg2ni878yn9');
+        var newRow = table.insertRow(i);
+        var newCell = newRow.insertCell(0);
+        newCell.setAttribute("colspan", colspan);
+        // newCell.innerText = content;
+        // this may be unsafe, but innerText does not interpret <br>
+        newCell.innerHTML = content;
+      }
+      function spanCell_wsh0yka2lsg2ni878yn9(i, j, rowspan, colspan) {
+        var table = document.getElementById("tinytable_wsh0yka2lsg2ni878yn9");
+        const targetRow = table.rows[i];
+        const targetCell = targetRow.cells[j];
+        for (let r = 0; r < rowspan; r++) {
+          // Only start deleting cells to the right for the first row (r == 0)
+          if (r === 0) {
+            // Delete cells to the right of the target cell in the first row
+            for (let c = colspan - 1; c > 0; c--) {
+              if (table.rows[i + r].cells[j + c]) {
+                table.rows[i + r].deleteCell(j + c);
+              }
+            }
+          }
+          // For rows below the first, delete starting from the target column
+          if (r > 0) {
+            for (let c = colspan - 1; c >= 0; c--) {
+              if (table.rows[i + r] && table.rows[i + r].cells[j]) {
+                table.rows[i + r].deleteCell(j);
+              }
+            }
+          }
+        }
+        // Set rowspan and colspan of the target cell
+        targetCell.rowSpan = rowspan;
+        targetCell.colSpan = colspan;
+      }
+      // tinytable span after
+      window.addEventListener('load', function () {
+          var cellsToStyle = [
+            // tinytable style arrays after
+          { positions: [ { i: 1, j: 0 }, { i: 2, j: 0 }, { i: 3, j: 0 }, { i: 4, j: 0 }, { i: 5, j: 0 }, { i: 6, j: 0 }, { i: 7, j: 0 }, { i: 8, j: 0 }, { i: 9, j: 0 }, { i: 14, j: 0 }, { i: 11, j: 0 }, { i: 12, j: 0 }, { i: 13, j: 0 }, { i: 15, j: 0 },  ], css_id: 'tinytable_css_zhdisrlqu7xiau0rwj17',}, 
+          { positions: [ { i: 1, j: 1 }, { i: 2, j: 1 }, { i: 3, j: 1 }, { i: 5, j: 1 }, { i: 6, j: 1 }, { i: 7, j: 1 }, { i: 9, j: 1 }, { i: 6, j: 2 }, { i: 11, j: 1 }, { i: 13, j: 1 }, { i: 14, j: 1 }, { i: 15, j: 1 }, { i: 12, j: 2 }, { i: 4, j: 1 }, { i: 1, j: 2 }, { i: 2, j: 2 }, { i: 3, j: 2 }, { i: 8, j: 1 }, { i: 5, j: 2 }, { i: 2, j: 3 }, { i: 7, j: 2 }, { i: 12, j: 1 }, { i: 9, j: 2 }, { i: 6, j: 3 }, { i: 11, j: 2 }, { i: 8, j: 3 }, { i: 13, j: 2 }, { i: 14, j: 2 }, { i: 15, j: 2 }, { i: 12, j: 3 }, { i: 4, j: 2 }, { i: 1, j: 3 }, { i: 15, j: 3 }, { i: 3, j: 3 }, { i: 8, j: 2 }, { i: 5, j: 3 }, { i: 2, j: 4 }, { i: 7, j: 3 }, { i: 4, j: 4 }, { i: 9, j: 3 }, { i: 6, j: 4 }, { i: 11, j: 3 }, { i: 8, j: 4 }, { i: 13, j: 3 }, { i: 14, j: 3 }, { i: 11, j: 4 }, { i: 12, j: 4 }, { i: 4, j: 3 }, { i: 1, j: 4 }, { i: 15, j: 4 }, { i: 3, j: 4 }, { i: 5, j: 4 }, { i: 14, j: 4 }, { i: 7, j: 4 }, { i: 9, j: 4 }, { i: 13, j: 4 },  ], css_id: 'tinytable_css_y68zcghymgqyo1rd9wsx',}, 
+          { positions: [ { i: 10, j: 0 },  ], css_id: 'tinytable_css_xouus72zuvb75r8ghywn',}, 
+          { positions: [ { i: 10, j: 3 }, { i: 10, j: 1 }, { i: 10, j: 4 }, { i: 10, j: 2 },  ], css_id: 'tinytable_css_wbr4oyx7gjdj3g8h9lbo',}, 
+          { positions: [ { i: 16, j: 1 }, { i: 16, j: 2 }, { i: 16, j: 3 }, { i: 16, j: 4 },  ], css_id: 'tinytable_css_um4zypmoaagef5ulkync',}, 
+          { positions: [ { i: 0, j: 1 }, { i: 0, j: 2 }, { i: 0, j: 3 }, { i: 0, j: 4 },  ], css_id: 'tinytable_css_tph6sb7jdk9sykep5zpm',}, 
+          { positions: [ { i: 0, j: 0 },  ], css_id: 'tinytable_css_p3a5k4dazxe0ap8l62ii',}, 
+          { positions: [ { i: 16, j: 0 },  ], css_id: 'tinytable_css_ljyc78rrfe56q1fj0nvm',}, 
+          ];
+
+          // Loop over the arrays to style the cells
+          cellsToStyle.forEach(function (group) {
+              group.positions.forEach(function (cell) {
+                  styleCell_wsh0yka2lsg2ni878yn9(cell.i, cell.j, group.css_id);
+              });
+          });
+      });
+    </script>
+
+    <style>
+      /* tinytable css entries after */
+      .table td.tinytable_css_zhdisrlqu7xiau0rwj17, .table th.tinytable_css_zhdisrlqu7xiau0rwj17 { text-align: left; }
+      .table td.tinytable_css_y68zcghymgqyo1rd9wsx, .table th.tinytable_css_y68zcghymgqyo1rd9wsx { text-align: center; }
+      .table td.tinytable_css_xouus72zuvb75r8ghywn, .table th.tinytable_css_xouus72zuvb75r8ghywn { text-align: left; border-bottom: solid black 0.05em; }
+      .table td.tinytable_css_wbr4oyx7gjdj3g8h9lbo, .table th.tinytable_css_wbr4oyx7gjdj3g8h9lbo { text-align: center; border-bottom: solid black 0.05em; }
+      .table td.tinytable_css_um4zypmoaagef5ulkync, .table th.tinytable_css_um4zypmoaagef5ulkync { text-align: center; border-bottom: solid #d3d8dc 0.1em; }
+      .table td.tinytable_css_tph6sb7jdk9sykep5zpm, .table th.tinytable_css_tph6sb7jdk9sykep5zpm { text-align: center; border-top: solid #d3d8dc 0.1em; border-bottom: solid #d3d8dc 0.05em; }
+      .table td.tinytable_css_p3a5k4dazxe0ap8l62ii, .table th.tinytable_css_p3a5k4dazxe0ap8l62ii { text-align: left; border-top: solid #d3d8dc 0.1em; border-bottom: solid #d3d8dc 0.05em; }
+      .table td.tinytable_css_ljyc78rrfe56q1fj0nvm, .table th.tinytable_css_ljyc78rrfe56q1fj0nvm { text-align: left; border-bottom: solid #d3d8dc 0.1em; }
+    </style>
+    <div class="container">
+      <table class="table table-borderless" id="tinytable_wsh0yka2lsg2ni878yn9" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing='true'>
+        <thead>
+        <caption>Effect of High-Fatality Crashes on Truck Stop Construction (with Year Fixed Effects)</caption>
+              <tr>
+                <th scope="col"> </th>
+                <th scope="col">Year FE</th>
+                <th scope="col">Year + Zoning FE</th>
+                <th scope="col">Year + Region + Zoning FE</th>
+                <th scope="col">Year + State + Zoning FE</th>
+              </tr>
+        </thead>
+        <tfoot><tr><td colspan='5'>+ p &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001</td></tr>
+<tr><td colspan='5'>Reference period: 2006 - 2007 . Stars indicate statistical significance: * p&lt;0.1, ** p&lt;0.05, *** p&lt;0.01</td></tr></tfoot>
+        <tbody>
+                <tr>
+                  <td>1996-1997 × High Fatality</td>
+                  <td>−0.723***</td>
+                  <td>−0.846***</td>
+                  <td>−1.207***</td>
+                  <td>−1.064***</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>(0.000)</td>
+                  <td>(0.047)</td>
+                  <td>(0.077)</td>
+                  <td>(0.131)</td>
+                </tr>
+                <tr>
+                  <td>1998-1999 × High Fatality</td>
+                  <td>0.353***</td>
+                  <td>0.461***</td>
+                  <td>0.392***</td>
+                  <td>0.306***</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>(0.000)</td>
+                  <td>(0.030)</td>
+                  <td>(0.041)</td>
+                  <td>(0.041)</td>
+                </tr>
+                <tr>
+                  <td>2000-2001 × High Fatality</td>
+                  <td>1.868***</td>
+                  <td>1.724***</td>
+                  <td>2.054***</td>
+                  <td>1.794***</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>(0.000)</td>
+                  <td>(0.052)</td>
+                  <td>(0.046)</td>
+                  <td>(0.093)</td>
+                </tr>
+                <tr>
+                  <td>2002-2003 × High Fatality</td>
+                  <td>2.431***</td>
+                  <td>2.593***</td>
+                  <td>2.695***</td>
+                  <td>3.471***</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>(0.000)</td>
+                  <td>(0.046)</td>
+                  <td>(0.065)</td>
+                  <td>(0.127)</td>
+                </tr>
+                <tr>
+                  <td>2004-2005 × High Fatality</td>
+                  <td>1.403***</td>
+                  <td>1.252***</td>
+                  <td>1.188***</td>
+                  <td>1.654***</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>(0.000)</td>
+                  <td>(0.060)</td>
+                  <td>(0.050)</td>
+                  <td>(0.088)</td>
+                </tr>
+                <tr>
+                  <td>Num.Obs.</td>
+                  <td>8921</td>
+                  <td>8921</td>
+                  <td>8921</td>
+                  <td>8921</td>
+                </tr>
+                <tr>
+                  <td>RMSE</td>
+                  <td>1.89</td>
+                  <td>1.87</td>
+                  <td>1.85</td>
+                  <td>1.57</td>
+                </tr>
+                <tr>
+                  <td>Year FE</td>
+                  <td>Yes</td>
+                  <td>Yes</td>
+                  <td>Yes</td>
+                  <td>Yes</td>
+                </tr>
+                <tr>
+                  <td>Zoning Category FE</td>
+                  <td>No</td>
+                  <td>Yes</td>
+                  <td>Yes</td>
+                  <td>Yes</td>
+                </tr>
+                <tr>
+                  <td>Region FE</td>
+                  <td>No</td>
+                  <td>No</td>
+                  <td>Yes</td>
+                  <td>No</td>
+                </tr>
+                <tr>
+                  <td>State FE</td>
+                  <td>No</td>
+                  <td>No</td>
+                  <td>No</td>
+                  <td>Yes</td>
+                </tr>
+        </tbody>
+      </table>
+    </div>
+<!-- postamble start -->
+  </body>
+
+</html>
+<!-- postamble end -->
+<!-- hack to avoid NA insertion in last line -->

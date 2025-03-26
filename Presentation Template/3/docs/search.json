@@ -1,0 +1,205 @@
+[
+  {
+    "objectID": "ed_template.html#research-question",
+    "href": "ed_template.html#research-question",
+    "title": "Zoning: A Barrier or Solution to Truck Parking Shortages?",
+    "section": "Research Question",
+    "text": "Research Question\n\nWhat is the effect of truck parking accidents on truck stop creation?\nTo what extent is the role of zoning in truck stop creation?"
+  },
+  {
+    "objectID": "ed_template.html#motivation",
+    "href": "ed_template.html#motivation",
+    "title": "Zoning: A Barrier or Solution to Truck Parking Shortages?",
+    "section": "Motivation",
+    "text": "Motivation\n\nParking shortage for trucks –&gt; Leads to accidents\nincreases costs\nreduces public safety\ndelayed goods\n80% of goods are delivered by truck (BTS)"
+  },
+  {
+    "objectID": "ed_template.html#background",
+    "href": "ed_template.html#background",
+    "title": "Zoning: A Barrier or Solution to Truck Parking Shortages?",
+    "section": "Background",
+    "text": "Background\n\ntruck parking infrastructure has not kept pace with industry growth.\nThe shortage of legal parking -&gt; illegal parking/ unsafe driving -&gt; increasing the risk of accidents."
+  },
+  {
+    "objectID": "ed_template.html#scale-of-the-problem",
+    "href": "ed_template.html#scale-of-the-problem",
+    "title": "Zoning: A Barrier or Solution to Truck Parking Shortages?",
+    "section": "Scale of the Problem",
+    "text": "Scale of the Problem\n\n3.874 million truck drivers in North America (U.S. and Canada).\naverage of 56 minutes per day searching for parking.\nThis results in a $5,600 annual economic loss per driver.\nthis translates to a $21.69 billion annual loss.\n70%-98% of truck drivers face parking challenges, making the problem even larger (ATRI, USDOT)."
+  },
+  {
+    "objectID": "ed_template.html#comparison",
+    "href": "ed_template.html#comparison",
+    "title": "Zoning: A Barrier or Solution to Truck Parking Shortages?",
+    "section": "Comparison",
+    "text": "Comparison\n\nUsing conservative estimates (43.8% of truckers struggle to find parking)\n1.53 million affected drivers nearly twice the total homeless population in North America (~865,000)."
+  },
+  {
+    "objectID": "ed_template.html#zoning-as-a-critical-barrier",
+    "href": "ed_template.html#zoning-as-a-critical-barrier",
+    "title": "Zoning: A Barrier or Solution to Truck Parking Shortages?",
+    "section": "Zoning as a Critical Barrier",
+    "text": "Zoning as a Critical Barrier\n\nDespite widespread acknowledgment of the truck parking shortage, zoning laws hinder the development of parking facilities.\nMany cities oppose new truck stops due to land value concerns and public resistance.\n90,056 local governments in the U.S. enforce unique zoning restrictions, making a nationwide solution difficult."
+  },
+  {
+    "objectID": "ed_template.html#contribution",
+    "href": "ed_template.html#contribution",
+    "title": "Zoning: A Barrier or Solution to Truck Parking Shortages?",
+    "section": "Contribution",
+    "text": "Contribution\n\nThere is limited empirical research quantifying how zoning regulations influence truck parking availability.\nNew phenomena\nAnalyze the relationship between zoning laws, truck stop creation, and parking shortages by using traffic accident data.\nUnique insight, new data, recent phenomena"
+  },
+  {
+    "objectID": "ed_template.html#institutional-setting",
+    "href": "ed_template.html#institutional-setting",
+    "title": "Zoning: A Barrier or Solution to Truck Parking Shortages?",
+    "section": "Institutional Setting",
+    "text": "Institutional Setting\n\nUSA\n1993-2016"
+  },
+  {
+    "objectID": "ed_template.html#data",
+    "href": "ed_template.html#data",
+    "title": "Zoning: A Barrier or Solution to Truck Parking Shortages?",
+    "section": "Data",
+    "text": "Data\n\nUSDOT’s FMCSA Crash File, all reported vehicle crashes in the U.S. (1990–Present), ~1993–2016.\nDetailed accident information: vehicle types (trucks, motorcycles, buses), accident circumstances (e.g., involvement of parked vehicles), result (fatalities).\nZoning classifications from Puentes, Martin, and Pendall (2006) , ~ four types: Traditional, Exclusion, Reform, and Wild Wild Texas.\nData set on truck stop directory (Yang, 2024)"
+  },
+  {
+    "objectID": "ed_template.html#truct-stop-creation-data",
+    "href": "ed_template.html#truct-stop-creation-data",
+    "title": "Zoning: A Barrier or Solution to Truck Parking Shortages?",
+    "section": "Truct Stop Creation Data",
+    "text": "Truct Stop Creation Data\nobserve change in truck stop creation at (2007, 2008 , 2015 2016)"
+  },
+  {
+    "objectID": "ed_template.html#strategy",
+    "href": "ed_template.html#strategy",
+    "title": "Zoning: A Barrier or Solution to Truck Parking Shortages?",
+    "section": "Strategy",
+    "text": "Strategy\n\nInsufficient Truck Parking → Illegal Truck Parking/Unsafe Driving → Observed Accidents → Increased Demand for Truck Parking → Increase in Truck Stops."
+  },
+  {
+    "objectID": "ed_template.html#event-study-model-overview",
+    "href": "ed_template.html#event-study-model-overview",
+    "title": "Zoning: A Barrier or Solution to Truck Parking Shortages?",
+    "section": "Event Study Model Overview",
+    "text": "Event Study Model Overview\n\\[ \\Delta \\text{NumTruckStop}_{j,t=[2006-2016]} =  \\sum_{i=1993}^{2006} \\text{Fatality}_{j,i} +  \\\\ \\gamma_{j}+ \\lambda_{t}+ \\mu_{l} +  \\epsilon \\]\nyear \\(t\\) , time \\(t\\), zoning category \\(j\\), location \\(l\\) (fix effects)\n\n\\(\\Delta\\text{NumTruckStop}_{t}\\) —- change in truck stop\n\\(\\text{Fatality}_{i}\\) -– Indicator variable for fatalities \\(&gt;1\\) and in year \\(i\\)"
+  },
+  {
+    "objectID": "ed_template.html#results",
+    "href": "ed_template.html#results",
+    "title": "Zoning: A Barrier or Solution to Truck Parking Shortages?",
+    "section": "Results",
+    "text": "Results"
+  },
+  {
+    "objectID": "ed_template.html#interpretation",
+    "href": "ed_template.html#interpretation",
+    "title": "Zoning: A Barrier or Solution to Truck Parking Shortages?",
+    "section": "Interpretation",
+    "text": "Interpretation\n\nA traffic accident 4 years prior results to 2.7 truck stop increase relative to 2006\n5 years to build a truck stop"
+  },
+  {
+    "objectID": "ed_template.html#results-1",
+    "href": "ed_template.html#results-1",
+    "title": "Zoning: A Barrier or Solution to Truck Parking Shortages?",
+    "section": "Results",
+    "text": "Results"
+  },
+  {
+    "objectID": "ed_template.html#zoning-fixed-effects-coefficients",
+    "href": "ed_template.html#zoning-fixed-effects-coefficients",
+    "title": "Zoning: A Barrier or Solution to Truck Parking Shortages?",
+    "section": "Zoning Fixed Effects (coefficients)",
+    "text": "Zoning Fixed Effects (coefficients)"
+  },
+  {
+    "objectID": "ed_template.html#zoning-fixed-effects-interpretation",
+    "href": "ed_template.html#zoning-fixed-effects-interpretation",
+    "title": "Zoning: A Barrier or Solution to Truck Parking Shortages?",
+    "section": "Zoning Fixed Effects Interpretation",
+    "text": "Zoning Fixed Effects Interpretation\nNoisy result. exclusion has low observation count"
+  },
+  {
+    "objectID": "ed_template.html#limitation",
+    "href": "ed_template.html#limitation",
+    "title": "Zoning: A Barrier or Solution to Truck Parking Shortages?",
+    "section": "Limitation",
+    "text": "Limitation\nCant Observe Pretends"
+  },
+  {
+    "objectID": "ed_template.html#did-1",
+    "href": "ed_template.html#did-1",
+    "title": "Zoning: A Barrier or Solution to Truck Parking Shortages?",
+    "section": "DID",
+    "text": "DID\n\\[\n\\Delta \\text{NumTruckStop}_{j,t} = \\sum_{i \\in \\{2007, 2008, 2015, 2016\\}} \\text{Accident}_{j,t=i} + \\gamma_j + \\\\\\lambda_t + \\mu_l + \\epsilon\n\\]\nyear \\(t\\) , time \\(i\\), zoning category \\(j\\), location \\(l\\) (fix effects)\n\n\\(\\Delta \\text{NumTruckStop}_{j,t}\\) , change in number of truck stops\n\\(\\text{Accident}_{j,t}\\) is a dummy variable indicating whether a high fatality accident and occurred between \\(2008\\) and \\(2015\\)"
+  },
+  {
+    "objectID": "ed_template.html#did-results",
+    "href": "ed_template.html#did-results",
+    "title": "Zoning: A Barrier or Solution to Truck Parking Shortages?",
+    "section": "DID results",
+    "text": "DID results"
+  },
+  {
+    "objectID": "ed_template.html#did-results-1",
+    "href": "ed_template.html#did-results-1",
+    "title": "Zoning: A Barrier or Solution to Truck Parking Shortages?",
+    "section": "DID results",
+    "text": "DID results"
+  },
+  {
+    "objectID": "ed_template.html#parallel-trends",
+    "href": "ed_template.html#parallel-trends",
+    "title": "Zoning: A Barrier or Solution to Truck Parking Shortages?",
+    "section": "Parallel Trends",
+    "text": "Parallel Trends"
+  },
+  {
+    "objectID": "ed_template.html#balancing-states",
+    "href": "ed_template.html#balancing-states",
+    "title": "Zoning: A Barrier or Solution to Truck Parking Shortages?",
+    "section": "Balancing States",
+    "text": "Balancing States"
+  },
+  {
+    "objectID": "ed_template.html#balancing-regions",
+    "href": "ed_template.html#balancing-regions",
+    "title": "Zoning: A Barrier or Solution to Truck Parking Shortages?",
+    "section": "Balancing Regions",
+    "text": "Balancing Regions"
+  },
+  {
+    "objectID": "ed_template.html#observe-fix-effect",
+    "href": "ed_template.html#observe-fix-effect",
+    "title": "Zoning: A Barrier or Solution to Truck Parking Shortages?",
+    "section": "Observe Fix Effect",
+    "text": "Observe Fix Effect\nWe see the same thing. Noisy observation"
+  },
+  {
+    "objectID": "ed_template.html#location-matters-more",
+    "href": "ed_template.html#location-matters-more",
+    "title": "Zoning: A Barrier or Solution to Truck Parking Shortages?",
+    "section": "Location Matters More",
+    "text": "Location Matters More\nNice clean separation"
+  },
+  {
+    "objectID": "ed_template.html#bias",
+    "href": "ed_template.html#bias",
+    "title": "Zoning: A Barrier or Solution to Truck Parking Shortages?",
+    "section": "Bias",
+    "text": "Bias\n\nMeasurement Error: truck stop vs truck capacity ~ underestimate\nAnticipation Effect: policies other than truck stops (change in parking ordinances) may be implemented to ease the infrastructure shortage ~ underestimate\nZoning classifications may change McLaughlin (2012) ~ underestimate\nTiming of the treatment (2008, 2015) (time FE)"
+  },
+  {
+    "objectID": "ed_template.html#policy-implication-and-conclusion",
+    "href": "ed_template.html#policy-implication-and-conclusion",
+    "title": "Zoning: A Barrier or Solution to Truck Parking Shortages?",
+    "section": "Policy Implication and Conclusion",
+    "text": "Policy Implication and Conclusion\n\nMunicipalities are self regulating adequately with response to trucking accidents.\nOne-size-fits-all federal approach is not needed.\nSome outlier municipalities may require targeted policy interventions."
+  },
+  {
+    "objectID": "ed_template.html#thank-you-for-listening",
+    "href": "ed_template.html#thank-you-for-listening",
+    "title": "Zoning: A Barrier or Solution to Truck Parking Shortages?",
+    "section": "Thank you for Listening",
+    "text": "Thank you for Listening\nReferences\n\n\n\n\n\n\n\n\n\nMcLaughlin, Ralph B. 2012. “Land Use Regulation: Where Have We Been, Where Are We Going?” Cities, Current Research on Cities, 29 (March): S50–55. https://doi.org/10.1016/j.cities.2011.12.002.\n\n\nPuentes, Robert, Jonathan Martin, and Rolf Pendall. 2006. “From Traditional to Reformed: A Review of the Land Use Regulations in the Nation’s 50 Largest Metropolitan Areas.” Brookings. https://www.brookings.edu/articles/from-traditional-to-reformed-a-review-of-the-land-use-regulations-in-the-nations-50-largest-metropolitan-areas/."
+  }
+]

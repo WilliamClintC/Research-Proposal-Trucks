@@ -1,0 +1,228 @@
+---
+title: "Zoning: A Barrier or Solution to Truck Parking Shortages?"
+subtite: ""
+date: today
+format: 
+  revealjs:
+    slide-number: true
+    show-slide-number: all
+    theme: serif
+    chalkboard: true
+editor: visual
+author:
+  - name: "William Clinton Co"
+    id: 
+    orcid: 
+    email: 
+    affiliation: 
+      - name: The University of British Columbia
+        city: 
+        url: ""
+logo: /content/ubc-logo.png
+footer: ""
+bibliography: references.bib
+---
+
+# Format
+
+1.  Research Question
+
+2.  Setting
+
+3.  Results
+
+    1.  Event Study Model
+
+    2.  DID Model
+
+4.  Conlusion
+
+## Research Question
+
+-   What is the effect of truck parking accidents on truck stop creation?
+-   To what extent is the role of zoning in truck stop creation?
+
+## Motivation
+
+-   Parking shortage for trucks –\> Leads to accidents
+-   increases costs
+-   reduces public safety
+-   delayed goods
+-   80% of goods are delivered by truck (BTS)
+
+## Background
+
+-   truck parking infrastructure has not kept pace with industry growth.
+
+-   The shortage of legal parking -\> illegal parking/ unsafe driving **-\>** increasing the risk of accidents.
+
+## **Scale of the Problem**
+
+-   3.874 million truck drivers in North America (U.S. and Canada).
+
+-   average of 56 minutes per day searching for parking.
+
+-   This results in a \$5,600 annual economic loss per driver.
+
+-   this translates to a **\$21.69** billion annual loss.
+
+-   70%-98% of truck drivers face parking challenges, making the problem even larger (ATRI, USDOT).
+
+## **Comparison**
+
+-   Using conservative estimates (43.8% of truckers struggle to find parking)
+
+-   **1.53 million** affected drivers nearly twice the total homeless population in North America **(\~865,000)**.
+
+## **Zoning as a Critical Barrier**
+
+-   Despite widespread acknowledgment of the truck parking shortage, **zoning laws hinder the development of parking facilities**.
+
+-   Many cities oppose new truck stops due to land value concerns and public resistance.
+
+-   **90,056 local governments in the U.S.** enforce unique zoning restrictions, making a nationwide solution difficult.
+
+## Contribution
+
+-   There is limited empirical research quantifying how zoning regulations influence truck parking availability.
+
+-   New phenomena
+
+-   Analyze the relationship between zoning laws, truck stop creation, and parking shortages by using traffic accident data.
+
+-   Unique insight, new data, recent phenomena
+
+## Institutional Setting
+
+-   USA
+
+-   1993-2016
+
+## Data
+
+-   USDOT’s FMCSA Crash File, all reported vehicle crashes in the U.S. (1990–Present), \~1993–2016.
+
+-   Detailed accident information: vehicle types (trucks, motorcycles, buses), accident circumstances (e.g., involvement of parked vehicles), result (fatalities).
+
+-   Zoning classifications from @puentesTraditionalReformedReview2006 , \~ four types: Traditional, Exclusion, Reform, and Wild Wild Texas.
+
+-   Data set on truck stop directory (Yang, 2024)
+
+## Truct Stop Creation Data
+
+observe change in truck stop creation at (2007, 2008 , 2015 2016)
+
+![](images/unnamed-01.png)
+
+## Strategy
+
+\
+Insufficient Truck Parking → Illegal Truck Parking/Unsafe Driving → **Observed Accidents** → Increased Demand for Truck Parking → **Increase in Truck Stops.**
+
+## **Event Study Model Overview**
+
+$$ \Delta \text{NumTruckStop}_{j,t=[2006-2016]} =  \sum_{i=1993}^{2006} \text{Fatality}_{j,i} +  \\ \gamma_{j}+ \lambda_{t}+ \mu_{l} +  \epsilon $$
+
+year $t$ , time $t$, zoning category $j$, location $l$ (fix effects)
+
+-   $\Delta\text{NumTruckStop}_{t}$ —- change in truck stop
+
+-   $\text{Fatality}_{i}$ -– Indicator variable for fatalities $>1$ and in year $i$
+
+## Results
+
+![](images/Rplot-02.png)
+
+## Interpretation
+
+-   A traffic accident 4 years prior results to 2.7 truck stop increase relative to 2006
+-   5 years to build a truck stop
+
+![](images/Screenshot%202025-03-26%20150138.png)
+
+## Results
+
+![](images/Screenshot%202025-03-26%20150138-01.png)
+
+## Zoning Fixed Effects (coefficients)
+
+![](images/Rplot09.png)
+
+## Zoning Fixed Effects Interpretation
+
+Noisy result. exclusion has low observation count
+
+![](images/2-02.png)
+
+## Limitation
+
+Cant Observe Pretends
+
+![](images/1-02.png)
+
+# DID
+
+## DID
+
+$$
+\Delta \text{NumTruckStop}_{j,t} = \sum_{i \in \{2007, 2008, 2015, 2016\}} \text{Accident}_{j,t=i} + \gamma_j + \\\lambda_t + \mu_l + \epsilon
+$$
+
+year $t$ , time $i$, zoning category $j$, location $l$ (fix effects)
+
+-   $\Delta \text{NumTruckStop}_{j,t}$ , change in number of truck stops
+-   $\text{Accident}_{j,t}$ is a dummy variable indicating whether a high fatality accident and occurred between $2008$ and $2015$
+
+## DID results
+
+![](images/Rplot07.png)
+
+## DID results
+
+![](images/Rplot-05.png)
+
+## Parallel Trends
+
+![](images/output-11.png)
+
+## Balancing States
+
+![](images/output-08.png)
+
+## Balancing Regions
+
+![](images/output-10.png)
+
+## Observe Fix Effect
+
+We see the same thing. Noisy observation
+
+![](images/Rplot-03.png)
+
+## Location Matters More
+
+Nice clean separation
+
+![](images/Rplot05.png)
+
+## Bias
+
+-   Measurement Error: truck stop vs truck capacity \~ underestimate
+
+-   Anticipation Effect: policies other than truck stops (change in parking ordinances) may be implemented to ease the infrastructure shortage \~ underestimate
+
+-   Zoning classifications may change @mclaughlinLandUseRegulation2012 \~ underestimate
+
+-   Timing of the treatment (2008, 2015) (time FE)
+
+## Policy Implication and Conclusion
+
+-   Municipalities are self regulating adequately with response to trucking accidents.
+
+-   One-size-fits-all federal approach is not needed.
+
+-   Some outlier municipalities may require targeted policy interventions.
+
+## Thank you for Listening
+
+### References

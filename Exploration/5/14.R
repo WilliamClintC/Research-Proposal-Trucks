@@ -14,6 +14,7 @@ df_6 <- df_6 %>%
          accident_year = year(REPORT_DATE),
          Accident = as.integer(FATALITIES >= optimal_n)) # assuming optimal_n is defined
 
+
 # Aggregate accident info by county
 accident_by_county <- df_6 %>%
   group_by(STATE, COUNTY) %>%
@@ -45,8 +46,8 @@ merged_df <- truck_df_long %>%
   )
 
 # Run enhanced DiD models with separate interactions for each year
-model1 <- feols(delta_NumTruckStop ~ Accident*y2007 + Accident*y2015 + Accident*y2016 | 
-                  STATE + Region + simple_family, data = merged_df)
+model1 <- feols(delta_NumTruckStop ~ Accident*y2007 + Accident*y2015 + Accident*y2016, 
+                data = merged_df)
 
 model2 <- feols(delta_NumTruckStop ~ Accident*y2007 + Accident*y2015 + Accident*y2016 | 
                   simple_family, data = merged_df)
@@ -57,259 +58,153 @@ model3 <- feols(delta_NumTruckStop ~ Accident*y2007 + Accident*y2015 + Accident*
 model4 <- feols(delta_NumTruckStop ~ Accident*y2007 + Accident*y2015 + Accident*y2016 | 
                   Region + simple_family, data = merged_df)
 
-# --- VISUALIZATION 1: MODEL SUMMARY TABLE ---
+
+
+# --- FOCUSED MODEL SUMMARY TABLE ---
 modelsummary(
   list("Model 1: Year FE" = model1, 
        "Model 2: Year + Zoning FE" = model2, 
        "Model 3: Year + Region + Zoning FE" = model3, 
        "Model 4: Year + State + Zoning FE" = model4),
   stars = TRUE,
+  fixef = TRUE,
   title = paste0("Effect of Accident on Truck Stops (Reference Year = 2008)"),
   notes = "Standard errors in parentheses. * p < 0.1, ** p < 0.05, *** p < 0.01",
   coef_map = c(
-    "Accident:y2007" = "Accident × 2007",
     "Accident:y2015" = "Accident × 2015",
-    "Accident:y2016" = "Accident × 2016",
-    "y2007" = "Year 2007",
-    "y2015" = "Year 2015",
-    "y2016" = "Year 2016",
-    "Accident" = "Accident"
+    "Accident:y2016" = "Accident × 2016"
   ),
   gof_map = c("nobs", "r.squared", "adj.r.squared"),
   add_rows = tribble(
     ~term,                ~"Model 1: Year FE",   ~"Model 2: Year + Zoning FE",   ~"Model 3: Year + Region + Zoning FE",   ~"Model 4: Year + State + Zoning FE",
     "Fixed Effects:",     "",                   "",                            "",                                      "",
-    "State",              "Yes",                "No",                          "Yes",                                   "No",
-    "Region",             "Yes",                "No",                          "No",                                    "Yes",
-    "Zoning Category",    "Yes",                "Yes",                         "Yes",                                   "Yes"
+    "State",              "No",                 "No",                          "Yes",                                   "No",
+    "Region",             "No",                 "No",                          "No",                                    "Yes",
+    "Zoning Category",    "No",                 "Yes",                         "Yes",                                   "Yes"
   )
 )
 
-# --- VISUALIZATION 2: EVENT STUDY PLOT ---
-# Extract coefficients and standard errors for interaction terms
-event_study_data <- data.frame(
-  model = rep(c("Model 1: Year FE", "Model 2: Year + Zoning FE", "Model 3: Year + Region + Zoning FE", "Model 4: Year + State + Zoning FE"), each = 3),
-  year = rep(c(2007, 2015, 2016), 4),
-  coefficient = c(
-    coef(model1)["Accident:y2007"], coef(model1)["Accident:y2015"], coef(model1)["Accident:y2016"],
-    coef(model2)["Accident:y2007"], coef(model2)["Accident:y2015"], coef(model2)["Accident:y2016"],
-    coef(model3)["Accident:y2007"], coef(model3)["Accident:y2015"], coef(model3)["Accident:y2016"],
-    coef(model4)["Accident:y2007"], coef(model4)["Accident:y2015"], coef(model4)["Accident:y2016"]
+#part 
+# Create a copy of the data with releveled simple_family
+merged_df_mod <- merged_df
+merged_df_mod$simple_family <- relevel(as.factor(merged_df_mod$simple_family), ref = "Wild Texas")
+
+# Create alternative models with simple_family as regular variables
+model2_alt <- feols(delta_NumTruckStop ~ Accident*y2007 + Accident*y2015 + Accident*y2016 + 
+                      simple_family, data = merged_df_mod)
+
+model3_alt <- feols(delta_NumTruckStop ~ Accident*y2007 + Accident*y2015 + Accident*y2016 + 
+                      simple_family | STATE, data = merged_df_mod)
+
+model4_alt <- feols(delta_NumTruckStop ~ Accident*y2007 + Accident*y2015 + Accident*y2016 + 
+                      simple_family | Region, data = merged_df_mod)
+
+# Get model coefficients names
+all_coefs <- names(coef(model2_alt))
+family_coefs <- all_coefs[grep("simple_family", all_coefs)]
+
+# Create a clean coefficient mapping
+clean_names <- gsub("simple_family", "", family_coefs)
+coef_mapping <- setNames(clean_names, family_coefs)
+
+# Create a professional table with clean category names
+modelsummary(
+  list("Model 2: Year + Zoning" = model2_alt, 
+       "Model 3: Year + State + Zoning" = model3_alt, 
+       "Model 4: Year + Region + Zoning" = model4_alt),
+  stars = TRUE,
+  coef_map = coef_mapping,  # Map to clean category names
+  title = "Effect of Zoning Categories on Truck Stops",
+  notes = paste0("Reference category: Wild Texas", 
+                 "\nStandard errors in parentheses. * p < 0.1, ** p < 0.05, *** p < 0.01"),
+  add_rows = tribble(
+    ~term,                ~"Model 2: Year + Zoning",   ~"Model 3: Year + State + Zoning",   ~"Model 4: Year + Region + Zoning",
+    "Fixed Effects:",     "",                          "",                                  "",
+    "State",              "No",                        "Yes",                               "No",
+    "Region",             "No",                        "No",                                "Yes"
   ),
-  se = c(
-    summary(model1)$se["Accident:y2007"], summary(model1)$se["Accident:y2015"], summary(model1)$se["Accident:y2016"],
-    summary(model2)$se["Accident:y2007"], summary(model2)$se["Accident:y2015"], summary(model2)$se["Accident:y2016"],
-    summary(model3)$se["Accident:y2007"], summary(model3)$se["Accident:y2015"], summary(model3)$se["Accident:y2016"],
-    summary(model4)$se["Accident:y2007"], summary(model4)$se["Accident:y2015"], summary(model4)$se["Accident:y2016"]
-  )
+  gof_map = c("nobs", "r.squared", "adj.r.squared")
 )
 
-# Add confidence intervals
-event_study_data <- event_study_data %>%
-  mutate(
-    lower_ci = coefficient - 1.96 * se,
-    upper_ci = coefficient + 1.96 * se,
-    # Add reference year (2008) with zero coefficient
-    model = factor(model, levels = c("Model 1: Year FE", "Model 2: Year + Zoning FE", "Model 3: Year + Region + Zoning FE", "Model 4: Year + State + Zoning FE"))
-  )
 
-# Create event study plot
-ggplot(event_study_data, aes(x = year, y = coefficient, color = model, shape = model)) +
+
+library(ggplot2)
+library(broom)
+library(dplyr)
+library(tidyr)
+
+# Function to extract coefficients and prepare for plotting
+extract_coefs <- function(model, model_name) {
+  # Extract coefficients
+  coefs <- tidy(model)
+  
+  # Filter only simple_family variables
+  family_coefs <- coefs %>%
+    filter(grepl("simple_family", term))
+  
+  # Clean coefficient names
+  family_coefs$category <- gsub("simple_family", "", family_coefs$term)
+  
+  # Add model identifier
+  family_coefs$model <- model_name
+  
+  # Add reference category with coefficient 0
+  ref_row <- data.frame(
+    term = "reference",
+    estimate = 0,
+    std.error = 0,
+    statistic = NA,
+    p.value = NA,
+    category = "Wild Texas",
+    model = model_name
+  )
+  
+  # Combine with reference category
+  family_coefs <- bind_rows(family_coefs, ref_row)
+  
+  return(family_coefs)
+}
+
+# Extract coefficients from each model
+model2_coefs <- extract_coefs(model2_alt, "Model 2: Year + Zoning")
+model3_coefs <- extract_coefs(model3_alt, "Model 3: Year + State + Zoning")
+model4_coefs <- extract_coefs(model4_alt, "Model 4: Year + Region + Zoning")
+
+# Combine all coefficients
+all_coefs <- bind_rows(model2_coefs, model3_coefs, model4_coefs)
+
+# Create a factor for models to control their order
+all_coefs$model <- factor(all_coefs$model, 
+                          levels = c("Model 2: Year + Zoning", 
+                                     "Model 3: Year + State + Zoning", 
+                                     "Model 4: Year + Region + Zoning"))
+
+# Calculate average coefficient for each category to determine ordering
+avg_coefs <- all_coefs %>%
+  group_by(category) %>%
+  summarize(avg_estimate = mean(estimate, na.rm = TRUE)) %>%
+  arrange(avg_estimate)  # Sort from smallest to largest
+
+# Set category order based on average coefficients (smallest to largest)
+all_coefs$category <- factor(all_coefs$category, levels = avg_coefs$category)
+
+# Create coefficient plot
+ggplot(all_coefs, aes(x = category, y = estimate, color = model, shape = model)) +
   geom_point(position = position_dodge(width = 0.5), size = 3) +
-  geom_errorbar(aes(ymin = lower_ci, ymax = upper_ci), 
-                position = position_dodge(width = 0.5), width = 0.3) +
-  geom_hline(yintercept = 0, linetype = "dashed", color = "black") +
-  geom_vline(xintercept = 2008, linetype = "dotted", color = "gray") +
-  # Add a point for reference year
-  geom_point(data = data.frame(
-    year = rep(2008, 4),
-    coefficient = rep(0, 4),
-    model = factor(c("Model 1: Year FE", "Model 2: Year + Zoning FE", "Model 3: Year + Region + Zoning FE", "Model 4: Year + State + Zoning FE"),
-                   levels = c("Model 1: Year FE", "Model 2: Year + Zoning FE", "Model 3: Year + Region + Zoning FE", "Model 4: Year + State + Zoning FE"))
-  ), aes(x = year, y = coefficient, color = model, shape = model), size = 3) +
-  scale_x_continuous(breaks = c(2007, 2008, 2015, 2016)) +
+  geom_errorbar(aes(ymin = estimate - 1.96*std.error, 
+                    ymax = estimate + 1.96*std.error),
+                position = position_dodge(width = 0.5), width = 0.2) +
+  geom_hline(yintercept = 0, linetype = "dashed", color = "gray50") +
+  labs(title = "Effect of Zoning Categories on Truck Stops",
+       subtitle = "Wild Texas is the reference category (coefficient = 0)",
+       x = "Zoning Category",
+       y = "Coefficient Estimate",
+       color = "Model",
+       shape = "Model") +
   theme_minimal() +
-  labs(
-    title = "Effect of High-Fatality Crashes on Truck Stop Construction",
-    subtitle = "Reference year: 2008 - All models include year fixed effects",
-    x = "Year Period",
-    y = "Coefficient (Change in Truck Stop Construction)",
-    color = "Model Specification",
-    shape = "Model Specification"
-  ) +
-  theme(legend.position = "bottom")
-
-
-
-#part last 
-# First, check if the model has the simple_family fixed effect
-has_zoning_fe <- function(model) {
-  fe_names <- names(fixef(model))
-  return("simple_family" %in% fe_names)
-}
-
-# Create a safe extraction function that checks if the fixed effect exists
-extract_zoning_fe <- function(model, model_name) {
-  if (!has_zoning_fe(model)) {
-    message("No simple_family fixed effect in ", model_name)
-    return(NULL)
-  }
-  
-  # Get fixed effects for simple_family
-  fe <- fixef(model)$simple_family
-  
-  # Extract standard errors if available
-  se_attr <- attr(fe, "se")
-  if (is.null(se_attr)) {
-    message("No standard errors found for ", model_name)
-    se <- rep(NA, length(fe))
-  } else {
-    se <- se_attr
-  }
-  
-  # Create a data frame
-  result <- data.frame(
-    category = names(fe),
-    estimate = as.numeric(fe),
-    se = as.numeric(se),
-    model = model_name,
-    stringsAsFactors = FALSE
-  )
-  
-  return(result)
-}
-
-# Try to extract fixed effects from each model
-fe_df1 <- extract_zoning_fe(model1, "Model 1: Year FE")
-fe_df2 <- extract_zoning_fe(model2, "Model 2: Year + Zoning FE")
-fe_df3 <- extract_zoning_fe(model3, "Model 3: Year + Region + Zoning FE")
-fe_df4 <- extract_zoning_fe(model4, "Model 4: Year + State + Zoning FE")
-
-# Combine all valid fixed effects
-fe_list <- list(fe_df1, fe_df2, fe_df3, fe_df4)
-valid_fe <- fe_list[!sapply(fe_list, is.null)]
-
-if (length(valid_fe) == 0) {
-  stop("No valid zoning fixed effects found in any model")
-}
-
-all_fe <- bind_rows(valid_fe)
-
-# Print diagnostic information
-print(paste("Total zoning fixed effects collected:", nrow(all_fe)))
-print(paste("Number of unique categories:", length(unique(all_fe$category))))
-
-# Calculate average effect size for each category to order them
-category_avg <- all_fe %>%
-  group_by(category) %>%
-  summarize(avg_effect = mean(estimate, na.rm = TRUE)) %>%
-  arrange(avg_effect)
-
-# Order categories by average effect
-all_fe$category <- factor(all_fe$category, levels = category_avg$category)
-# Create a plot with categories on the x-axis
-ggplot(all_fe, aes(x = category, y = estimate, color = model, shape = model)) +
-  geom_point(position = position_dodge(width = 0.8), size = 3) +
-  geom_errorbar(aes(ymin = estimate - 1.96*se, 
-                    ymax = estimate + 1.96*se),
-                position = position_dodge(width = 0.8), width = 0.3) +
-  geom_hline(yintercept = 0, linetype = "dashed") +
-  # No coord_flip() here to keep categories on x-axis
-  theme_minimal() +
-  labs(
-    title = "Impact of Zoning Categories on Truck Stop Construction",
-    subtitle = "Comparison across model specifications",
-    y = "Coefficient (Effect on Truck Stop Construction)",
-    x = "Zoning Category",
-    color = "Model Specification",
-    shape = "Model Specification"
-  ) +
   theme(
-    legend.position = "bottom",
-    # Adjust x-axis text for better readability
-    axis.text.x = element_text(angle = 45, hjust = 1)
-  ) +
-  guides(color = guide_legend(nrow = 2))
-
-
-
-# part last last
-
-
-
-
-
-# After calculating the average effect for each category
-category_avg <- all_fe %>%
-  group_by(category) %>%
-  summarize(avg_effect = mean(estimate, na.rm = TRUE)) %>%
-  arrange(avg_effect)
-
-# Find the midpoint category (closest to median effect)
-median_effect <- median(category_avg$avg_effect)
-midpoint_idx <- which.min(abs(category_avg$avg_effect - median_effect))
-midpoint_category <- category_avg$category[midpoint_idx]
-
-# Print information about the reference category
-print(paste("Using midpoint category as reference:", midpoint_category))
-print(paste("Midpoint category average effect:", 
-            round(category_avg$avg_effect[midpoint_idx], 4)))
-
-# Adjust all estimates relative to the midpoint category
-all_fe_adjusted <- all_fe %>%
-  group_by(model) %>%
-  mutate(
-    # Find the estimate for the midpoint category in this model
-    reference_value = estimate[category == midpoint_category],
-    # Adjust all estimates relative to the reference
-    adjusted_estimate = estimate - reference_value,
-    # Standard errors remain the same
-    adjusted_se = se
-  ) %>%
-  ungroup()
-
-# Calculate confidence intervals explicitly
-all_fe_adjusted <- all_fe_adjusted %>%
-  mutate(
-    lower_ci = adjusted_estimate - 1.96 * adjusted_se,
-    upper_ci = adjusted_estimate + 1.96 * adjusted_se
-  )
-
-# Order categories by adjusted effect
-adjusted_category_avg <- all_fe_adjusted %>%
-  group_by(category) %>%
-  summarize(avg_effect = mean(adjusted_estimate, na.rm = TRUE)) %>%
-  arrange(avg_effect)
-
-# Set factor levels for proper ordering
-all_fe_adjusted$category <- factor(all_fe_adjusted$category, 
-                                   levels = adjusted_category_avg$category)
-
-# Create the adjusted plot with clearer confidence intervals
-ggplot(all_fe_adjusted, aes(x = category, y = adjusted_estimate, color = model, shape = model)) +
-  # Add a confidence interval ribbon with transparency
-  geom_errorbar(aes(ymin = lower_ci, ymax = upper_ci),
-                position = position_dodge(width = 0.8), 
-                width = 0.3,
-                linewidth = 0.8,
-                alpha = 0.8) +
-  # Add the point estimates
-  geom_point(position = position_dodge(width = 0.8), size = 3) +
-  # Zero reference line
-  geom_hline(yintercept = 0, linetype = "dashed") +
-  theme_minimal() +
-  labs(
-    title = "Impact of Zoning Categories on Truck Stop Construction",
-    subtitle = paste("Reference category (0):", midpoint_category),
-    y = "Relative Effect on Truck Stop Construction",
-    x = "Zoning Category",
-    color = "Model Specification",
-    shape = "Model Specification",
-    caption = "Error bars represent 95% confidence intervals"
-  ) +
-  theme(
-    legend.position = "bottom",
     axis.text.x = element_text(angle = 45, hjust = 1),
-    plot.caption = element_text(hjust = 0, face = "italic")
+    legend.position = "bottom",
+    panel.grid.minor = element_blank()
   ) +
-  guides(color = guide_legend(nrow = 2))
+  scale_color_brewer(palette = "Set1")

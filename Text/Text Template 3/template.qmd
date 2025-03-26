@@ -94,6 +94,10 @@ In fact, more restrictive zoning categories often become increasingly exclusive 
 This self-reinforcing characteristic may deter new truck stop development, further exacerbating the downward bias in our estimates due to unobserved capacity expansions.
 Lastly, potential omitted variables such as lobbying activities by trucking firms could further distort our findings, although the overall direction of this bias remains uncertain.
 
+policies unrelated to truck stops may be implemented to ease the trucking problem
+
+timing of the treatment we only observe 207 and 2015
+
 ## Related Literature
 
 The present study contributes uniquely to the literature on transportation infrastructure by examining truck stop construction as a localized response to high-fatality truck crashes a topic that, to our knowledge, has not been addressed with a comparable data-set.
