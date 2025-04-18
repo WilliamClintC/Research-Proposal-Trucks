@@ -368,18 +368,19 @@ controlling for location characteristics and time shocks. The estimating
 equation is:
 
 \[
-\Delta \text{NumTruckStop}_{lt} = \sum_{i=1993}^{2006} \text{Fatality}_{li} + \gamma_j + \lambda_t + \mu_l + \epsilon_{jlt}
+\Delta \text{NumTruckStop}_{jlt} = \sum_{i=1993}^{2006} \text{Fatality}_{jli} + \gamma_j + \lambda_t + \mu_l + \epsilon_{jlt}
 \]
 
-Where:\\
-- \(\Delta \text{NumTruckStop}_{jlt}\) is the change in the number of
-truck stops (change from 2006-2016) in zoning category \(j\), location
-\(l\), from 2006 to 2016.\\
-- \(\text{Fatality}_{jli}\) is an indicator for a high-severity accident
-(more than two standard deviations above the mean) involving a parked
-truck in year \(i\).\\
-- \(\gamma_j\), \(\lambda_t\), and \(\mu_l\) are zoning type, year, and
-regional fixed effects, respectively.
+The estimating equation examines how severe parked-truck accidents
+influence changes in truck stop infrastructure. The dependent variable,
+\(\Delta \text{NumTruckStop}_{jlt}\), is the change in the number of
+truck stops from 2006 to 2016 in zoning category \(j\), location \(l\),
+and year \(t\). The main explanatory variables are indicators for
+high-fatality parked-truck accidents, \(\text{Fatality}_{jli}\),
+occurring from 1993 to 2006. An accident is considered high-severity if
+its severity exceeds two standard deviations above the mean. The model
+includes zoning fixed effects (\(\gamma_j\)), year fixed effects
+(\(\lambda_t\)), and regional fixed effects (\(\mu_l\)).
 
 This model uses pre-2007 accident data to predict post-2006
 infrastructure changes. The assumption is that accident timing and
@@ -396,9 +397,13 @@ supports a one-way causal structure: accidents prompt infrastructure,
 not vice versa.
 
 To capture regional heterogeneity in trucking activity, regulation, and
-climate, we cluster standard errors at the region level. This accounts
-for spatial correlation in accident rates and infrastructure trends,
-ensuring robust inference.
+climate, we cluster standard errors at the region level. Clustering
+standard errors by region assumes that observations within a region may
+be correlated, while observations across regions are independent. This
+accounts for potential intra-regional shocks or unobserved factors that
+could bias standard errors if ignored. This accounts for spatial
+correlation in accident rates and infrastructure trends, ensuring robust
+inference.
 
 \subsection{Difference-in-Differences (DiD)
 Design}\label{difference-in-differences-did-design}
@@ -549,39 +554,14 @@ accidents, typically by two additional facilities.
 
 \end{figure}%
 
-Figure~\ref{fig-trends_past} shows counties with pre-2006 high-fatality
-accidents consistently built more truck stops, aligning with
-infrastructure needs. Figure~\ref{fig-trends_mid} confirms parallel
+Section~\ref{sec-parallel-trends-chart-fixed-effect-model} shows
+counties with pre-2006 high-fatality accidents consistently built more
+truck stops, aligning with infrastructure needs.
+Section~\ref{sec-parallel-trends-chart-did-model} confirms parallel
 pre-treatment trends (2008-2015), with post-2015 divergence (+0.6 annual
 change in accident-prone counties). This supports a interpretation: the
 increase stems from post-accident responses, not pre-existing trends.
 Non-parallel trends bias appears unlikely.
-
-\begin{figure}
-
-\centering{
-
-\includegraphics[width=4.6875in,height=\textheight]{images/output.png}
-
-}
-
-\caption{\label{fig-trends_past}Parallel Trends Counties with accident
-Against without accident before 2006}
-
-\end{figure}%
-
-\begin{figure}
-
-\centering{
-
-\includegraphics[width=4.71875in,height=\textheight]{images/output-01.png}
-
-}
-
-\caption{\label{fig-trends_mid}Parallel Trends Counties with accident
-Against without accident between 2008 and 2015}
-
-\end{figure}%
 
 Our DiD estimates (Figure~\ref{fig-did}, Figure~\ref{fig-DID_table})
 compare locations with high-fatality accidents (2008-2015) to controls
@@ -590,7 +570,7 @@ and state fixed effects show consistent estimates (adj. R²:
 0.005-0.015). The 2015 coefficient exhibits a statistically significant
 positive value , indicating that jurisdictions responded to
 high-fatality accidents occurring between 2008-2015 by constructing
-additional truck stops. Balancing tests
+additional truck stops, relative to the baseline. Balancing tests
 (\hyperref[sec-c.-balancing_chart_region]{C. Balancing Chart},
 \hyperref[sec-D.balancing_chart_state]{D. Balancing Chart}) confirm
 parallel pre-trends, supporting our design.
@@ -658,8 +638,11 @@ estimates downward. Other factors, such as unobserved policy responses
 or lobbying, may also influence results, though their direction is
 unclear. Finally, the concentration of accidents around 2007 and 2015,
 along with limited data outside this window, restricts our ability to
-generalize findings. Broader, longitudinal data would help validate and
-extend our conclusions.
+generalize findings, nor analyze the underlying truck stop construction
+outside these years, which adds uncertainty to our results. Broader,
+longitudinal data would help validate and extend our conclusions. It
+would allow us to explore and validate our unidirectional causality,
+addressing potential reverse causality limitations.
 
 \section{Policy Implication and
 Conclusion}\label{policy-implication-and-conclusion}
@@ -687,8 +670,9 @@ Future research could expand on this work by analyzing institutional
 contexts, such as state DOT policies or municipal zoning boards, to
 explain local response variation. Testing results with alternative
 accident severity metrics or zoning measurements like the Wharton Land
-Use Regulatory Index (WLIURA) \citep{gyourkoNewMeasureLocal2008} may
-also be valuable. More granular datasets, including the
+Use Regulatory Index (WLIURA), whiel also considering placebo tests and
+conditional zoning models. \citep{gyourkoNewMeasureLocal2008} may also
+be valuable. More granular datasets, including the
 \href{https://www.nhtsa.gov/file-downloads}{NHTSA File Downloads} and
 \href{https://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars}{Fatality
 Analysis Reporting System (FARS)}, could improve measurement precision.
@@ -703,59 +687,108 @@ causes and their relation to policy responses.
 \subsection{Remark: Scale of Truck Parking Challenges
 vs.~Homelessness}\label{remark-scale-of-truck-parking-challenges-vs.-homelessness}
 
-While homelessness is a critical and deeply concerning issue in North
-America, the shortage of truck parking presents a significantly larger
-challenge in terms of sheer numbers. According to data from the U.S.
-Bureau of Labor Statistics and Statistics Canada, there are
-approximately 3.5 million truck drivers operating in the U.S. and
-Canada. Studies indicate that a substantial percentage of these drivers
-face difficulties finding safe and adequate parking.
+While homelessness remains a serious social concern in North America,
+the shortage of truck parking affects an even larger population. With
+approximately 3.5 million truck drivers in the U.S. and Canada, the
+Federal Highway Administration (FHWA) estimates that 43.8\%, or about
+1.53 million drivers, struggle to find safe, adequate parking. Other
+sources, such as the American Transportation Research Institute (ATRI)
+and the U.S. Department of Transportation (USDOT), estimate the figure
+to be as high as 70\%--98\%.
 
-A conservative estimate from the Federal Highway Administration (FHWA)
-suggests that 43.8\% of truck drivers experience parking challenges,
-translating to roughly 1.53 million affected drivers. However, other
-estimates are even higher, research from the American Transportation
-Research Institute (ATRI) has found the number to be closer to 70\%,
-while the U.S. Department of Transportation (USDOT) has reported figures
-as high as 98\%.
+In contrast, the combined homeless population of the U.S.
+(\textasciitilde580,000), Canada (\textasciitilde235,000), and Mexico
+(\textasciitilde50,000) totals around 865,000. Even using the
+conservative FHWA estimate, the truck parking shortage affects nearly
+twice as many individuals.
 
-For comparison, the total homeless population in North America,
-including the U.S. (\textasciitilde580,000), Canada
-(\textasciitilde235,000), and Mexico (\textasciitilde50,000), amounts to
-approximately 865,000 individuals. This means that even under the
-conservative FHWA estimate, the truck parking crisis affects nearly
-\emph{twice} as many people as the entire homeless population of North
+Both crises deserve attention, but in terms of scale, the truck parking
+shortage rivals, if not exceeds, the homelessness crisis across North
 America.
 
-While both issues are important, this analysis shows the scale of the
-truck parking crisis, making it an even larger problem, if not at least
-as significant, as the homelessness crisis affecting all of North
-America.
-
-\subsection{\texorpdfstring{\textbf{A. Visualization of
-dataset.}}{A. Visualization of dataset.}}\label{sec-a.-visualization-of-dataset.-}
+\subsection{\texorpdfstring{\textbf{Visualization of
+dataset.}}{Visualization of dataset.}}\label{sec-a.-visualization-of-dataset.-}
 
 (Present Truck stop parking observatios also available
 \href{https://data-usdot.opendata.arcgis.com/datasets/usdot::truck-stop-parking/about}{Truck
 Stop Parking \textbar{} Geospatial at the Bureau of Transportation
 Statistics})
 
-\includegraphics[width=4.27083in,height=\textheight]{images/unnamed.png}
+\begin{figure}[H]
 
-\subsection{B. Map of Zoning
+{\centering \includegraphics[width=4.27083in,height=\textheight]{images/unnamed.png}
+
+}
+
+\caption{Dataset Visualization}
+
+\end{figure}%
+
+\subsection{Map of Zoning
 Categories}\label{sec-b.-map-of-zoning-categories}
 
-\includegraphics{images/unnamed (1).png}
+\begin{figure}[H]
 
-\subsection{C. Balancing Chart
+{\centering \includegraphics{images/unnamed (1).png}
+
+}
+
+\caption{Zoning Category Map}
+
+\end{figure}%
+
+\subsection{Balancing Chart
 (Region)}\label{sec-c.-balancing_chart_region}
 
-\includegraphics{images/clipboard-2848566608.png}
+\begin{figure}[H]
 
-\subsection{D. Balancing Chart
-(State)}\label{sec-D.balancing_chart_state}
+{\centering \includegraphics{images/clipboard-2848566608.png}
 
-\includegraphics{images/clipboard-2792065255.png}
+}
+
+\caption{Balancing Chart Region}
+
+\end{figure}%
+
+\subsection{Balancing Chart (State)}\label{sec-D.balancing_chart_state}
+
+\begin{figure}[H]
+
+{\centering \includegraphics{images/clipboard-2792065255.png}
+
+}
+
+\caption{Balancing Chart State}
+
+\end{figure}%
+
+\subsection{Parallel Trends Chart Fixed Effect
+Model}\label{sec-parallel-trends-chart-fixed-effect-model}
+
+\begin{figure}[H]
+
+{\centering \includegraphics[width=4.6875in,height=\textheight]{images/output.png}
+
+}
+
+\caption{Parallel Trends Counties with accident Against without accident
+before 2006}
+
+\end{figure}%
+
+\subsection{Parallel Trends Chart DID
+Model}\label{sec-parallel-trends-chart-did-model}
+
+\begin{figure}[H]
+
+{\centering \includegraphics[width=4.71875in,height=\textheight]{images/output-01.png}
+
+}
+
+\caption{Parallel Trends Counties with accident Against without accident
+between 2008 and 2015}
+
+\end{figure}%
 
 
 \renewcommand\refname{References}
